@@ -1,4 +1,4 @@
-# Planet Nix Site
+# Nix Vegas Site
 
 ## Quickstart
 

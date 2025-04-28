@@ -3,20 +3,21 @@
   <head>
     <title>
       {% block title %}
-      Planet Nix {% if page.title %} - {{ page.title }} {% endif %}
+      Nix Vegas {% if page.title %} - {{ page.title }} {% endif %}
       {% endblock %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Planet Nix">
-    <meta name="keywords" content="nixos, nix package manager, linux, southern california, pasadena, socal">
-    <meta name="author" content="Planet Nix Organizers">
-    <meta property="og:title" content="Planet Nix: March 6th-7th, 2025 @ Pasadena, CA">
-    <meta property="og:image" content="https://planetnix.com/img/planet-nix-black.png">
-    <meta property="og:description" content="A conference for contributors and users of Nix and NixOS.">
-    <meta property="og:url" content="https://planetnix.com/">
+    <meta name="description" content="Nix Vegas">
+    <meta name="keywords" content="nixos, nix package manager, linux, def con, las vegas">
+    <meta name="author" content="Nix Vegas Organizers">
+    <meta charset="utf-8">
+    <meta property="og:title" content="Nix Vegas: August 7-10, 2025 @ DEF CON 33">
+    <meta property="og:image" content="/img/nix-vegas.png">
+    <meta property="og:description" content="A DEF CON Community for contributors and users of Nix and NixOS.">
+    <meta property="og:url" content="https://nix.vegas/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US:utf-8">
-    <meta property="og:site_name" content="Planet Nix">
+    <meta property="og:site_name" content="Nix Vegas">
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
@@ -26,7 +27,7 @@
     {% endblock %}
     <div class="content">
         {% block content %}
-        {% endblock %}   
+        {% endblock %}
     </div>
     {% include 'components/footer.html' %}
   </body>
