@@ -23,3 +23,11 @@ Las Vegas Convention Center, 2901 S Las Vegas Blvd, Las Vegas, NV 89109
 
 **Registration:**
 Viva Nix Vegas is part of DEF CON. A badge will get you full access, and can be purchased [here](https://shop.defcon.org/products/def-con-33-ticket) or at the door.
+
+---
+
+## FAQ
+
+### I have questions, where should I ask them?
+
+Feel free to create a discussion on GitHub on the [NixVegas/nix.vegas](https://github.com/NixVegas/nix.vegas/discussions) repository.
