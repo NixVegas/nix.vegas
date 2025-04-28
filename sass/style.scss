@@ -4,12 +4,13 @@
   padding: 0 20px;
 }
 
-.container {
-  max-width: 860px;
-}
+//.container {
+//  max-width: 860px;
+//}
 
 @import './reset.scss';
 @import './typography.scss';
+@import './glitch.scss';
 @import './components/hero.scss';
 @import './components/schedule.scss';
 @import './components/speakers.scss';

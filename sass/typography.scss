@@ -1,13 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Museo';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Museo 300'), url('/fonts/Museo300-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Museo';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Museo 700'), url('/fonts/Museo700-Regular.woff') format('woff');
+}
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
-h1, h2, h3 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
+h1 {
+    font-family: 'Museo', sans-serif;
+    font-weight: 700;
+}
+
+h2, h3 {
+    font-family: 'Museo', sans-serif;
+    font-weight: 300;
 }
 
 p, li {

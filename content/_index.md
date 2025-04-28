@@ -13,15 +13,13 @@ Nix Vegas is colocated with DEF CON 33, and we are in our first year as a DEF CO
 
 ---
 
-## **Location**
+## Location
 
 **When:**
 August 7th-10th, 2025
 
 **Where:**
-Las Vegas Convention Center
-2901 S Las Vegas Blvd
-Las Vegas, NV 89109
+Las Vegas Convention Center, 2901 S Las Vegas Blvd, Las Vegas, NV 89109
 
 **Registration:**
 Viva Nix Vegas is part of DEF CON. A badge will get you full access, and can be purchased [here](https://shop.defcon.org/products/def-con-33-ticket) or at the door.
