@@ -26,6 +26,14 @@ Viva Nix Vegas is part of DEF CON. A badge will get you full access, and can be 
 
 ---
 
+## Sponsors
+
+*To be announced soon*
+
+<!-- :thonk: -->
+
+---
+
 ## FAQ
 
 ### I have questions, where should I ask them?
