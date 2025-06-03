@@ -1,27 +1,38 @@
 .hero-wrapper {
-    background: url('img/hero-bg.png') no-repeat center center;
-    background-position: 50% 55%;
-    min-height: 100px;
+    background: url('img/nix-vegas.png') no-repeat center center;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: #000;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .container {
         margin: auto;
         text-align: center;
-    }
-
-    .brand {
-        margin: 0 auto;
-        display: block;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: hue-rotate(110deg);
-        padding: 0 0 10px 0;
         width: 100%;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: clip;
+
+        .brand {
+            margin: auto auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            //backdrop-filter: hue-rotate(140deg);
+            padding: 5px 0 5px 0;
+            width: 100%;
+        }
     }
 }
 
-h2.hero-subtitle {
-    font-size: 1.2em;
-    margin-top: 0;
+h1.hero-title {
+    font-size: 2.2em;
+}
+
+h2.hero-title {
+    font-size: 1.5em;
 }
 
 .container h1 {

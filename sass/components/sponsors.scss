@@ -1,0 +1,16 @@
+#sponsors ~ blockquote {
+  margin: 0;
+}
+
+#sponsors ~ blockquote p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sponsors ~ blockquote img {
+  max-width: 225px;
+  min-width: 200px;
+  object-fit: contain;
+  margin: 10px;
+}
