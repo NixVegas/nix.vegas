@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.description }}</h2>
+    <h3>by {{ page.authors | join(sep=" and ") }}</h3>
+    <div class="blog-wrapper">{{ page.content | safe }}</div>
+{% endblock %}

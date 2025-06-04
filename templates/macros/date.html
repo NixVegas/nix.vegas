@@ -1,0 +1,44 @@
+{% macro date_chip(month, day) %}
+
+{% set months_short = [
+  "ERR", 
+  "JAN", 
+  "FEB", 
+  "MAR", 
+  "APR", 
+  "MAY", 
+  "JUN", 
+  "JUL", 
+  "AUG", 
+  "SEP", 
+  "OCT", 
+  "NOV", 
+  "DEC"
+  ] 
+%}
+
+<div class="calendar-date-chip">
+    <div class="month">{{ months_short[month] }}</div>
+    <div class="day">{{ day }}</div>
+</div>
+{% endmacro date_chip %}
+
+{% macro date_full(month, day, year) %}
+{% set months_long = [
+  "Error",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+] %}
+
+{{ months_long[month] }} {{ day }}, {{ year }}
+{% endmacro date_full %}

@@ -1,8 +1,8 @@
 {
-  description = "Nix Planet Website";
+  description = "Nix Vegas Website";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -19,7 +19,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in {
         packages = with pkgs; rec {
-          planetNixSite = stdenv.mkDerivation {
+          nixVegasSite = stdenv.mkDerivation {
             name = "socal-nix-site";
             src = ./.;
             buildInputs = with pkgs; [
@@ -32,7 +32,7 @@
             '';
           };
 
-          default = planetNixSite;
+          default = nixVegasSite;
         };
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [

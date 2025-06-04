@@ -1,0 +1,30 @@
+{% import "macros/date.html" as date_macros %}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="blog-wrapper">
+  <div class="container">
+    <ul class="blog-post-list">
+      {% for post in section.pages %}
+
+      <li class="blog-post">
+        <p class="blog-post-date">
+          {{ post.date }}
+        </p>
+          <h2 class="title is-h2">
+            <a href="{{ post.permalink }}">
+              {{ post.title }}
+            </a>
+          </h2>
+          <h3 class="subtitle is-h3">
+            {{ post.description }}
+          </h3>
+          <h4 class="author is-h4">
+            {{ post.authors | join(sep=" and ") }}
+          </h4>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}

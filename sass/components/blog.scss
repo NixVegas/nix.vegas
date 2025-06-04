@@ -1,0 +1,27 @@
+.blog-wrapper .container {
+    max-width: 100%;
+}
+
+.blog-wrapper p:has(img), .blog-wrapper .video {
+    display: flex;
+}
+
+.blog-wrapper img, .blog-wrapper iframe {
+    max-width: 100%;
+    align-self: center;
+    flex: 1;
+}
+
+.blog-wrapper p:has(img) + blockquote, .blog-wrapper .video + blockquote {
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.blog-wrapper li.blog-post::marker {
+    content: "";
+}
+
+.blog-wrapper li.blog-post .blog-post-date {
+    font-style: italic;
+}
