@@ -1,10 +1,10 @@
 <div class="hero-wrapper">
     <div class="container">
         <figure class="brand">
-            <h1 class="hero-title glitch" data-text="Nix Vegas"><span>Nix Vegas</span></h1>
+						<h1 class="hero-title glitch" data-text="Nix Vegas"><span><a href="/">Nix Vegas</a></span></h1>
             <h2 class="hero-title glitch" data-text="REBUILD THE WORLD"><span>REBUILD THE WORLD</span></h2>
             <h3 class="hero-subtitle glitch"><span>August 7-10, 2025, <a target="_blank" href="https://defcon.org">DEF CON 33</a></h3>
-            <h4 class="hero-subtitle"><a href="#cfp">CFP</a> is open from June 7 to July 5. <em><a target="_blank" href="http://sessionize.com/NixVegas">Submit your talk here.</a></em></h4>
+						{% if current_path == '/' %}<h4 class="hero-subtitle"><a href="#cfp">CFP</a> is open from June 7 to July 5. <em><a target="_blank" href="http://sessionize.com/NixVegas">Submit your talk here.</a></em></h4>{% endif %}
         </figure>
         {% include 'components/social-bar.html' %}
     </div>

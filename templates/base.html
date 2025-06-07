@@ -1,26 +1,28 @@
+{% import "macros/social.html" as social -%}
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>
-      {% block title %}
-      Nix Vegas {% if page.title %} - {{ page.title }} {% endif %}
-      {% endblock %}
+      {%- block title -%}
+        {{ social::og_title() }}
+      {%- endblock -%}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nix Vegas">
-    <meta name="keywords" content="nixos, nix package manager, linux, def con, las vegas">
+    <meta name="title" content="{{ config.title }}">
+    <meta name="description" content="{{ config.description }}">
     <meta name="author" content="Nix Vegas Organizers">
     <meta name="fediverse:creator" content="@nixvegas@defcon.social">
-    <meta name="twitter:site" content="@nixvegas">
-    <meta name="twitter:creator" content="@nixvegas">
-    <meta charset="utf-8">
-    <meta property="og:title" content="Nix Vegas {% if page.title %} - {{ page.title }} {% endif %}">
-    <meta property="og:image" content="/img/nix-vegas-thumb.png">
-    <meta property="og:description" content="A DEF CON Community for contributors and users of Nix and NixOS.">
-    <meta property="og:url" content="https://nix.vegas/">
-    <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US:utf-8">
-    <meta property="og:site_name" content="Nix Vegas">
+    <meta property="og:site_name" content="{{ config.title }}">
+    {%- block og_preview -%}
+      {{ social::og_preview() }}
+    {%- endblock og_preview -%}
+
+    {%- block twitter_preview -%}
+      {{ social::twitter_preview() }}
+    {%- endblock twitter_preview -%}
+
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>

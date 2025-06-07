@@ -1,4 +1,6 @@
 # The URL the site will be built for
+title = "Nix Vegas"
+description = "A DEF CON Community for contributors and users of Nix and NixOS"
 base_url = "https://nix.vegas/"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -13,4 +15,6 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
+og_preview_img = "/img/nix-vegas-thumb.png"
+twitter_site = "@nixvegas"
+twitter_user = "@nixvegas"
