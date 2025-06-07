@@ -1,0 +1,23 @@
+#sponsors ~ blockquote {
+  margin: 0;
+}
+
+#sponsors ~ blockquote p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+  // Make the sponsors display in a column on mobile
+  #sponsors ~ blockquote p {
+    flex-direction: column !important;
+  }
+}
+
+#sponsors ~ blockquote img {
+  max-width: 225px;
+  min-width: 225px;
+  object-fit: contain;
+  margin: 10px;
+}

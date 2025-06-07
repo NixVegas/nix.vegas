@@ -1,11 +1,11 @@
 .main-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .container {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 @import './reset.scss';
@@ -15,6 +15,7 @@
 @import './components/schedule.scss';
 @import './components/speakers.scss';
 @import './components/navigation.scss';
+@import './components/sponsors.scss';
 @import './components/social-bar.scss';
 @import './components/blog.scss';
 @import './components/footer.scss';
