@@ -12,8 +12,13 @@ body {
 .content {
   max-width: 800px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 a {
   color: #6ce;
+}
+
+pre {
+  overflow: scroll;
 }
