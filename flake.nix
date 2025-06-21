@@ -38,6 +38,8 @@
           buildInputs = with pkgs; [
             zola
             alejandra
+            pngcrush
+            nodePackages.svgo
           ];
         };
       }
