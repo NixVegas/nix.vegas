@@ -22,6 +22,9 @@ Rebuilding the world takes some CPU time. These companies have graciously provid
 >[![System76](/img/sponsors/System76.svg)](https://system76.com/)
 >[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
 
+>[![Ampere](/img/sponsors/Ampere.svg)](https://amperecomputing.com)
+>[![Next Computing](/img/sponsors/NextComputing.png)](https://solutions.nextcomputing.com/)
+
 ---
 
 ## CFP
