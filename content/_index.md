@@ -17,7 +17,14 @@ Access to services and software everywhere: that's Nix. We've come a long way si
 
 ## Sponsors
 
-Rebuilding the world takes some CPU time. These companies have graciously provided hardware:
+Thank you to these companies who believe in Nix as the future of software deployment for supporting the
+first Nix Community at DEF CON:
+
+>[![Flox](/img/sponsors/Flox.svg)](https://flox.dev)
+
+>[![Determinate Systems](/img/sponsors/Determinate.svg)](https://determinate.systems)
+
+Rebuilding the world takes some CPU time. These companies have also graciously provided hardware:
 
 >[![System76](/img/sponsors/System76.svg)](https://system76.com/)
 >[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
@@ -33,3 +40,6 @@ CFP is open from June 7 to July 5, 2025. Submit your talks on [Sessionize](https
 
 See that page for more details, including badge requirements and ideas for talks.
 
+**UPDATE:** Flox has generously offered to sponsor DEF CON Human badges for a limited number of accepted speakers
+giving talks of 30 minutes or more! If your talk is accepted and we can make this work, we will let you know.
+We would like to try and make this happen for as many speakers as we can, so stay tuned for more details.
