@@ -15,6 +15,10 @@ _You can follow Kenz on [Twitch](https://www.twitch.tv/kenz_tobias_art) and [Ins
 
 ----
 
+![](/img/nix-vegas-vertical.png)
+
+----
+
 ## Theme
 
 Our theme this year is **Rebuild the World**, and it shows in our artwork
@@ -45,8 +49,6 @@ with [reproducible builds](https://reproducible.nixos.org/) and repeatedly deplo
   management in the world, and what are the threats to it?
 
 We're excited to see everyone this year at DEF CON.
-
-![](/img/nix-vegas.png)
 
 <3,
 The Nix Vegas Team
