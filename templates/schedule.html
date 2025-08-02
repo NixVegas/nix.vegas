@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
-{% set schedule =
-load_data(path="data/schedule.json", format="json") %} {{ page.content | safe }}
+{% set schedule = load_data(path="data/schedule.json", format="json") %}
+{{ page.content | safe }}
 
 <nav class="schedule-navigation">
   <div class="left">
@@ -10,15 +10,9 @@ load_data(path="data/schedule.json", format="json") %} {{ page.content | safe }}
     </h2>
   </div>
 
-  <div class="schedule-navigation-options right">
-    <input type="checkbox" id="schedule-show-as-grid" /> &nbsp; 
-    <label for="schedule-show-as-grid">Hide descriptions and align to grid</label>
-  </div>
-
   <div class="schedule-navigation-footer">
     <p>
-      The schedule is also available as an iCal file. You can download it <a href="https://sessionize.com/api/v2/0td78ig6/view/All">here.</a>
-      Check back later for updates.
+        The schedule is also available <a href="https://hackertracker.app/schedule/?conf=DEFCON33&tag=48148">on Hacker Tracker</a>!
     </p>
   </div>
 </nav>
@@ -27,7 +21,7 @@ load_data(path="data/schedule.json", format="json") %} {{ page.content | safe }}
 {% for day_content in schedule %}
 <div class="schedule-day">
   <div class="schedule-day-header">
-    <h2>{{ day_content.date | date(format="%A - %B %eth, %Y") }}</h2>
+    <h2>{{ day_content.date | date(format="%A - %B %eth, %Y", timezone=config.extra.timezone) }}</h2>
   </div>
   {% for room in day_content.rooms %}
   <div class="schedule-room">
@@ -39,15 +33,14 @@ load_data(path="data/schedule.json", format="json") %} {{ page.content | safe }}
 
       {% for session in room.sessions %}
       <div class="schedule-item"
-      
-        style="grid-row:  time-{{ session.startsAt | date(format="%H%M") }} /  time-{{ session.endsAt | date(format="%H%M") }};"
+        style="grid-row:  time-{{ session.startsAt | date(format="%H%M", timezone=config.extra.timezone) }} /  time-{{ session.endsAt | date(format="%H%M", timezone=config.extra.timezone) }};"
       >
           <span class="time">
-          {{ session.startsAt | date(format="%H:%M") }} - {{ session.endsAt |
-            date(format="%H:%M") }}
+          {{ session.startsAt | date(format="%H:%M", timezone=config.extra.timezone) }} - {{ session.endsAt |
+            date(format="%H:%M", timezone=config.extra.timezone) }}
           </span>
           <h3>{{ session.title }}</h3>
-          
+
           <div class="schedule-item-speakers">
             {% for speaker in session.speakers %}
             <span>{{ speaker.name }}</span>
@@ -55,27 +48,14 @@ load_data(path="data/schedule.json", format="json") %} {{ page.content | safe }}
           </div>
           <p class="schedule-description">{{ session.description }}</p>
       </div>
-        
-      {% endfor %} 
+
+      {% endfor %}
     </div>
-    
+
   </div>
-  {% endfor %} 
+  {% endfor %}
 
 </div>
-{% endfor %} 
-
-<script>
-  const $SchedduleInputToggle = document.getElementById('schedule-show-as-grid');
-  const $Body = document.body;
-
-  $SchedduleInputToggle.addEventListener('change', () => {
-    if ($SchedduleInputToggle.checked) {
-      $Body.classList.add('schedule-as-grid');
-    } else {
-      $Body.classList.remove('schedule-as-grid');
-    }
-  });
-</script>
+{% endfor %}
 
 {% endblock %}
