@@ -3,7 +3,7 @@ template: "blog_templates/base.html"
 title: "Nix Vegas artwork announcement"
 authors: ["Nix Vegas Team", "Kenz Tobias"]
 description: "Introducing the Nix Vegas art, by Kenz Tobias!"
-date: "2025-07-08"
+date: "2025-07-23"
 ---
 
 ----

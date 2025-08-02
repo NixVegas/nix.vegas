@@ -27,7 +27,7 @@
 }
 
 .rgb {
-  animation: filter-animation 15s infinite, img-glitch 15s infinite;
+  animation: filter-animation 30s infinite, img-glitch 15s infinite;
 }
 
 @keyframes img-glitch {
@@ -39,7 +39,7 @@
   49.9%,
   54%,
   74.9%,
-  77.5%,
+  79.5%,
   89.9%,
   95%,
   100% {
@@ -79,8 +79,12 @@
     filter: hue-rotate(0deg);
   }
 
+  25% {
+    filter: hue-rotate(50deg);
+  }
+
   50% {
-    filter: hue-rotate(-80deg);
+    filter: hue-rotate(-50deg);
   }
 
   100% {
