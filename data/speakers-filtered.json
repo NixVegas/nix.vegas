@@ -1,2 +1,590 @@
 [
+  {
+    "id": "9cbc38ef-4977-48c8-a6cf-d4cff6889729",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "adeci",
+    "bio": "Developer, NixOS enthusiast, hardware repair tech.",
+    "tagLine": "Software Engineer",
+    "profilePicture": "https://sessionize.com/image/64fa-400o400o1-TrzeQdSPwEqGLEfPbA3sxX.png",
+    "sessions": [
+      {
+        "id": 971105,
+        "name": "0 to Infra in 100 Days: A Nix Speedrun"
+      }
+    ],
+    "isTopSpeaker": true,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/adeci",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "bf3e587e-2dc5-4d0d-9dd6-a3deb4fb253e",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Antonio Escalera",
+    "bio": "Antonio is a highly accomplished Senior Platform Engineer with over a decade of experience in the design, development, and implementation of innovative platform architectures. Having worked with some of the largest defense, financial services, research, and retail organizations in the United States, he is an expert in creating robust, scalable, and secure solutions tailored to the unique needs of his clients. Antonio's deep technical knowledge is complemented by his exceptional communication and collaboration skills. He is adept at fostering strong relationships with cross-functional teams and external stakeholders.",
+    "tagLine": "Senior Platform Engineer, Defense Unicorns",
+    "profilePicture": "https://sessionize.com/image/ba8d-400o400o1-aKRHibMJ384ahPbQ1wHsS7.jpg",
+    "sessions": [
+      {
+        "id": 979380,
+        "name": "T-Minus 24 Hours: From Source to Spaceflight in a Single Day"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/antonio-escalera",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/aescalera-defenseunicorns/nixos-uds",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "c3214108-0e6a-4aae-87ae-0f1525897c68",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Brenna Buuck",
+    "bio": "Brenna Buuck is the subject matter expert at MinIO for databases and data lakehouses. A data engineer turned developer evangelist, she is passionate about coding, data, and learning. She endeavors to inspire and educate other developers about the latest tools and technologies, helping them build amazing things through code, tutorials, speaking engagements, and writing. She holds an undergraduate degree from the University of California, San Diego, and a graduate degree from San Diego State University.",
+    "tagLine": "Developer Evangelist",
+    "profilePicture": "https://sessionize.com/image/61a0-400o400o1-JJa2BqWCsu7qN43Pyg4ELb.jpg",
+    "sessions": [
+      {
+        "id": 986692,
+        "name": "Source to Scale: Using Nix to Deploy Secure, Self-Hosted Data Lakehouses"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://www.twitter.com/BrennaBuuck",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blog.min.io/author/brenna/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/BrennaBuuck",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a2d5b30f-72ad-4724-8a0d-c722c8009688",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Britton Robitzsch",
+    "bio": "I'm a senior software engineer focusing on ETL tooling and Infrastructure. I've been nix-pilled for around three years, and slowly infecting all my friends and coworkers. Temporarily based in NYC, more permanently based in Colorado. I'm either on the computer or out in nature, sometimes both at once.",
+    "tagLine": "Software Dev, Nix Evangalist, Campsite Architect",
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 983476,
+        "name": "From Solo Nix to Team Infrastructure: Deploying NixOS with Clan"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/BrittonR",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7a89e437-e6ac-4033-b7c9-ceb95cc1dac8",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Daniel Baker",
+    "bio": "I am an engineer, mathematician, developer, and Linux enjoyer. I primarly support the NixOS project as part of the Marketing Team. I believe that the future of software development and software deployment needs foundations in formal methods and functional programming to be successful.",
+    "tagLine": "Software Engineer at Anduril",
+    "profilePicture": "https://sessionize.com/image/0856-400o400o1-JyzK9xt1ujrK92y133RMQN.jpg",
+    "sessions": [
+      {
+        "id": 991768,
+        "name": "Nix Vegas Opening Ceremony"
+      },
+      {
+        "id": 972641,
+        "name": "Rebuild The World: Access to secure software dependency management everywhere with Nix"
+      }
+    ],
+    "isTopSpeaker": true,
+    "links": [
+      {
+        "title": "Blog",
+        "url": "https://djacu.dev/",
+        "linkType": "Blog"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/djacu",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": "https://mastodon.igl.ooo/@djacu",
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "7da026fd-65c9-4f84-8ffa-b783e9ab6950",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Farid Zakaria",
+    "bio": "I am a software engineer, father, and wishful surfer.\r\nI am currently an engineer at Confluent and I previously worked at Google/Looker. I am also pursuing a Ph.D. in computer science (nearly complete!) at the University of California Santa Cruz where I've leveraged Nix for my research.\r\n\r\nI am a NixOS enthusiast, use it as my daily driver and my research and use of Nix has led me to rethink basic Linux primitives.",
+    "tagLine": "Software Engineer, PhD Student and Nix enthusiast",
+    "profilePicture": "https://sessionize.com/image/02b8-400o400o1-JD6oiz5Cts4gWZTUZ8ikWJ.jpg",
+    "sessions": [
+      {
+        "id": 963921,
+        "name": "Learn Nix the Fun Way"
+      },
+      {
+        "id": 972641,
+        "name": "Rebuild The World: Access to secure software dependency management everywhere with Nix"
+      }
+    ],
+    "isTopSpeaker": true,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/fmzakari",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://fzakaria.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/farid-zakaria",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/fzakaria",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "39dcdda1-beca-403c-86f3-e46c3bfdc3fc",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Jeremy Fleischman",
+    "bio": "Programmer. Speedcuber. Formerly at Arista Networks, the World Cube Association, and Honor Technology. Currently on sabbatical, spending my time leveling up my Nix skills and contributing to the community.",
+    "tagLine": "Nix Formatting Team Lead, Nix Infra Team member",
+    "profilePicture": "https://sessionize.com/image/bc63-400o400o1-S8JDhYF3bJ7eNpngjk6KgM.png",
+    "sessions": [
+      {
+        "id": 982706,
+        "name": "Autoformatting with Nix in Neovim"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Blog",
+        "url": "https://www.jflei.com",
+        "linkType": "Blog"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/jfly",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a798a5a7-aa6a-4708-91a3-65fba0941125",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Michael Gilligan",
+    "bio": "Mr. Gilligan learned C and UNIX as an undergrad at Berkeley. In his early career he wrote device drivers and networking protocols. He reluctantly learned Java and learned the good, the bad, and the ugly. His journey has included consulting, management, and entrepreneurship. He is the co-maintainer of bitcoinj, contributes to other open source projects, and is working to better integrate secure enclaves with secp256k1 ECC and Nix.",
+    "tagLine": "Professional software developer, FOSS contributor, aspiring cypherpunk",
+    "profilePicture": "https://sessionize.com/image/e74c-400o400o1-DPiVVK4YXu3iCRugauUhNv.jpg",
+    "sessions": [
+      {
+        "id": 990859,
+        "name": "Cypherpunk Java with Nix"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/msgilligan",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/msgilligan",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": "https://foojay.social/@msgilligan",
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "24b86e55-c99f-4af9-9155-ab0face6ee17",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Morgan Jones",
+    "bio": "I am an embedded security engineer for Viasat, member of the SoCal NixOS User Group, and one of the organizers of Nix Vegas. After mostly using my compilers classes in college for learning reverse engineering and finding remote code execution in mobile AR game anti-cheat systems, I now work on embedded security for a living, and may have read Ken Thompson's Reflections on Trusting Trust one too many times.",
+    "tagLine": "Embedded Security Engineer",
+    "profilePicture": "https://sessionize.com/image/56fb-400o400o1-JKvRqUMpifLuSet7jKzs8f.png",
+    "sessions": [
+      {
+        "id": 991768,
+        "name": "Nix Vegas Opening Ceremony"
+      },
+      {
+        "id": 972641,
+        "name": "Rebuild The World: Access to secure software dependency management everywhere with Nix"
+      },
+      {
+        "id": 991755,
+        "name": "Reproduce This Build: How we built the Nix Badge"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/numinit",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "1d7536c9-204c-4731-951f-ad3d8301ae08",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "cooldadhacking",
+    "bio": "Rambo has been doing offensive security for almost a decade now. He's okay at it, and has gotten by largely on vibes and personality. In spite of his mediocrity, his current company lets him work side projects that are related to AI and red teaming.",
+    "tagLine": "red team",
+    "profilePicture": "https://sessionize.com/image/bc0d-400o400o1-3WFuSzqFXbrSSb2uGQMLm6.jpg",
+    "sessions": [
+      {
+        "id": 961271,
+        "name": "Getting to Top 250 on HtB with Nix and LLMs"
+      }
+    ],
+    "isTopSpeaker": true,
+    "links": [
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/cooldadhacking",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/cooldadhacking",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "91988ecf-4b9d-4d80-9ea4-2c79af1b87c6",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "tomberek",
+    "bio": "Director of Labs at Flox. Have used Nix in small teams, and large organizations, from academic research to war zones, to managing hardware and to train artificial intelligence. Started his career at Google, then the United States Marine Corps, the Defense Digital Service, and at Rebellion. Currently developing an easier on-ramp to the ecosystem at Flox. Reach out if you are interested in contributing to Nixpkgs or Nix itself or if you are considering large-scale adoption.",
+    "tagLine": "Flox - Director of Labs",
+    "profilePicture": "https://sessionize.com/image/6f8c-400o400o1-LnYdqcWkuAmiWroVMkBQc4.jpg",
+    "sessions": [
+      {
+        "id": 972641,
+        "name": "Rebuild The World: Access to secure software dependency management everywhere with Nix"
+      }
+    ],
+    "isTopSpeaker": true,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/bereknyei",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/tomberek",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": "https://mastodon.social/@tomberek",
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "099484d8-5be9-4029-9063-68864cd56172",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "The Computer Guy",
+    "bio": "Low level programmer, OS/Zig/Linux dev, Nixpkgs committer (LLVM). Likes to watch 大空スバル (Subaru Oozora).",
+    "tagLine": "LLVM, stdenv, and HW team member",
+    "profilePicture": "https://sessionize.com/image/c8ee-400o400o1-DuKKCMQALeyhf7cSwmS3ee.png",
+    "sessions": [
+      {
+        "id": 991768,
+        "name": "Nix Vegas Opening Ceremony"
+      },
+      {
+        "id": 972648,
+        "name": "Doing toolchains declaratively"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/RossComputerGuy",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://tristanxr.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/tristan-ross",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "5126e42b-d3b8-410f-ab41-282f67d3c99e",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Wes Payne",
+    "bio": "Seattlite, Podcaster with Jupiter Broadcasting, Software Developer, and Linux Enthusiast.",
+    "tagLine": "Co-host of LINUX Unplugged",
+    "profilePicture": "https://sessionize.com/image/93e2-400o400o1-JLtRkTxjcu4HksVCBGEtsJ.jpg",
+    "sessions": [
+      {
+        "id": 971174,
+        "name": "Mesh Network Sidecars for NixOS Services"
+      }
+    ],
+    "isTopSpeaker": true,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://twitter.com/wespayne",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://linuxunplugged.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/wes-payne",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/noblepayne/",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  }
 ]

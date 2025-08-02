@@ -5,16 +5,24 @@ load_data(path="data/speakers-filtered.json", format="json") %} {{ page.content
   <div class="speaker-image">
     <img
       src="{{ speaker.profilePicture }}"
-      alt="{{ speaker.firstName }} {{ speaker.lastName }}"
+      alt="{{ speaker.fullName }}"
     />
   </div>
   <div class="speaker-info">
-    <h2 id="{{ speaker.firstName | lower }}-{{ speaker.lastName | lower | replace(from=` `, to=`-`) }}">
-      <a href="#{{ speaker.firstName | lower }}-{{ speaker.lastName | lower | replace(from=` `, to=`-`) }}">
-      {{ speaker.firstName }} {{ speaker.lastName }}
+    <h2 id="{{ speaker.fullName | lower | replace(from=` `, to=`-`) }}">
+      <a href="#{{ speaker.fullName | lower | replace(from=` `, to=`-`) }}">
+      {{ speaker.fullName }}
     </a>
     </h2>
     <p>{{ speaker.bio }}</p>
+    {% if speaker.links[0] %}
+    <h3>Links</h3>
+    <ul>
+      {% for link in speaker.links %}
+      <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
     <h3>Sessions</h3>
     <ul>
       {% for session in speaker.sessions %}
