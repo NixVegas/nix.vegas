@@ -2,12 +2,14 @@
 load_data(path="data/speakers-filtered.json", format="json") %} {{ page.content
 | safe }} {% for speaker in speakers %}
 <div class="speaker-item">
+  {% if speaker.profilePicture %}
   <div class="speaker-image">
     <img
       src="{{ speaker.profilePicture }}"
       alt="{{ speaker.fullName }}"
     />
   </div>
+  {% endif %}
   <div class="speaker-info">
     <h2 id="{{ speaker.fullName | lower | replace(from=` `, to=`-`) }}">
       <a href="#{{ speaker.fullName | lower | replace(from=` `, to=`-`) }}">
