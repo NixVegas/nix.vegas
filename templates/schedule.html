@@ -10,11 +10,6 @@
     </h2>
   </div>
 
-  <div class="schedule-navigation-options right">
-    <input type="checkbox" id="schedule-show-as-grid" /> &nbsp; 
-    <label for="schedule-show-as-grid">Hide descriptions and align to grid</label>
-  </div>
-
   <div class="schedule-navigation-footer">
     <p>
         The schedule is also available <a href="https://hackertracker.app/schedule/?conf=DEFCON33&tag=48148">on Hacker Tracker</a>!
@@ -62,18 +57,5 @@
 
 </div>
 {% endfor %}
-
-<script>
-  const $ScheduleInputToggle = document.getElementById('schedule-show-as-grid');
-  const $Body = document.body;
-
-  $ScheduleInputToggle.addEventListener('change', () => {
-    if ($ScheduleInputToggle.checked) {
-      $Body.classList.add('schedule-as-grid');
-    } else {
-      $Body.classList.remove('schedule-as-grid');
-    }
-  });
-</script>
 
 {% endblock %}
