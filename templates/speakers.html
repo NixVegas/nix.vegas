@@ -1,6 +1,8 @@
-{% extends 'base.html' %} {% block content %} {% set speakers =
-load_data(path="data/speakers-filtered.json", format="json") %} {{ page.content
-| safe }} {% for speaker in speakers %}
+{% extends 'base.html' %}
+{% block content %}
+{% set speakers = load_data(path="data/speakers-filtered.json", format="json") %}
+{{ page.content | safe }}
+{% for speaker in speakers %}
 <div class="speaker-item">
   {% if speaker.profilePicture %}
   <div class="speaker-image">
@@ -17,14 +19,44 @@ load_data(path="data/speakers-filtered.json", format="json") %} {{ page.content
     </a>
     </h2>
     <p>{{ speaker.bio }}</p>
-    {% if speaker.links[0] %}
-    <h3>Links</h3>
-    <ul>
-      {% for link in speaker.links %}
-      <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+
+    {% for link in speaker.links %}
+      <h3>Links</h3>
+      <ul>
+      {% break %}
+    {% endfor %}
+
+    {% if speaker.links | length == 0 %}
+      {% for item in speaker.questionAnswers %}
+        {% if item.questionType == "Web_address" and item.answer %}
+          <h3>Links</h3>
+          <ul>
+          {% break %}
+        {% endif %}
       {% endfor %}
-    </ul>
     {% endif %}
+
+    {% for link in speaker.links %}
+      <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+    {% endfor %}
+
+    {% for item in speaker.questionAnswers %}
+      {% if item.questionType == "Web_address" and item.answer %}
+        <li><a href="{{ item.answer }}">{{ item.question }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if speaker.links | length > 0 %}
+      </ul>
+    {% else %}
+      {% for item in speaker.questionAnswers %}
+        {% if item.questionType == "Web_address" and item.answer %}
+          </ul>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
     <h3>Sessions</h3>
     <ul>
       {% for session in speaker.sessions %}

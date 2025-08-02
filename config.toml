@@ -18,3 +18,4 @@ highlight_code = true
 og_preview_img = "/img/nix-vegas-thumb.png"
 twitter_site = "@nixvegas"
 twitter_user = "@nixvegas"
+timezone = "America/Los_Angeles"

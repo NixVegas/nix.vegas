@@ -1,6 +1,6 @@
 [
   {
-    "date": "2025-08-08T00:00:00",
+    "date": "2025-08-08T00:00:00Z",
     "isDefault": true,
     "rooms": [
       {
@@ -11,8 +11,8 @@
             "id": "991768",
             "title": "Nix Vegas Opening Ceremony",
             "description": "Kickoff and opening of the Nix Vegas space.",
-            "startsAt": "2025-08-08T10:00:00",
-            "endsAt": "2025-08-08T10:20:00",
+            "startsAt": "2025-08-08T17:00:00Z",
+            "endsAt": "2025-08-08T17:20:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -42,8 +42,8 @@
             "id": "963921",
             "title": "Learn Nix the Fun Way",
             "description": "Learning Nix can be off-putting, as many introductions dive into complex terminology and academic concepts, missing the chance to simplify Nix's advantages. Having given talks both internally and externally, I've shifted to showcasing fun, practical examples first, leaving the nuances for later. Join me to see some straightforward examples of what Nix can offer and why it might be worth adopting.",
-            "startsAt": "2025-08-08T10:30:00",
-            "endsAt": "2025-08-08T11:00:00",
+            "startsAt": "2025-08-08T17:30:00Z",
+            "endsAt": "2025-08-08T18:00:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -65,8 +65,8 @@
             "id": "971105",
             "title": "0 to Infra in 100 Days: A Nix Speedrun",
             "description": "What if learning Nix was like a speed-run?\r\n \r\nA few months ago, I'd never touched Nix. Then my friend's brother told me about PlanetNix at Scale22x. I flew from Florida to California with Nix on an old laptop and only four days of flailing experience. I felt grossly under prepared, but after the talks and meeting brilliant people, I was hooked.\r\n \r\nToday, I'm building Nix infrastructure full-time and manage every device I own declaratively with tools like Clan.\r\n \r\nThis talk maps my route from 'what the hell is a derivation?' to contributing to Nix projects in 100 days. I'll share the exact learning path, struggles, and wins. As someone close enough to remember the pain but far enough to have some solutions, I'll crash-course some tough Nix concepts with live demos showing my real usage.\r\n \r\nFor beginners and the Nix-curious, this can be a great launch point for YOUR speed-run. Nix's learning curve is infamous, but with the right fundamentals and some problem framing, it doesn't have to be.",
-            "startsAt": "2025-08-08T11:10:00",
-            "endsAt": "2025-08-08T11:55:00",
+            "startsAt": "2025-08-08T18:10:00Z",
+            "endsAt": "2025-08-08T18:55:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -88,8 +88,8 @@
             "id": "01cfcea5-5f14-4267-8bb5-d360ad3480b3",
             "title": "Maybe A Few Hydra Failures",
             "description": "In this audience participation-heavy session, you can get your PRs to nixpkgs reviewed and maybe even merged... if the build on one of our Threadripper Pro or Ampere systems passes.\n\nCome with PRs in hand and call them out, and we'll review, build, and maybe even merge them on stage.\n\nRejected name: Whose PR Is It Anyway",
-            "startsAt": "2025-08-08T12:00:00",
-            "endsAt": "2025-08-08T12:50:00",
+            "startsAt": "2025-08-08T19:00:00Z",
+            "endsAt": "2025-08-08T19:50:00Z",
             "isServiceSession": true,
             "isPlenumSession": false,
             "speakers": [],
@@ -106,8 +106,8 @@
             "id": "971174",
             "title": "Mesh Network Sidecars for NixOS Services",
             "description": "Inspired by the popular container sidecar pattern, this talk demonstrates a generic, open source NixOS module that brings the same security and isolation to bare metal services. We’ll explore how to declaratively wrap any systemd service, placing it in an isolated network namespace with its own mesh network client (e.g., Tailscale or Netbird). This approach makes services securely accessible on your mesh, fully firewalled from the host—no application changes required. Good fit for folks exploring declarative infrastructure and looking for practical ways to apply modern security patterns to their own servers.",
-            "startsAt": "2025-08-08T14:15:00",
-            "endsAt": "2025-08-08T14:45:00",
+            "startsAt": "2025-08-08T21:15:00Z",
+            "endsAt": "2025-08-08T21:45:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -129,8 +129,8 @@
             "id": "986692",
             "title": "Source to Scale: Using Nix to Deploy Secure, Self-Hosted Data Lakehouses",
             "description": "Data is the foundation of AI. Data lakehouses are how that foundation is managed at scale. Deploying and maintaining lakehouse components like object storage, table formats, catalogs, and query engines remains complex, opaque, and often tied to cloud assumptions. This session explores how Nix and NixOS can be used to declaratively define and deploy a full, self-hosted lakehouse architecture. The stack includes MinIO AIStor for high-performance object storage, Apache Iceberg for open table formats, Nessie or Polaris for metadata, and query engines like Dremio or DuckDB. Topics include early design experiments, the benefits of reproducibility and portability, and current challenges around packaging, network policy, and secure deployment. The goal is to present an aspirational blueprint for building cloud-native data infrastructure that runs anywhere from source.",
-            "startsAt": "2025-08-08T15:00:00",
-            "endsAt": "2025-08-08T15:30:00",
+            "startsAt": "2025-08-08T22:00:00Z",
+            "endsAt": "2025-08-08T22:30:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -152,8 +152,8 @@
             "id": "991755",
             "title": "Reproduce This Build: How we built the Nix Badge",
             "description": "In our quest to spread Nix to the world, we created a fully Nix-based open source hardware pipeline. From reproducible KiCad PCB design to C and Zig code that serves a mesh networked Nix binary cache on your badge, you can now spin Gerber files to the fab or firmware with a single command. Follow along as we go over how we built the Nix Badge, what it can do, and, of course, how you can hack it.",
-            "startsAt": "2025-08-08T15:35:00",
-            "endsAt": "2025-08-08T16:20:00",
+            "startsAt": "2025-08-08T22:35:00Z",
+            "endsAt": "2025-08-08T23:20:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -175,8 +175,8 @@
             "id": "6717df53-1e67-42c2-81df-a22240fb07aa",
             "title": "Lightning Talks and Unconference",
             "description": "Give a talk about whatever you want, as long as it's less than 10 minutes! Or just come and chill in the Nix Vegas space for the Unconference.",
-            "startsAt": "2025-08-08T16:15:00",
-            "endsAt": "2025-08-08T18:00:00",
+            "startsAt": "2025-08-08T23:15:00Z",
+            "endsAt": "2025-08-09T01:00:00Z",
             "isServiceSession": true,
             "isPlenumSession": false,
             "speakers": [],
@@ -200,8 +200,8 @@
             "id": "972641",
             "title": "Rebuild The World: Access to secure software dependency management everywhere with Nix",
             "description": "In a world full of unwanted app updates and SaaS providers who want your personal information, being able to self host the 120,000 Linux packages in Nixpkgs has the potential to change the game for anyone who's tired of the slow decline of cloud services. If you're curious about what NixOS can do for your homelab, or even if you're just worried about SBOMs or traceability of exactly where your software and all its dependencies came from, join us for an hour-long panel on the DEF CON Community Stage about how we can reclaim our services and software from vendor lockin and Docker image bitrot using Nix and NixOS. We'll be doing a deep dive into why Nix changes software deployment, and how you can get started and get involved in the quiet revolution that has been reshaping how we use software.",
-            "startsAt": "2025-08-08T13:00:00",
-            "endsAt": "2025-08-08T14:00:00",
+            "startsAt": "2025-08-08T20:00:00Z",
+            "endsAt": "2025-08-08T21:00:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -237,7 +237,7 @@
     ],
     "timeSlots": [
       {
-        "slotStart": "10:00:00",
+        "slotStart": "17:00:00",
         "rooms": [
           {
             "id": 67813,
@@ -246,8 +246,8 @@
               "id": "991768",
               "title": "Nix Vegas Opening Ceremony",
               "description": "Kickoff and opening of the Nix Vegas space.",
-              "startsAt": "2025-08-08T10:00:00",
-              "endsAt": "2025-08-08T10:20:00",
+              "startsAt": "2025-08-08T17:00:00Z",
+              "endsAt": "2025-08-08T17:20:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -278,7 +278,7 @@
         ]
       },
       {
-        "slotStart": "10:30:00",
+        "slotStart": "17:30:00",
         "rooms": [
           {
             "id": 67813,
@@ -287,8 +287,8 @@
               "id": "963921",
               "title": "Learn Nix the Fun Way",
               "description": "Learning Nix can be off-putting, as many introductions dive into complex terminology and academic concepts, missing the chance to simplify Nix's advantages. Having given talks both internally and externally, I've shifted to showcasing fun, practical examples first, leaving the nuances for later. Join me to see some straightforward examples of what Nix can offer and why it might be worth adopting.",
-              "startsAt": "2025-08-08T10:30:00",
-              "endsAt": "2025-08-08T11:00:00",
+              "startsAt": "2025-08-08T17:30:00Z",
+              "endsAt": "2025-08-08T18:00:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -311,7 +311,7 @@
         ]
       },
       {
-        "slotStart": "11:10:00",
+        "slotStart": "18:10:00",
         "rooms": [
           {
             "id": 67813,
@@ -320,8 +320,8 @@
               "id": "971105",
               "title": "0 to Infra in 100 Days: A Nix Speedrun",
               "description": "What if learning Nix was like a speed-run?\r\n \r\nA few months ago, I'd never touched Nix. Then my friend's brother told me about PlanetNix at Scale22x. I flew from Florida to California with Nix on an old laptop and only four days of flailing experience. I felt grossly under prepared, but after the talks and meeting brilliant people, I was hooked.\r\n \r\nToday, I'm building Nix infrastructure full-time and manage every device I own declaratively with tools like Clan.\r\n \r\nThis talk maps my route from 'what the hell is a derivation?' to contributing to Nix projects in 100 days. I'll share the exact learning path, struggles, and wins. As someone close enough to remember the pain but far enough to have some solutions, I'll crash-course some tough Nix concepts with live demos showing my real usage.\r\n \r\nFor beginners and the Nix-curious, this can be a great launch point for YOUR speed-run. Nix's learning curve is infamous, but with the right fundamentals and some problem framing, it doesn't have to be.",
-              "startsAt": "2025-08-08T11:10:00",
-              "endsAt": "2025-08-08T11:55:00",
+              "startsAt": "2025-08-08T18:10:00Z",
+              "endsAt": "2025-08-08T18:55:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -344,7 +344,7 @@
         ]
       },
       {
-        "slotStart": "12:00:00",
+        "slotStart": "19:00:00",
         "rooms": [
           {
             "id": 67813,
@@ -353,8 +353,8 @@
               "id": "01cfcea5-5f14-4267-8bb5-d360ad3480b3",
               "title": "Maybe A Few Hydra Failures",
               "description": "In this audience participation-heavy session, you can get your PRs to nixpkgs reviewed and maybe even merged... if the build on one of our Threadripper Pro or Ampere systems passes.\n\nCome with PRs in hand and call them out, and we'll review, build, and maybe even merge them on stage.\n\nRejected name: Whose PR Is It Anyway",
-              "startsAt": "2025-08-08T12:00:00",
-              "endsAt": "2025-08-08T12:50:00",
+              "startsAt": "2025-08-08T19:00:00Z",
+              "endsAt": "2025-08-08T19:50:00Z",
               "isServiceSession": true,
               "isPlenumSession": false,
               "speakers": [],
@@ -372,7 +372,7 @@
         ]
       },
       {
-        "slotStart": "13:00:00",
+        "slotStart": "20:00:00",
         "rooms": [
           {
             "id": 67812,
@@ -381,8 +381,8 @@
               "id": "972641",
               "title": "Rebuild The World: Access to secure software dependency management everywhere with Nix",
               "description": "In a world full of unwanted app updates and SaaS providers who want your personal information, being able to self host the 120,000 Linux packages in Nixpkgs has the potential to change the game for anyone who's tired of the slow decline of cloud services. If you're curious about what NixOS can do for your homelab, or even if you're just worried about SBOMs or traceability of exactly where your software and all its dependencies came from, join us for an hour-long panel on the DEF CON Community Stage about how we can reclaim our services and software from vendor lockin and Docker image bitrot using Nix and NixOS. We'll be doing a deep dive into why Nix changes software deployment, and how you can get started and get involved in the quiet revolution that has been reshaping how we use software.",
-              "startsAt": "2025-08-08T13:00:00",
-              "endsAt": "2025-08-08T14:00:00",
+              "startsAt": "2025-08-08T20:00:00Z",
+              "endsAt": "2025-08-08T21:00:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -417,7 +417,7 @@
         ]
       },
       {
-        "slotStart": "14:15:00",
+        "slotStart": "21:15:00",
         "rooms": [
           {
             "id": 67813,
@@ -426,8 +426,8 @@
               "id": "971174",
               "title": "Mesh Network Sidecars for NixOS Services",
               "description": "Inspired by the popular container sidecar pattern, this talk demonstrates a generic, open source NixOS module that brings the same security and isolation to bare metal services. We’ll explore how to declaratively wrap any systemd service, placing it in an isolated network namespace with its own mesh network client (e.g., Tailscale or Netbird). This approach makes services securely accessible on your mesh, fully firewalled from the host—no application changes required. Good fit for folks exploring declarative infrastructure and looking for practical ways to apply modern security patterns to their own servers.",
-              "startsAt": "2025-08-08T14:15:00",
-              "endsAt": "2025-08-08T14:45:00",
+              "startsAt": "2025-08-08T21:15:00Z",
+              "endsAt": "2025-08-08T21:45:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -450,7 +450,7 @@
         ]
       },
       {
-        "slotStart": "15:00:00",
+        "slotStart": "22:00:00",
         "rooms": [
           {
             "id": 67813,
@@ -459,8 +459,8 @@
               "id": "986692",
               "title": "Source to Scale: Using Nix to Deploy Secure, Self-Hosted Data Lakehouses",
               "description": "Data is the foundation of AI. Data lakehouses are how that foundation is managed at scale. Deploying and maintaining lakehouse components like object storage, table formats, catalogs, and query engines remains complex, opaque, and often tied to cloud assumptions. This session explores how Nix and NixOS can be used to declaratively define and deploy a full, self-hosted lakehouse architecture. The stack includes MinIO AIStor for high-performance object storage, Apache Iceberg for open table formats, Nessie or Polaris for metadata, and query engines like Dremio or DuckDB. Topics include early design experiments, the benefits of reproducibility and portability, and current challenges around packaging, network policy, and secure deployment. The goal is to present an aspirational blueprint for building cloud-native data infrastructure that runs anywhere from source.",
-              "startsAt": "2025-08-08T15:00:00",
-              "endsAt": "2025-08-08T15:30:00",
+              "startsAt": "2025-08-08T22:00:00Z",
+              "endsAt": "2025-08-08T22:30:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -483,7 +483,7 @@
         ]
       },
       {
-        "slotStart": "15:35:00",
+        "slotStart": "22:35:00",
         "rooms": [
           {
             "id": 67813,
@@ -492,8 +492,8 @@
               "id": "991755",
               "title": "Reproduce This Build: How we built the Nix Badge",
               "description": "In our quest to spread Nix to the world, we created a fully Nix-based open source hardware pipeline. From reproducible KiCad PCB design to C and Zig code that serves a mesh networked Nix binary cache on your badge, you can now spin Gerber files to the fab or firmware with a single command. Follow along as we go over how we built the Nix Badge, what it can do, and, of course, how you can hack it.",
-              "startsAt": "2025-08-08T15:35:00",
-              "endsAt": "2025-08-08T16:20:00",
+              "startsAt": "2025-08-08T22:35:00Z",
+              "endsAt": "2025-08-08T23:20:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -516,7 +516,7 @@
         ]
       },
       {
-        "slotStart": "16:15:00",
+        "slotStart": "23:15:00",
         "rooms": [
           {
             "id": 67813,
@@ -525,8 +525,8 @@
               "id": "6717df53-1e67-42c2-81df-a22240fb07aa",
               "title": "Lightning Talks and Unconference",
               "description": "Give a talk about whatever you want, as long as it's less than 10 minutes! Or just come and chill in the Nix Vegas space for the Unconference.",
-              "startsAt": "2025-08-08T16:15:00",
-              "endsAt": "2025-08-08T18:00:00",
+              "startsAt": "2025-08-08T23:15:00Z",
+              "endsAt": "2025-08-09T01:00:00Z",
               "isServiceSession": true,
               "isPlenumSession": false,
               "speakers": [],
@@ -546,7 +546,7 @@
     ]
   },
   {
-    "date": "2025-08-09T00:00:00",
+    "date": "2025-08-09T00:00:00Z",
     "isDefault": false,
     "rooms": [
       {
@@ -557,8 +557,8 @@
             "id": "982706",
             "title": "Autoformatting with Nix in Neovim",
             "description": "I love code autoformatters, but I jump between a lot of projects, and figuring out the rules for each project is tedious. Nix and Treefmt make this a whole lot better, but don't provide editor integrations.\r\n\r\nI'll talk about how I built a format-on-save Neovim plugin that Does the Right Thing. If you aren't a Neovim user, I hope to inspire you to build a similar integration for your preferred editor.",
-            "startsAt": "2025-08-09T10:30:00",
-            "endsAt": "2025-08-09T11:00:00",
+            "startsAt": "2025-08-09T17:30:00Z",
+            "endsAt": "2025-08-09T18:00:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -580,8 +580,8 @@
             "id": "990859",
             "title": "Cypherpunk Java with Nix",
             "description": "Cypherpunks write code that is open source, privacy-oriented, decentralized, trust-minimized, verifiable/auditable, interoperable, and bundled in Linux distributions. Cypherpunks don't use Java. But in 2025 using Java 25 and Nix -- they can and should!\r\n\r\nWe will review how functional-style programming, minimalism, pattern-matching, native compilation and integration with C/C++/Rust through a new FFM mechanism are game-changers for Java developers and worthy of a second look by those who dismissed Java years ago.\r\n\r\nIn this session we will see how Nix can reliably build native and JIT-compiled tools and applications, how dependencies can be minimized and bootstrappability achieved.\r\n\r\nWe will compare Maven's bytecode packaging to the Nix model and how the two can be integrated while also brining in native libraries.\r\n\r\nReal-world examples will be provided. We will look at the gaps that remain and how to close them so we can live the Java-cypherpunk dream and contribute to the \"Great Tree\".\r\n\r\n",
-            "startsAt": "2025-08-09T11:15:00",
-            "endsAt": "2025-08-09T12:00:00",
+            "startsAt": "2025-08-09T18:15:00Z",
+            "endsAt": "2025-08-09T19:00:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -603,8 +603,8 @@
             "id": "983f74b2-54c0-46c6-b34a-8ed5f87c8c40",
             "title": "Maybe A Few Hydra Failures",
             "description": "In this audience participation-heavy session, you can get your PRs to nixpkgs reviewed and maybe even merged... if the build on one of our Threadripper Pro or Ampere systems passes.\n\nCome with PRs in hand and call them out, and we'll review, build, and maybe even merge them on stage.\n\nRejected name: Whose PR Is It Anyway",
-            "startsAt": "2025-08-09T12:00:00",
-            "endsAt": "2025-08-09T12:55:00",
+            "startsAt": "2025-08-09T19:00:00Z",
+            "endsAt": "2025-08-09T19:55:00Z",
             "isServiceSession": true,
             "isPlenumSession": false,
             "speakers": [],
@@ -621,8 +621,8 @@
             "id": "983476",
             "title": "From Solo Nix to Team Infrastructure: Deploying NixOS with Clan",
             "description": "Most people discover NixOS as a solo pursuit: taming their laptop, configuring dotfiles, or spinning up a homelab. But what happens when you want to bring others along? How do you scale your reproducible setup across a team, startup, or organization?\r\n\r\nIn this talk, I’ll share my path from managing a personal NixOS homelab to architecting infrastructure and developer environments for a growing startup. After many false starts and tangled configurations, I found Clan—a powerful framework that transformed how I manage machines, roles, and secrets. With Clan, I've replaced fragmented manual processes with a single source of truth for all my deployments, cutting through the clutter and reclaiming hours of maintenance time.\r\n\r\nWe’ll look at how Clan makes it easy to keep your infrastructure organized, share reusable configuration modules, handle secrets securely with Clan Vars, and scale NixOS across teams without having to start from scratch each time.",
-            "startsAt": "2025-08-09T13:00:00",
-            "endsAt": "2025-08-09T13:30:00",
+            "startsAt": "2025-08-09T20:00:00Z",
+            "endsAt": "2025-08-09T20:30:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -644,8 +644,8 @@
             "id": "972648",
             "title": "Doing toolchains declaratively",
             "description": "Systems engineers may need different toolchains, whether its a specific configuration for a unique target or something so they can cross compile. On many distros, this requires either manually building the toolchain or finding the right packages. With Nix, we can do it declaratively.\r\n\r\nI will be going into the new toolchain attributes mechanism in nixpkgs and how my work on the Standard Environment team opens the door to many new things for embedded and systems engineering with nix.",
-            "startsAt": "2025-08-09T13:50:00",
-            "endsAt": "2025-08-09T14:05:00",
+            "startsAt": "2025-08-09T20:50:00Z",
+            "endsAt": "2025-08-09T21:05:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -667,8 +667,8 @@
             "id": "979380",
             "title": "T-Minus 24 Hours: From Source to Spaceflight in a Single Day",
             "description": "When the mission is launch-critical, time becomes a tactical asset. In this session, you'll learn how Defense Unicorns' Unicorn Delivery Service and NixOS work in unison to deliver secure, fully declarative software—on-prem or in disconnected, degraded, intermittent, and limited environments—in less than 24 hours.\r\n\r\nWhat began with a record-breaking delivery for the U.S. Space Force at Cape Canaveral evolved into a new paradigm of software delivery that spread department-wide like wildfire. Operational timelines of critical-software used by warfighters is no longer measured in weeks or even days: it's hours, and soon to be minutes.\r\n\r\nJoin us to see how \"T-Minus 24 Hours\" isn't aspirational—it's operational. Learn how this approach is transforming the way we deliver trusted, resilient software to the warfighter at mission speed.",
-            "startsAt": "2025-08-09T14:10:00",
-            "endsAt": "2025-08-09T15:10:00",
+            "startsAt": "2025-08-09T21:10:00Z",
+            "endsAt": "2025-08-09T22:10:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -690,8 +690,8 @@
             "id": "961271",
             "title": "Getting to Top 250 on HtB with Nix and LLMs",
             "description": "In this talk, the speaker walks through how they used Nix to declare several AI models with full access to their computer in order to climb the Hack The Box (HtB) leaderboard—after being previously hardstuck at the \"Hacker\" rank while juggling the responsibilities of being a busy dad.\r\n\r\nThey demonstrate a semi-autonomous workflow where they are (not) automating themselves out of a job. The talk explores the challenge of tackling numerous CTF problems with limited time and shows how the combination of Nix and AI offers a powerful workflow for solving CTFs that often require multiple, isolated testing environments.\r\n\r\nFinally, this custom Nix-based setup is compared to more traditional security-focused distros like Kali and AthenaOS. The talk ends by exploring how this approach transfers to real-world offensive security scenarios—pen testing, red teaming, and bug bounty hunting—and how much of it can be practically applied.",
-            "startsAt": "2025-08-09T15:30:00",
-            "endsAt": "2025-08-09T16:30:00",
+            "startsAt": "2025-08-09T22:30:00Z",
+            "endsAt": "2025-08-09T23:30:00Z",
             "isServiceSession": false,
             "isPlenumSession": false,
             "speakers": [
@@ -713,8 +713,8 @@
             "id": "c292f36a-3e5b-47c1-8ce1-8aef168ae689",
             "title": "Lightning Talks and Unconference",
             "description": "Give a talk about whatever you want, as long as it's less than 10 minutes! Or just come and chill in the Nix Vegas space for the Unconference.",
-            "startsAt": "2025-08-09T16:40:00",
-            "endsAt": "2025-08-09T18:00:00",
+            "startsAt": "2025-08-09T23:40:00Z",
+            "endsAt": "2025-08-10T01:00:00Z",
             "isServiceSession": true,
             "isPlenumSession": false,
             "speakers": [],
@@ -733,7 +733,7 @@
     ],
     "timeSlots": [
       {
-        "slotStart": "10:30:00",
+        "slotStart": "17:30:00",
         "rooms": [
           {
             "id": 67813,
@@ -742,8 +742,8 @@
               "id": "982706",
               "title": "Autoformatting with Nix in Neovim",
               "description": "I love code autoformatters, but I jump between a lot of projects, and figuring out the rules for each project is tedious. Nix and Treefmt make this a whole lot better, but don't provide editor integrations.\r\n\r\nI'll talk about how I built a format-on-save Neovim plugin that Does the Right Thing. If you aren't a Neovim user, I hope to inspire you to build a similar integration for your preferred editor.",
-              "startsAt": "2025-08-09T10:30:00",
-              "endsAt": "2025-08-09T11:00:00",
+              "startsAt": "2025-08-09T17:30:00Z",
+              "endsAt": "2025-08-09T18:00:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -766,7 +766,7 @@
         ]
       },
       {
-        "slotStart": "11:15:00",
+        "slotStart": "18:15:00",
         "rooms": [
           {
             "id": 67813,
@@ -775,8 +775,8 @@
               "id": "990859",
               "title": "Cypherpunk Java with Nix",
               "description": "Cypherpunks write code that is open source, privacy-oriented, decentralized, trust-minimized, verifiable/auditable, interoperable, and bundled in Linux distributions. Cypherpunks don't use Java. But in 2025 using Java 25 and Nix -- they can and should!\r\n\r\nWe will review how functional-style programming, minimalism, pattern-matching, native compilation and integration with C/C++/Rust through a new FFM mechanism are game-changers for Java developers and worthy of a second look by those who dismissed Java years ago.\r\n\r\nIn this session we will see how Nix can reliably build native and JIT-compiled tools and applications, how dependencies can be minimized and bootstrappability achieved.\r\n\r\nWe will compare Maven's bytecode packaging to the Nix model and how the two can be integrated while also brining in native libraries.\r\n\r\nReal-world examples will be provided. We will look at the gaps that remain and how to close them so we can live the Java-cypherpunk dream and contribute to the \"Great Tree\".\r\n\r\n",
-              "startsAt": "2025-08-09T11:15:00",
-              "endsAt": "2025-08-09T12:00:00",
+              "startsAt": "2025-08-09T18:15:00Z",
+              "endsAt": "2025-08-09T19:00:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -799,7 +799,7 @@
         ]
       },
       {
-        "slotStart": "12:00:00",
+        "slotStart": "19:00:00",
         "rooms": [
           {
             "id": 67813,
@@ -808,8 +808,8 @@
               "id": "983f74b2-54c0-46c6-b34a-8ed5f87c8c40",
               "title": "Maybe A Few Hydra Failures",
               "description": "In this audience participation-heavy session, you can get your PRs to nixpkgs reviewed and maybe even merged... if the build on one of our Threadripper Pro or Ampere systems passes.\n\nCome with PRs in hand and call them out, and we'll review, build, and maybe even merge them on stage.\n\nRejected name: Whose PR Is It Anyway",
-              "startsAt": "2025-08-09T12:00:00",
-              "endsAt": "2025-08-09T12:55:00",
+              "startsAt": "2025-08-09T19:00:00Z",
+              "endsAt": "2025-08-09T19:55:00Z",
               "isServiceSession": true,
               "isPlenumSession": false,
               "speakers": [],
@@ -827,7 +827,7 @@
         ]
       },
       {
-        "slotStart": "13:00:00",
+        "slotStart": "20:00:00",
         "rooms": [
           {
             "id": 67813,
@@ -836,8 +836,8 @@
               "id": "983476",
               "title": "From Solo Nix to Team Infrastructure: Deploying NixOS with Clan",
               "description": "Most people discover NixOS as a solo pursuit: taming their laptop, configuring dotfiles, or spinning up a homelab. But what happens when you want to bring others along? How do you scale your reproducible setup across a team, startup, or organization?\r\n\r\nIn this talk, I’ll share my path from managing a personal NixOS homelab to architecting infrastructure and developer environments for a growing startup. After many false starts and tangled configurations, I found Clan—a powerful framework that transformed how I manage machines, roles, and secrets. With Clan, I've replaced fragmented manual processes with a single source of truth for all my deployments, cutting through the clutter and reclaiming hours of maintenance time.\r\n\r\nWe’ll look at how Clan makes it easy to keep your infrastructure organized, share reusable configuration modules, handle secrets securely with Clan Vars, and scale NixOS across teams without having to start from scratch each time.",
-              "startsAt": "2025-08-09T13:00:00",
-              "endsAt": "2025-08-09T13:30:00",
+              "startsAt": "2025-08-09T20:00:00Z",
+              "endsAt": "2025-08-09T20:30:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -860,7 +860,7 @@
         ]
       },
       {
-        "slotStart": "13:50:00",
+        "slotStart": "20:50:00",
         "rooms": [
           {
             "id": 67813,
@@ -869,8 +869,8 @@
               "id": "972648",
               "title": "Doing toolchains declaratively",
               "description": "Systems engineers may need different toolchains, whether its a specific configuration for a unique target or something so they can cross compile. On many distros, this requires either manually building the toolchain or finding the right packages. With Nix, we can do it declaratively.\r\n\r\nI will be going into the new toolchain attributes mechanism in nixpkgs and how my work on the Standard Environment team opens the door to many new things for embedded and systems engineering with nix.",
-              "startsAt": "2025-08-09T13:50:00",
-              "endsAt": "2025-08-09T14:05:00",
+              "startsAt": "2025-08-09T20:50:00Z",
+              "endsAt": "2025-08-09T21:05:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -893,7 +893,7 @@
         ]
       },
       {
-        "slotStart": "14:10:00",
+        "slotStart": "21:10:00",
         "rooms": [
           {
             "id": 67813,
@@ -902,8 +902,8 @@
               "id": "979380",
               "title": "T-Minus 24 Hours: From Source to Spaceflight in a Single Day",
               "description": "When the mission is launch-critical, time becomes a tactical asset. In this session, you'll learn how Defense Unicorns' Unicorn Delivery Service and NixOS work in unison to deliver secure, fully declarative software—on-prem or in disconnected, degraded, intermittent, and limited environments—in less than 24 hours.\r\n\r\nWhat began with a record-breaking delivery for the U.S. Space Force at Cape Canaveral evolved into a new paradigm of software delivery that spread department-wide like wildfire. Operational timelines of critical-software used by warfighters is no longer measured in weeks or even days: it's hours, and soon to be minutes.\r\n\r\nJoin us to see how \"T-Minus 24 Hours\" isn't aspirational—it's operational. Learn how this approach is transforming the way we deliver trusted, resilient software to the warfighter at mission speed.",
-              "startsAt": "2025-08-09T14:10:00",
-              "endsAt": "2025-08-09T15:10:00",
+              "startsAt": "2025-08-09T21:10:00Z",
+              "endsAt": "2025-08-09T22:10:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -926,7 +926,7 @@
         ]
       },
       {
-        "slotStart": "15:30:00",
+        "slotStart": "22:30:00",
         "rooms": [
           {
             "id": 67813,
@@ -935,8 +935,8 @@
               "id": "961271",
               "title": "Getting to Top 250 on HtB with Nix and LLMs",
               "description": "In this talk, the speaker walks through how they used Nix to declare several AI models with full access to their computer in order to climb the Hack The Box (HtB) leaderboard—after being previously hardstuck at the \"Hacker\" rank while juggling the responsibilities of being a busy dad.\r\n\r\nThey demonstrate a semi-autonomous workflow where they are (not) automating themselves out of a job. The talk explores the challenge of tackling numerous CTF problems with limited time and shows how the combination of Nix and AI offers a powerful workflow for solving CTFs that often require multiple, isolated testing environments.\r\n\r\nFinally, this custom Nix-based setup is compared to more traditional security-focused distros like Kali and AthenaOS. The talk ends by exploring how this approach transfers to real-world offensive security scenarios—pen testing, red teaming, and bug bounty hunting—and how much of it can be practically applied.",
-              "startsAt": "2025-08-09T15:30:00",
-              "endsAt": "2025-08-09T16:30:00",
+              "startsAt": "2025-08-09T22:30:00Z",
+              "endsAt": "2025-08-09T23:30:00Z",
               "isServiceSession": false,
               "isPlenumSession": false,
               "speakers": [
@@ -959,7 +959,7 @@
         ]
       },
       {
-        "slotStart": "16:40:00",
+        "slotStart": "23:40:00",
         "rooms": [
           {
             "id": 67813,
@@ -968,8 +968,8 @@
               "id": "c292f36a-3e5b-47c1-8ce1-8aef168ae689",
               "title": "Lightning Talks and Unconference",
               "description": "Give a talk about whatever you want, as long as it's less than 10 minutes! Or just come and chill in the Nix Vegas space for the Unconference.",
-              "startsAt": "2025-08-09T16:40:00",
-              "endsAt": "2025-08-09T18:00:00",
+              "startsAt": "2025-08-09T23:40:00Z",
+              "endsAt": "2025-08-10T01:00:00Z",
               "isServiceSession": true,
               "isPlenumSession": false,
               "speakers": [],
@@ -989,7 +989,7 @@
     ]
   },
   {
-    "date": "2025-08-10T00:00:00",
+    "date": "2025-08-10T00:00:00Z",
     "isDefault": false,
     "rooms": [
       {
@@ -1000,8 +1000,8 @@
             "id": "26836a60-e467-4fbc-99b7-4c48ced4c2c2",
             "title": "Nix Vegas Unconference",
             "description": "Pick a topic, talk about whatever you want, or just come and chill in the Nix Vegas space for the Unconference.",
-            "startsAt": "2025-08-10T10:00:00",
-            "endsAt": "2025-08-10T13:00:00",
+            "startsAt": "2025-08-10T17:00:00Z",
+            "endsAt": "2025-08-10T20:00:00Z",
             "isServiceSession": true,
             "isPlenumSession": false,
             "speakers": [],
@@ -1020,7 +1020,7 @@
     ],
     "timeSlots": [
       {
-        "slotStart": "10:00:00",
+        "slotStart": "17:00:00",
         "rooms": [
           {
             "id": 67813,
@@ -1029,8 +1029,8 @@
               "id": "26836a60-e467-4fbc-99b7-4c48ced4c2c2",
               "title": "Nix Vegas Unconference",
               "description": "Pick a topic, talk about whatever you want, or just come and chill in the Nix Vegas space for the Unconference.",
-              "startsAt": "2025-08-10T10:00:00",
-              "endsAt": "2025-08-10T13:00:00",
+              "startsAt": "2025-08-10T17:00:00Z",
+              "endsAt": "2025-08-10T20:00:00Z",
               "isServiceSession": true,
               "isPlenumSession": false,
               "speakers": [],
