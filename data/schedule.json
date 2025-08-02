@@ -174,7 +174,7 @@
           {
             "id": "6717df53-1e67-42c2-81df-a22240fb07aa",
             "title": "Lightning Talks and Unconference",
-            "description": "Give a talk about whatever you want, as long as it's less than 10 minutes!",
+            "description": "Give a talk about whatever you want, as long as it's less than 10 minutes! Or just come and chill in the Nix Vegas space for the Unconference.",
             "startsAt": "2025-08-08T16:15:00",
             "endsAt": "2025-08-08T18:00:00",
             "isServiceSession": true,
@@ -524,7 +524,7 @@
             "session": {
               "id": "6717df53-1e67-42c2-81df-a22240fb07aa",
               "title": "Lightning Talks and Unconference",
-              "description": "Give a talk about whatever you want, as long as it's less than 10 minutes!",
+              "description": "Give a talk about whatever you want, as long as it's less than 10 minutes! Or just come and chill in the Nix Vegas space for the Unconference.",
               "startsAt": "2025-08-08T16:15:00",
               "endsAt": "2025-08-08T18:00:00",
               "isServiceSession": true,
