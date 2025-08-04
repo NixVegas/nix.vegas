@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  {% if config.extra.onsite %}
+  {% set onsite = get_page(path="onsite.md") %}
+  {{ onsite.content | safe }}
+  {% else %}
+  {% set offsite = get_page(path="offsite.md") %}
+  {{ offsite.content | safe }}
+  {% endif %}
   {{ section.content | safe }}
 {% endblock %}
