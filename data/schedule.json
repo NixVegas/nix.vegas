@@ -59,7 +59,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "971105",
@@ -304,7 +304,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 0
           }
@@ -587,7 +587,7 @@
             "speakers": [
               {
                 "id": "a798a5a7-aa6a-4708-91a3-65fba0941125",
-                "name": "Michael Gilligan"
+                "name": "Sean Gilligan"
               }
             ],
             "categories": [],
@@ -697,7 +697,7 @@
             "speakers": [
               {
                 "id": "1d7536c9-204c-4731-951f-ad3d8301ae08",
-                "name": "cooldadhacking"
+                "name": "Rambo \"cooldadhacking\" Anderson-You "
               }
             ],
             "categories": [],
@@ -782,7 +782,7 @@
               "speakers": [
                 {
                   "id": "a798a5a7-aa6a-4708-91a3-65fba0941125",
-                  "name": "Michael Gilligan"
+                  "name": "Sean Gilligan"
                 }
               ],
               "categories": [],
@@ -942,7 +942,7 @@
               "speakers": [
                 {
                   "id": "1d7536c9-204c-4731-951f-ad3d8301ae08",
-                  "name": "cooldadhacking"
+                  "name": "Rambo \"cooldadhacking\" Anderson-You "
                 }
               ],
               "categories": [],

@@ -146,7 +146,7 @@
     "id": "1d7536c9-204c-4731-951f-ad3d8301ae08",
     "firstName": "",
     "lastName": "",
-    "fullName": "Rambo Anderson-You",
+    "fullName": "Rambo \"cooldadhacking\" Anderson-You",
     "bio": "Rambo has been doing offensive security for almost a decade now. He's okay at it, and has gotten by largely on vibes and personality. In spite of his mediocrity, his current company lets him work side projects that are related to AI and red teaming.",
     "tagLine": "red team",
     "profilePicture": "https://sessionize.com/image/bc0d-400o400o1-3WFuSzqFXbrSSb2uGQMLm6.jpg",
@@ -311,7 +311,7 @@
     "links": [
       {
         "title": "Company Website",
-        "url": "https://goraft.tech/",
+        "url": "https://defenseunicorns.com",
         "linkType": "Company_Website"
       },
       {
@@ -476,48 +476,6 @@
     "categories": []
   },
   {
-    "id": "a798a5a7-aa6a-4708-91a3-65fba0941125",
-    "firstName": "",
-    "lastName": "",
-    "fullName": "Michael Gilligan",
-    "bio": "Mr. Gilligan learned C and UNIX as an undergrad at Berkeley. In his early career he wrote device drivers and networking protocols. He reluctantly learned Java and learned the good, the bad, and the ugly. His journey has included consulting, management, and entrepreneurship. He is the co-maintainer of bitcoinj, contributes to other open source projects, and is working to better integrate secure enclaves with secp256k1 ECC and Nix.",
-    "tagLine": "Professional software developer, FOSS contributor, aspiring cypherpunk",
-    "profilePicture": "https://sessionize.com/image/e74c-400o400o1-DPiVVK4YXu3iCRugauUhNv.jpg",
-    "sessions": [
-      {
-        "id": 990859,
-        "name": "Cypherpunk Java with Nix"
-      }
-    ],
-    "isTopSpeaker": false,
-    "links": [
-      {
-        "title": "X (Twitter)",
-        "url": "https://x.com/msgilligan",
-        "linkType": "Twitter"
-      }
-    ],
-    "questionAnswers": [
-      {
-        "id": 104096,
-        "question": "GitHub",
-        "questionType": "Web_address",
-        "answer": "https://github.com/msgilligan",
-        "sort": 15,
-        "answerExtra": null
-      },
-      {
-        "id": 106487,
-        "question": "Mastodon",
-        "questionType": "Web_address",
-        "answer": "https://foojay.social/@msgilligan",
-        "sort": 16,
-        "answerExtra": null
-      }
-    ],
-    "categories": []
-  },
-  {
     "id": "24b86e55-c99f-4af9-9155-ab0face6ee17",
     "firstName": "",
     "lastName": "",
@@ -555,6 +513,48 @@
         "question": "Mastodon",
         "questionType": "Web_address",
         "answer": null,
+        "sort": 16,
+        "answerExtra": null
+      }
+    ],
+    "categories": []
+  },
+  {
+    "id": "a798a5a7-aa6a-4708-91a3-65fba0941125",
+    "firstName": "",
+    "lastName": "",
+    "fullName": "Sean Gilligan",
+    "bio": "Mr. Gilligan learned C and UNIX as an undergrad at Berkeley. In his early career he wrote device drivers and networking protocols. He reluctantly learned Java and learned the good, the bad, and the ugly. His journey has included consulting, management, and entrepreneurship. He is the co-maintainer of bitcoinj, contributes to other open source projects, and is working to better integrate secure enclaves with secp256k1 ECC and Nix.",
+    "tagLine": "Professional software developer, FOSS contributor, aspiring cypherpunk",
+    "profilePicture": "https://sessionize.com/image/e74c-400o400o1-DPiVVK4YXu3iCRugauUhNv.jpg",
+    "sessions": [
+      {
+        "id": 990859,
+        "name": "Cypherpunk Java with Nix"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "X (Twitter)",
+        "url": "https://x.com/msgilligan",
+        "linkType": "Twitter"
+      }
+    ],
+    "questionAnswers": [
+      {
+        "id": 104096,
+        "question": "GitHub",
+        "questionType": "Web_address",
+        "answer": "https://github.com/msgilligan",
+        "sort": 15,
+        "answerExtra": null
+      },
+      {
+        "id": 106487,
+        "question": "Mastodon",
+        "questionType": "Web_address",
+        "answer": "https://foojay.social/@msgilligan",
         "sort": 16,
         "answerExtra": null
       }
