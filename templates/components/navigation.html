@@ -2,23 +2,31 @@
   <nav class="nav-header container">
     <ul>
       <li>
+        {% if config.extra.onsite %}
+        <a href="/">Welcome</a>
+        {% else %}
         <a href="/">Home</a>
+        {% endif %}
       </li>
       <li>
         <a href="/#sponsors">Sponsors</a>
       </li>
+      {% if not config.extra.onsite %}
       <li>
         <a href="/about">About</a>
       </li>
+      {% endif %}
       <li>
         <a href="/schedule">Schedule</a>
       </li>
       <li>
         <a href="/speakers">Speakers</a>
       </li>
+      {% if not config.extra.onsite %}
       <li>
         <a href="/blog">Blog</a>
       </li>
+      {% endif %}
     </ul>
   </nav>
 </header>

@@ -12,7 +12,6 @@ stdenv.mkDerivation {
     zola
   ];
   buildPhase = ''
-    ls -al
     runHook preBuild
     zola build --output-dir public
     runHook postBuild

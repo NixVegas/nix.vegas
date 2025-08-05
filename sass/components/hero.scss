@@ -26,6 +26,14 @@
     }
 }
 
+.onsite {
+  min-height: 50vh;
+}
+
+.onsite .social-bar {
+  display: none;
+}
+
 .rgb {
   animation: filter-animation 30s infinite, img-glitch 15s infinite;
 }
