@@ -1,7 +1,7 @@
 <h4>Nixpkgs {{ config.nixos_version }}</h4>
 
 <ul>
-{% if config.extra.nixpkgs %}
-  <li><a href="/{{ config.extra.nixpkgs }}">Nixpkgs tarball</a></li>
+{% if config.extra.channel %}
+  <li><a href="/{{config.extra.channel}}">Nixpkgs channel</a> (<code> {{config.extra.nixpkgs_rev}}</code>)</li>
 {% endif %}
 </ul>

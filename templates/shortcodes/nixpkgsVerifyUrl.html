@@ -1,0 +1,3 @@
+{%- if config.extra.nixpkgs_rev -%}
+  https://github.com/NixOS/nixpkgs/archive/{{config.extra.nixpkgs_rev}}.tar.gz
+{%- endif -%}
