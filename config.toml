@@ -22,3 +22,11 @@ timezone = "America/Los_Angeles"
 
 # Set to true if we are building the onsite version.
 onsite = false
+
+# Configuration for onsite resources.
+nixos_version = ""
+isos = []
+vmas = []
+nixpkgs = ""
+manual = ""
+search = ""
