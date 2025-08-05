@@ -1,0 +1,5 @@
+<ul>
+  {% for iso_link in config.extra.isos %}
+  <li><a href="/{{ iso_link }}">{{iso_link | split(pat="/") | last}}</a></li>
+  {% endfor %}
+</ul>

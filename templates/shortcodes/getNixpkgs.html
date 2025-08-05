@@ -1,0 +1,9 @@
+{%- if config.extra.channel -%}
+  <a href="/{{ config.extra.channel }}">
+    {%- if text -%}
+      {{text}}
+    {%- else -%}
+      {{config.extra.channel | split(pat="/") | last}}
+    {%- endif -%}
+  </a>
+{%- endif -%}

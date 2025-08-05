@@ -1,0 +1,5 @@
+<ul>
+{% for vma_link in config.extra.vmas %}
+  <li><a href="/{{ vma_link }}">{{vma_link | split(pat="/") | last}}</a></li>
+{% endfor %}
+</ul>

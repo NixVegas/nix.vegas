@@ -1,0 +1,7 @@
+<a href="https://github.com/NixOS/nixpkgs/commit/{{ config.extra.nixpkgs_rev }}">
+  {%- if text -%}
+    {{text}}
+  {%- else -%}
+    {{config.extra.nixpkgs_rev}}
+  {%- endif -%}
+</a>
