@@ -1,12 +1,20 @@
+{% if config.extra.onsite %}
+<div class="hero-wrapper rgb onsite">
+{% else %}
 <div class="hero-wrapper rgb">
+{% endif %}
     <div class="container">
         <figure class="brand">
             <h1 class="hero-title glitch" data-text="Nix Vegas"><span><a href="/">Nix Vegas</a></span></h1>
             <h2 class="hero-title glitch" data-text="REBUILD THE WORLD"><span>REBUILD THE WORLD</span></h2>
+            {% if not config.extra.onsite %}
             <h3 class="hero-subtitle glitch"><span>August 7-10, 2025, <a target="_blank" href="https://defcon.org">DEF CON 33</a></h3>
+            {% endif %}
             <h4 class="hero-subtitle">
-                <em>CFP has ended. Check out our <a href="/schedule">schedule</a> and <a href="/speakers">speaker list</a>!</em>
+                {% if not config.extra.onsite %}
+                <em>Check out our <a href="/schedule">schedule</a> and <a href="/speakers">speaker list</a>!</em>
                 <br />
+                {% endif %}
                 <em><a href="/blog/artwork">Artwork by Kenz Tobias</a></em>
             </h4>
         </figure>
