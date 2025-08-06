@@ -21,7 +21,8 @@
 {% for day_content in schedule %}
 <div class="schedule-day">
   <div class="schedule-day-header">
-    <h2>{{ day_content.date | date(format="%A - %B %eth, %Y", timezone=config.extra.timezone) }}</h2>
+    {# NB: Sessionize provides this as a UTC timestamp starting at midnight. If we convert to local time, the day is wrong. #}
+    <h2>{{ day_content.date | date(format="%A - %B %eth, %Y") }}</h2>
   </div>
   {% for room in day_content.rooms %}
   <div class="schedule-room">

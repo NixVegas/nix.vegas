@@ -146,7 +146,7 @@
             "recordingUrl": null,
             "status": "Accepted",
             "isInformed": true,
-            "isConfirmed": false
+            "isConfirmed": true
           },
           {
             "id": "991755",
@@ -476,7 +476,7 @@
               "recordingUrl": null,
               "status": "Accepted",
               "isInformed": true,
-              "isConfirmed": false
+              "isConfirmed": true
             },
             "index": 0
           }
