@@ -4,5 +4,25 @@
     <h1>{{ page.title }}</h1>
     <h2>{{ page.description }}</h2>
     <h3>by {{ page.authors | join(sep=" and ") }}</h3>
+    {% if page.toc and page.extra.show_toc %}
+    <h4>Table of contents</h4>
+    <ul>
+    {% for h1 in page.toc %}
+        <li>
+            <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+            {% if h1.children %}
+                <ul>
+                    {% for h2 in h1.children %}
+                        <li>
+                            <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    <hr />
+    {% endif %}
     <div class="blog-wrapper">{{ page.content | safe }}</div>
 {% endblock %}
