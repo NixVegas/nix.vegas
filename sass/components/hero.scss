@@ -1,8 +1,4 @@
 .hero-wrapper {
-    background: url('img/nix-vegas.png') no-repeat center center;
-    background-position: 50% 50%;
-    background-size: fill;
-    background-color: #000;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -36,50 +32,6 @@
 
 .rgb {
   animation: filter-animation 30s infinite, img-glitch 15s infinite;
-}
-
-@keyframes img-glitch {
-  0%,
-  19.9%,
-  24.5%,
-  34.9%,
-  37%,
-  49.9%,
-  54%,
-  74.9%,
-  79.5%,
-  89.9%,
-  95%,
-  100% {
-    background: url('img/nix-vegas.png') no-repeat center center;
-    background-size: fill;
-    background-color: #000;
-  }
-  20% {
-    background: url('img/nix-vegas-glitched1.png') no-repeat center center;
-    background-size: fill;
-    background-color: #000;
-  }
-  35% {
-    background: url('img/nix-vegas-glitched2.png') no-repeat center center;
-    background-size: fill;
-    background-color: #000;
-  }
-  50% {
-    background: url('img/nix-vegas-glitched3.png') no-repeat center center;
-    background-size: fill;
-    background-color: #000;
-  }
-  75% {
-    background: url('img/nix-vegas-glitched4.png') no-repeat center center;
-    background-size: fill;
-    background-color: #000;
-  }
-  90% {
-    background: url('img/nix-vegas-glitched5.png') no-repeat center center;
-    background-size: fill;
-    background-color: #000;
-  }
 }
 
 @keyframes filter-animation {

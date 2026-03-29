@@ -3,20 +3,53 @@
 {% else %}
 <div class="hero-wrapper rgb">
 {% endif %}
-    <div class="container">
-        <figure class="brand">
-            <h1 class="hero-title glitch" data-text="Nix Vegas"><span><a href="/">Nix Vegas</a></span></h1>
-            <h2 class="hero-title glitch" data-text="REBUILD THE WORLD"><span>REBUILD THE WORLD</span></h2>
-            {% if not config.extra.onsite %}
-            <h3 class="hero-subtitle glitch"><span>August 7-10, 2025, <a target="_blank" href="https://defcon.org">DEF CON 33</a></h3>
-            {% endif %}
-            <h4 class="hero-subtitle">
-                {% if not config.extra.onsite %}
-                <em>Check out our <a href="/blog/2025-retrospective">2025 retrospective</a> and <a href="https://relive.nix.vegas/share/qRwLI0HgaiPzArL2oPcD1iR64UY-U51EgdrBuUN3KA2tzuQN9TEFXHqhCL3LL761Cvw">talk uploads</a>!</em>
-                <br />
-                {% endif %}
-            </h4>
-        </figure>
-        {% include 'components/social-bar.html' %}
-    </div>
+  <style>
+    .hero-wrapper {
+      background: url('{{ year_section.extra.hero_img | safe }}') no-repeat center center;
+      background-size: fill;
+      background-color: #000;
+    }
+    @keyframes img-glitch {
+      0%, 19.9%, 24.5%, 34.9%, 37%, 49.9%, 54%, 74.9%, 79.5%, 89.9%, 95%, 100% {
+        background: url('{{ year_section.extra.hero_img | safe }}') no-repeat center center;
+        background-size: fill;
+        background-color: #000;
+      }
+      20% {
+        background: url('{{ year_section.extra.hero_glitch_imgs | nth(n=0) | safe }}') no-repeat center center;
+        background-size: fill;
+        background-color: #000;
+      }
+      35% {
+        background: url('{{ year_section.extra.hero_glitch_imgs | nth(n=1) | safe }}') no-repeat center center;
+        background-size: fill;
+        background-color: #000;
+      }
+      50% {
+        background: url('{{ year_section.extra.hero_glitch_imgs | nth(n=2) | safe }}') no-repeat center center;
+        background-size: fill;
+        background-color: #000;
+      }
+      75% {
+        background: url('{{ year_section.extra.hero_glitch_imgs | nth(n=3) | safe }}') no-repeat center center;
+        background-size: fill;
+        background-color: #000;
+      }
+      90% {
+        background: url('{{ year_section.extra.hero_glitch_imgs | nth(n=4) | safe }}') no-repeat center center;
+        background-size: fill;
+        background-color: #000;
+      }
+    }
+  </style>
+  <div class="container">
+    {% if year_dir %}
+      {% set hero_path = year_dir ~ "/hero.md" %}
+    {% else %}
+      {% set hero_path = "hero.md" %}
+    {% endif %}
+    {% set hero = get_page(path=hero_path) %}
+    {{ hero.content | safe }}
+    {% include 'components/social-bar.html' %}
+  </div>
 </div>
