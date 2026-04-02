@@ -22,7 +22,7 @@ August 6th-9th, 2026
 Las Vegas Convention Center, 2901 S Las Vegas Blvd, Las Vegas, NV 89109
 
 **Registration:**
-Nix Vegas is part of DEF CON. A badge will get you full access, and can be purchased [here](https://shop.defcon.org/products/def-con-33-ticket) or at the door.
+Nix Vegas is part of DEF CON. A badge will get you full access, and can be purchased [here](https://shop.defcon.org) or at the door.
 
 ---
 
