@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="{{ config.title }}">
     <meta name="description" content="{{ config.description }}">
-    <meta name="author" content="Nix Vegas Organizers">
-    <meta name="fediverse:creator" content="@nixvegas@defcon.social">
+    <meta name="author" content="{{ config.title }} Organizers">
+    <meta name="fediverse:creator" content="{{ config.extra.masto_user }}">
     <meta property="og:locale" content="en_US:utf-8">
     <meta property="og:site_name" content="{{ config.title }}">
     {%- block og_preview -%}
@@ -24,17 +24,29 @@
     {%- endblock twitter_preview -%}
 
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
-    <link rel="preload" as="image" href="/img/nix-vegas.png">
-    <link rel="preload" as="image" href="/img/nix-vegas-glitched1.png">
-    <link rel="preload" as="image" href="/img/nix-vegas-glitched2.png">
-    <link rel="preload" as="image" href="/img/nix-vegas-glitched3.png">
-    <link rel="preload" as="image" href="/img/nix-vegas-glitched4.png">
-    <link rel="preload" as="image" href="/img/nix-vegas-glitched5.png">
+
+    {% set_global year_prefix = "" %}
+    {% set_global year_dir = "" %}
+    {% if current_path is matching("^/[0-9]{4}/") %}
+      {% set_global year_dir = current_path | split(pat="/") | nth(n=1) %}
+      {% set_global year_prefix = "/" ~ year_dir %}
+    {% endif %}
+
+    {% if year_dir %}
+      {% set_global year_section = get_section(path=year_dir ~ "/_index.md") %}
+    {% else %}
+      {% set_global year_section = get_section(path="_index.md") %}
+    {% endif %}
+
+    <link rel="icon" type="image/x-icon" href="{{ year_section.extra.favicon_ico }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ year_section.extra.favicon_16 }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ year_section.extra.favicon_32 }}">
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ year_section.extra.favicon_48 }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ year_section.extra.favicon_512 }}">
+    <link rel="preload" as="image" href="{{ year_section.extra.hero_img }}">
+    {% for img in year_section.extra.hero_glitch_imgs %}
+    <link rel="preload" as="image" href="{{ img }}">
+    {% endfor %}
   </head>
   <body>
     {% include 'components/hero.html' %}

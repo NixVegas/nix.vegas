@@ -2,7 +2,7 @@
   description = "Nix Vegas Website";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-compat.url = "https://flakehub.com/f/edolstra/flake-compat/1.tar.gz";
   };
@@ -21,6 +21,7 @@
       systems = [
         "x86_64-linux"
         "aarch64-linux"
+        "aarch64-darwin"
       ];
 
       perSystem =

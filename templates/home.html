@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  {% set page_prefix = "" %}
+  {% if current_path is matching("^/[0-9]{4}/") %}
+    {% set page_prefix = current_path | split(pat="/") | nth(n=1) %}
+    {% set page_prefix = page_prefix ~ "/" %}
+  {% endif %}
+
   {% if config.extra.onsite %}
-  {% set onsite = get_page(path="onsite.md") %}
+  {% set onsite = get_page(path=page_prefix ~ "onsite.md") %}
   {{ onsite.content | safe }}
   {% else %}
-  {% set offsite = get_page(path="offsite.md") %}
+  {% set offsite = get_page(path=page_prefix ~ "offsite.md") %}
   {{ offsite.content | safe }}
   {% endif %}
   {{ section.content | safe }}
