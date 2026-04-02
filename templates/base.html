@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="{{ config.title }}">
     <meta name="description" content="{{ config.description }}">
-    <meta name="author" content="Nix Vegas Organizers">
-    <meta name="fediverse:creator" content="@nixvegas@defcon.social">
+    <meta name="author" content="{{ config.title }} Organizers">
+    <meta name="fediverse:creator" content="{{ config.extra.masto_user }}">
     <meta property="og:locale" content="en_US:utf-8">
     <meta property="og:site_name" content="{{ config.title }}">
     {%- block og_preview -%}

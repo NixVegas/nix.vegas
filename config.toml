@@ -1,6 +1,5 @@
-# The URL the site will be built for
-title = "Nix Vegas"
-description = "A DEF CON Community for contributors and users of Nix and NixOS"
+title = "Nix Village"
+description = "A DEF CON Village for contributors and users of Nix and NixOS"
 base_url = "https://nix.vegas/"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -18,7 +17,9 @@ highlight_code = true
 og_preview_img = "/img/nix-vegas-thumb.png"
 twitter_site = "@nixvegas"
 twitter_user = "@nixvegas"
+masto_user = "@nixvegas@defcon.social"
 timezone = "America/Los_Angeles"
+cfp_year = "2026"
 
 # Set to true if we are building the onsite version.
 onsite = false

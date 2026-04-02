@@ -10,9 +10,16 @@
         <li><a href="{{ year_prefix }}/">Home</a></li>
         <li><a href="{{ year_prefix }}/#sponsors">Sponsors</a></li>
         <li><a href="{{ year_prefix }}/about">About</a></li>
-        <li><a href="{{ year_prefix }}/schedule">Schedule</a></li>
-        <li><a href="{{ year_prefix }}/speakers">Speakers</a></li>
-        <li><a href="{{ year_prefix }}/blog">Blog</a></li>
+        {% if year_dir %}
+          <li><a href="{{ year_prefix }}/schedule">Schedule</a></li>
+          <li><a href="{{ year_prefix }}/speakers">Speakers</a></li>
+        {% else %}
+          <li><a href="https://cfp.nix.vegas/{{ config.extra.cfp_year }}">CFP</a></li>
+        {% endif %}
+        <li><a href="/blog">Blog</a></li>
+        {% if not year_dir %}
+          <li><a href="/2025">Archive</a></li>
+        {% endif %}
       {% endif %}
     </ul>
   </nav>
