@@ -1,5 +1,5 @@
-title = "Nix Village"
-description = "A DEF CON Village for contributors and users of Nix and NixOS"
+title = "Nix Vegas"
+description = "A DEF CON Community for contributors and users of Nix and NixOS"
 base_url = "https://nix.vegas/"
 
 # Whether to automatically compile all Sass files in the sass directory
