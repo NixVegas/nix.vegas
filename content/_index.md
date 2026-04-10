@@ -17,7 +17,7 @@ extra:
 DEF CON's theme this year is **Agency**, take a second to read about it
 [here](https://defcon.org/html/defcon-34/dc-34-theme.html).
 
-While we are still hard at work on our art and village theme this year, we
+While we are still hard at work on our art and theme this year, we
 would like to challenge you to submit talks that answer to our take on the DEF
 CON theme:
 
