@@ -8,7 +8,7 @@ date: "2025-07-23"
 
 ----
 
-We are excited to announce the official [artwork](/img/nix-vegas.png) for Nix Vegas by Kenz Tobias,
+We are excited to announce the official [artwork](/img/2025/nix-vegas.png) for Nix Vegas by Kenz Tobias,
 an artist from Vista, CA.
 
 _You can follow Kenz on [Twitch](https://www.twitch.tv/kenz_tobias_art) and [Instagram](https://www.instagram.com/kenz_tobias_art/)_!
