@@ -1,5 +1,5 @@
 ---
-template: "blog_templates/base.html"
+template: "blog_post.html"
 title: "Adventures in NixOS Mesh Networking at DEF CON"
 authors: ["numinit"]
 description: "Experimenting with mesh software delivery at DEF CON using NixOS"

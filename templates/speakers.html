@@ -1,6 +1,8 @@
+{% import "macros/year.html" as year_macros %}
 {% extends 'base.html' %}
 {% block content %}
-{% set speakers = load_data(path="data/speakers-filtered.json", format="json") %}
+{% set year = year_macros::year_of_page(page=page) | trim %}
+{% set speakers = load_data(path="data/" ~ year ~ "/speakers-filtered.json", format="json") %}
 {{ page.content | safe }}
 {% for speaker in speakers %}
 <div class="speaker-item">

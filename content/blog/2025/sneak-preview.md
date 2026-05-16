@@ -1,5 +1,5 @@
 ---
-template: "blog_templates/base.html"
+template: "blog_post.html"
 title: "Extended CFP, and a sneak preview"
 authors: ["Nix Vegas Team"]
 description: "Get a preview of this year's Nix Vegas talks in advance of DEF CON"

@@ -1,5 +1,5 @@
 ---
-template: "home.html"
+template: "year_home.html"
 title: "Home"
 
 extra:

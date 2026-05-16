@@ -1,4 +1,5 @@
 {% import "macros/social.html" as social -%}
+{% import "macros/year.html" as year_macros -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,17 +26,19 @@
 
     <link rel="stylesheet" href="/style.css">
 
-    {% set_global year_prefix = "" %}
     {% set_global year_dir = "" %}
-    {% if current_path is matching("^/[0-9]{4}/") %}
-      {% set_global year_dir = current_path | split(pat="/") | nth(n=1) %}
-      {% set_global year_prefix = "/" ~ year_dir %}
+    {% if page %}
+      {% set_global year_dir = year_macros::year_of_page(page=page) | trim %}
+    {% elif section %}
+      {% set_global year_dir = year_macros::year_of_section(section=section) | trim %}
     {% endif %}
 
     {% if year_dir %}
       {% set_global year_section = get_section(path=year_dir ~ "/_index.md") %}
+      {% set_global year_prefix = "/" ~ year_dir %}
     {% else %}
       {% set_global year_section = get_section(path="_index.md") %}
+      {% set_global year_prefix = "" %}
     {% endif %}
 
     <link rel="icon" type="image/x-icon" href="{{ year_section.extra.favicon_ico }}">

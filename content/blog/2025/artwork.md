@@ -1,5 +1,5 @@
 ---
-template: "blog_templates/base.html"
+template: "blog_post.html"
 title: "Nix Vegas artwork announcement"
 authors: ["Nix Vegas Team", "Kenz Tobias"]
 description: "Introducing the Nix Vegas art, by Kenz Tobias!"

@@ -1,5 +1,5 @@
 ---
-template: "blog_templates/base.html"
+template: "blog_post.html"
 title: "The road to rebuilding the world"
 authors: ["the Nix Vegas Team"]
 description: "Looking back at DEF CON's first Nix Community"
