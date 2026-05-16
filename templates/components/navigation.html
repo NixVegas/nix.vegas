@@ -4,10 +4,8 @@
 <header>
   <nav class="nav-header container">
     <ul>
-      <li><a href="/">Home</a></li>
       {% if year_dir %}
-        <li><a href="/{{ year_dir }}/">{{ year_dir }} event</a></li>
-        <li><a href="/{{ year_dir }}/#sponsors">Sponsors</a></li>
+        <li><a href="/{{ year_dir }}/">Home</a></li>
         <li><a href="/{{ year_dir }}/about">About</a></li>
         <li><a href="/{{ year_dir }}/schedule">Schedule</a></li>
         <li><a href="/{{ year_dir }}/speakers">Speakers</a></li>
@@ -16,6 +14,7 @@
           <li><a href="/{{ current_year }}/">Current event →</a></li>
         {% endif %}
       {% else %}
+        <li><a href="/">Home</a></li>
         <li><a href="/{{ current_year }}/">Current event</a></li>
         <li><a href="/{{ current_year }}/about">About</a></li>
         <li><a href="https://cfp.nix.vegas/{{ config.extra.cfp_year }}">CFP</a></li>
