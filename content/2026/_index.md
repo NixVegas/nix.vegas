@@ -17,7 +17,7 @@ extra:
   event_tagline: "Agency"
 ---
 
-## DEF CON 26 Theme: Agency
+## DEF CON 34 Theme: Agency
 
 DEF CON's theme this year is **Agency**, take a second to read about it
 [here](https://defcon.org/html/defcon-34/dc-34-theme.html).

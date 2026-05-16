@@ -18,7 +18,7 @@ Just recently, a group of friends, colleagues, and classmates ran the first-ever
 
 We initially started planning Nix Vegas around March 2025, though this community is the culmination of several years of work by [many](https://github.com/NixOS/nixpkgs/pull/111518) [people](https://github.com/NixOS/nixpkgs/pull/291049). Over the next 4 months, we figured out various aspects such as theme, artwork, speakers, sponsors, and the Nix Badge. Eventually, we delivered a reliable network, great talks, and a fun badge.
 
-We want to thank all of our [speakers](/speakers), [sponsors](/#sponsors), and attendees. This was peak DEF CON for all of us.
+We want to thank all of our [speakers](/2025/speakers), [sponsors](/2025/#sponsors), and attendees. This was peak DEF CON for all of us.
 
 Additionally, thank you to Dark Tangent for having us this year, and the DEF CON Goon team for their tireless work and patience as we attempted to put a major twist on our efforts on Planet Nix to fit the vibe of DEF CON. The experience of running a DEF CON Community was fantastic, and we would like to highly encourage others to try to run something yourself based on our first-time experience this year.
 

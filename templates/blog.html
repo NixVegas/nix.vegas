@@ -4,27 +4,33 @@
 {% block content %}
 <div class="blog-wrapper">
   <div class="container">
-    <ul class="blog-post-list">
-      {% for post in section.pages %}
-
-      <li class="blog-post">
-        <p class="blog-post-date">
-          {{ post.date }}
-        </p>
-          <h2 class="title is-h2">
+    {% set blog = get_section(path="blog/_index.md") %}
+    {% set year_section_paths = blog.subsections | sort | reverse %}
+    {% for year_path in year_section_paths %}
+      {% set year_section = get_section(path=year_path) %}
+      {% set year = year_section.path | replace(from="/blog/", to="") | replace(from="/", to="") %}
+      <h2 class="blog-year-heading">{{ year }}</h2>
+      <ul class="blog-post-list">
+        {% for post in year_section.pages %}
+        <li class="blog-post">
+          <p class="blog-post-date">
+            {{ post.date }}
+          </p>
+          <h3 class="title is-h3">
             <a href="{{ post.permalink }}">
               {{ post.title }}
             </a>
-          </h2>
-          <h3 class="subtitle is-h3">
-            {{ post.description }}
           </h3>
-          <h4 class="author is-h4">
-            {{ post.authors | join(sep=" and ") }}
+          <h4 class="subtitle is-h4">
+            {{ post.description }}
           </h4>
-      </li>
-      {% endfor %}
-    </ul>
+          <h5 class="author is-h5">
+            {{ post.authors | join(sep=" and ") }}
+          </h5>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
   </div>
 </div>
 {% endblock content %}

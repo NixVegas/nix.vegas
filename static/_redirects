@@ -9,8 +9,8 @@
 /speakers  /2026/speakers   301
 # END current-year
 
-# Permanent blog redirects (activated in Phase 3 after blog posts move to /blog/YYYY/)
-# /blog/2025-retrospective   /blog/2025/2025-retrospective   301
-# /blog/artwork              /blog/2025/artwork              301
-# /blog/sneak-preview        /blog/2025/sneak-preview        301
-# /blog/dc32-nixmesh         /blog/2025/dc32-nixmesh         301
+# Permanent blog redirects (one-time moves from flat /blog/<slug> to /blog/YYYY/<slug>)
+/blog/2025-retrospective   /blog/2025/2025-retrospective   301
+/blog/artwork              /blog/2025/artwork              301
+/blog/sneak-preview        /blog/2025/sneak-preview        301
+/blog/dc32-nixmesh         /blog/2025/dc32-nixmesh         301
