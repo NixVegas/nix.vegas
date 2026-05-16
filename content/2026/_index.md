@@ -10,6 +10,11 @@ extra:
   favicon_512: "/img/favicon.png"
   hero_img: "/img/2025/nix-vegas.png"
   hero_glitch_imgs: []
+  event_dates: "August 6–9, 2026"
+  event_location: "Las Vegas Convention Center"
+  event_defcon: "DEF CON 34"
+  event_defcon_url: "https://defcon.org/html/defcon-34/"
+  event_tagline: "Agency"
 ---
 
 ## DEF CON 26 Theme: Agency
