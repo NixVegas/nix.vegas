@@ -1,0 +1,22 @@
+{% set current_year = config.extra.current_year %}
+{% set root_section = get_section(path="_index.md") %}
+{% set sections = root_section.subsections %}
+<ul class="past-events-list">
+  {% for section_path in sections %}
+    {% set sec = get_section(path=section_path) %}
+    {% if sec.path is matching("^/[0-9]{4}/$") %}
+      {% set year = sec.path | trim_start_matches(pat="/") | trim_end_matches(pat="/") %}
+      {% if year != current_year %}
+        <li>
+          <a href="/{{ year }}/">
+            <span class="past-event-year">{{ year }}</span>
+            <span class="past-event-defcon">{{ sec.extra.event_defcon }}</span>
+            {% if sec.extra.event_tagline %}
+              <span class="past-event-tagline">"{{ sec.extra.event_tagline }}"</span>
+            {% endif %}
+          </a>
+        </li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ul>

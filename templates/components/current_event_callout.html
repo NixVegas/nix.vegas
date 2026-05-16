@@ -1,0 +1,21 @@
+{% set current_year = config.extra.current_year %}
+{% set year_section = get_section(path=current_year ~ "/_index.md") %}
+<a class="current-event-callout" href="/{{ current_year }}/">
+  <div class="current-event-callout-defcon">
+    {{ year_section.extra.event_defcon }}
+  </div>
+  <div class="current-event-callout-dates">
+    {{ year_section.extra.event_dates }}
+  </div>
+  <div class="current-event-callout-location">
+    {{ year_section.extra.event_location }}
+  </div>
+  {% if year_section.extra.event_tagline %}
+  <div class="current-event-callout-tagline">
+    "{{ year_section.extra.event_tagline }}"
+  </div>
+  {% endif %}
+  <div class="current-event-callout-cta">
+    See the event →
+  </div>
+</a>

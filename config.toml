@@ -19,6 +19,7 @@ twitter_site = "@nixvegas"
 twitter_user = "@nixvegas"
 masto_user = "@nixvegas@defcon.social"
 timezone = "America/Los_Angeles"
+current_year = "2026"
 cfp_year = "2026"
 
 # Set to true if we are building the onsite version.
