@@ -22,10 +22,10 @@ timezone = "America/Los_Angeles"
 current_year = "2026"
 cfp_year = "2026"
 
-# Set to true if we are building the onsite version.
-onsite = false
-
-# Configuration for onsite resources.
+# Onsite/kiosk-build config slots. The site is no longer built in two modes
+# (the onsite Nix derivation was dropped), but the shortcodes in
+# templates/shortcodes/ still read these — leave the empty defaults so the
+# 2025 archive's /2025/onsite page renders without template errors.
 nixos_version = ""
 nixpkgs_rev = ""
 isos = []
