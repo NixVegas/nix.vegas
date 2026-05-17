@@ -68,13 +68,16 @@ We **can't** offer guaranteed speaking slots, sponsored sessions, branded talk c
 
 ## What we need beyond cash
 
-We also welcome in-kind support:
+Cash is great. In-kind support is sometimes a better fit for what your company already has lying around. The big buckets:
 
-- **Hardware:** compute, networking, storage for our onsite infrastructure (binary cache, mesh nodes, kiosks).
-- **Badge subsidies:** DEF CON badges are expensive; subsidies let us bring more speakers and volunteers.
-- **Services:** hosting, CDN, observability, anything that helps us run a reliable event.
+- **Networking.** A 10G-capable router/firewall and a managed switch with VLAN support to anchor the network. Smaller boxes that can run as mesh nodes around the space.
+- **Compute.** Servers for the binary cache (we mirror the full nixpkgs tree on-site), plus a high-core-count server (think 96+ cores) for streaming, builds, and live PR review during the event.
+- **Badge subsidies.** DEF CON badges are expensive, and they're how we get speakers and volunteers in the door. Subsidizing badges lets us bring in more talent.
+- **Swag.** We ran out of swag in 2025. If you produce or fund stickers, t-shirts, patches, or anything else attendees can take home, we'll happily put your name next to it.
 
-If you have something to offer that doesn't fit a neat tier, email us — we'll figure it out together.
+For more on how this came together in 2025, see our [DEF CON 33 retrospective](/blog/2025/2025-retrospective). We're building for similar (or larger) needs in 2026.
+
+If you have something to offer that doesn't fit a neat tier, email <sponsor@nix.vegas> — we'll figure it out together.
 
 ## Get in touch
 
