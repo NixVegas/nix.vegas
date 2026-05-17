@@ -27,12 +27,17 @@ We're a DEF CON community first, and we use that lens to reach into the more eso
 
 ## Audience
 
-TODO: numbers from 2025 to ground the pitch.
+2025 was our first year as a DEF CON community, and we filled the space. Multiple talks ran standing room only — attendees lined the back walls to catch them. We ran out of swag to hand out.
 
-- Attendees onsite: ~N
-- Talks delivered: ~N
-- Hours of programming: ~N
-- Stream / video reach: ~N
+The programming itself:
+
+- **12 speakers** delivering **15 unique talks and demos**
+- **3 days** of content in the Nix Vegas Space, single-track from morning to evening
+- Coverage spanning Nix, NixOS, reproducible builds, supply-chain security, and the more esoteric corners of both ecosystems
+
+Full lineup: [2025 schedule](/2025/schedule) and [2025 speakers](/2025/speakers).
+
+We're building on that for 2026.
 
 ## Sponsorship tiers
 
