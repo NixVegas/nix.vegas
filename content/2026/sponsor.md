@@ -41,31 +41,30 @@ We're building on that for 2026.
 
 ## Sponsorship tiers
 
-TODO: define tiers. Suggested starting shape (numbers placeholder):
+DEF CON has specific rules for community sponsorships, and we follow them. That shapes what we can and can't offer.
 
-### Bronze — $TBD
+We **can** offer logo placement on our website, signage and slides inside the Nix Vegas Space, brief mentions in opening remarks, and social media shoutouts.
 
-- Logo on the website footer for 2026
-- Mention in opening remarks
-- One social media shout-out
+We **can't** offer guaranteed speaking slots, sponsored sessions, branded talk content, dedicated booths, or product sales on our behalf. CFP is independent of sponsorship — if your team wants to submit talks, they go through the same review as everyone else.
 
-### Silver — $TBD
+### Source — $1,000
 
-- Everything in Bronze
-- Logo on stage backdrop
-- One slot in the conference welcome packet
+- Logo on the Nix Vegas 2026 website (sponsor page and footer)
+- One social media shout-out across our channels (Bluesky, Mastodon, X)
 
-### Gold — $TBD
+### Builder — $2,000
 
-- Everything in Silver
-- Booth space onsite
-- Sponsored break or session
+- Everything in Source
+- Brief mention in opening remarks
+- Logo on the between-talk slides shown in our community space
 
-### Platinum — $TBD
+### Closure — $4,000
 
-- Everything in Gold
-- Title sponsor billing
-- Customized engagement (badge feature, hosted side event, etc.) — let's talk
+- Everything in Builder
+- Your banner displayed inside the Nix Vegas Space (subject to DEF CON signage review)
+- Distribute your swag in our community space
+- One DEF CON badge for a member of your team
+- Acknowledgement in the post-event retrospective blog post and talk recordings
 
 ## What we need beyond cash
 
