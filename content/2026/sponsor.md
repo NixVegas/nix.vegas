@@ -5,14 +5,25 @@ title: "Sponsor Nix Vegas"
 
 # Sponsor Nix Vegas 2026
 
-Help us build the Nix community at DEF CON. Sponsorship keeps the lights on, funds badges, and lets us reach more attendees with great content.
-
 ## Why sponsor us
 
-TODO: short pitch — what makes Nix Vegas worth a sponsor's dollar. Examples to write up:
-- Who Nix Vegas reaches (DEF CON attendees, NixOS users, supply-chain security researchers).
-- What sponsors get out of being in front of that audience.
-- Why this is different from other DEF CON villages or Nix events.
+DEF CON is chaotic. If your company's software is running on any of our infrastructure that attendees have access to, there's a strong possibility it will be hacked somehow. We recommend letting this happen — it's fun for everyone involved.
+
+Nix Vegas is hosted by the Southern California NixOS User Group. We're embedded in the Nix community, and we have experience running large events — we help organize Planet Nix and SCaLE every year.
+
+Some examples of potential fits:
+
+- Do you want to help hackers connect with the Nix ecosystem?
+- Do you make hardware that matters for trustworthy software builds at scale?
+- Are you passionate about improving how software is deployed as much more of it is created?
+
+Here's what sponsorship gets you:
+
+- A presence in our community space — logo on our sign and slides, plus shoutouts on our website and social media.
+- Access to engineers who care about the same software- and hardware-security problems you do.
+- Conference badges and free swag for your company.
+
+We're a DEF CON community first, and we use that lens to reach into the more esoteric corners of Nix and NixOS. We encourage creative exploration of the systems that keep our software supply chain and builds secure.
 
 ## Audience
 
