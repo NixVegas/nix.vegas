@@ -15,13 +15,13 @@ Some examples of potential fits:
 
 - Do you want to help hackers connect with the Nix ecosystem?
 - Do you make hardware that matters for trustworthy software builds at scale?
-- Are you passionate about improving how software is deployed as much more of it is created?
+- Are you passionate about improving how software is deployed as more of it gets created?
 
 Here's what sponsorship gets you:
 
 - A presence in our community space — logo on our sign and slides, plus shoutouts on our website and social media.
 - Access to engineers who care about the same software- and hardware-security problems you do.
-- Conference badges and free swag for your company.
+- A conference badge available at our top tier, and the ability to put your swag directly in our community space.
 
 We're a DEF CON community first, and we use that lens to reach into the more esoteric corners of Nix and NixOS. We encourage creative exploration of the systems that keep our software supply chain and builds secure.
 
@@ -72,7 +72,6 @@ Cash is great. In-kind support is sometimes a better fit for what your company a
 
 - **Networking.** A 10G-capable router/firewall and a managed switch with VLAN support to anchor the network. Smaller boxes that can run as mesh nodes around the space.
 - **Compute.** Servers for the binary cache (we mirror the full nixpkgs tree on-site), plus a high-core-count server (think 96+ cores) for streaming, builds, and live PR review during the event.
-- **Badge subsidies.** DEF CON badges are expensive, and they're how we get speakers and volunteers in the door. Subsidizing badges lets us bring in more talent.
 - **Swag.** We ran out of swag in 2025. If you produce or fund stickers, t-shirts, patches, or anything else attendees can take home, we'll happily put your name next to it.
 
 For more on how this came together in 2025, see our [DEF CON 33 retrospective](/blog/2025/2025-retrospective). We're building for similar (or larger) needs in 2026.
@@ -81,4 +80,4 @@ If you have something to offer that doesn't fit a neat tier, email <sponsor@nix.
 
 ## Get in touch
 
-Email <sponsor@nix.vegas>. All sponsorship inquiries go to a shared inbox managed by the team and we'll respond within a few days.
+Email <sponsor@nix.vegas>. Tell us your tier interest, in-kind capability, or just that you want to talk — we'll route to the right person and respond within a few days.
