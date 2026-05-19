@@ -76,6 +76,7 @@ Cash is great. Sometimes in-kind support fits better with what your company alre
 - **Compute.** Servers for the binary cache (we mirror the full nixpkgs tree on-site), plus a high-core-count server (think 96+ cores) for streaming, builds, and live PR review during the event.
 - **Speaker badge funding.** DEF CON badges are expensive. We cover them for the speakers we bring in, and funding helps us bring in more talent and a more diverse lineup.
 - **Swag.** We ran out of swag in 2025. If you produce or fund stickers, t-shirts, patches, or anything else attendees can take home, we'll happily put your name next to it.
+- **Events.** If you want to sponsor the inaugural Nix Party Friday evening, get in touch. We're looking at a few affordable restaurants on the Strip for a get-together.
 
 See our [DEF CON 33 retrospective](/blog/2025/2025-retrospective) for how 2025 came together. 2026 needs are similar or larger.
 
