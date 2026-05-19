@@ -74,6 +74,7 @@ Cash is great. In-kind support is sometimes a better fit for what your company a
 
 - **Networking.** A 10G-capable router/firewall and a managed switch with VLAN support to anchor the network. Smaller boxes that can run as mesh nodes around the space.
 - **Compute.** Servers for the binary cache (we mirror the full nixpkgs tree on-site), plus a high-core-count server (think 96+ cores) for streaming, builds, and live PR review during the event.
+- **Speaker badge funding.** DEF CON badges are expensive. We cover them for the speakers we bring in, and funding helps us bring in more talent and a more diverse lineup.
 - **Swag.** We ran out of swag in 2025. If you produce or fund stickers, t-shirts, patches, or anything else attendees can take home, we'll happily put your name next to it.
 
 For more on how this came together in 2025, see our [DEF CON 33 retrospective](/blog/2025/2025-retrospective). We're building for similar (or larger) needs in 2026.
