@@ -9,7 +9,9 @@
         <li><a href="/{{ year_dir }}/about">About</a></li>
         <li><a href="/{{ year_dir }}/schedule">Schedule</a></li>
         <li><a href="/{{ year_dir }}/speakers">Speakers</a></li>
+        {% if viewing_current_year %}
         <li><a href="/{{ year_dir }}/sponsor">Sponsor</a></li>
+        {% endif %}
         {% if not viewing_current_year %}
         <li><a href="/{{ current_year }}/">{{ current_year }} →</a></li>
         {% endif %}
