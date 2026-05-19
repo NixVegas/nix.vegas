@@ -1,7 +1,7 @@
 ---
 template: "blog_post.html"
 title: "The road to rebuilding the world"
-authors: ["the Nix Vegas Team"]
+authors: ["Nix Vegas Team"]
 description: "Looking back at DEF CON's first Nix Community"
 date: "2025-08-25"
 extra:
