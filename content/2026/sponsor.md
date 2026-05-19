@@ -7,9 +7,9 @@ title: "Sponsor Nix Vegas"
 
 ## Why sponsor us
 
-DEF CON is chaotic. If your company's software is running on any of our infrastructure that attendees have access to, there's a strong possibility it will be hacked somehow. We recommend letting this happen — it's fun for everyone involved.
+DEF CON is chaotic. If your company's software runs on any of our infrastructure that attendees can reach, it'll probably get hacked. We recommend letting that happen. It's fun for everyone involved.
 
-Nix Vegas is hosted by the Southern California NixOS User Group. We're embedded in the Nix community, and we have experience running large events — we help organize Planet Nix and SCaLE every year.
+Nix Vegas is hosted by the Southern California NixOS User Group. We've been part of the Nix community for years and help organize Planet Nix and SCaLE every year. Running events is something we know how to do.
 
 Some examples of potential fits:
 
@@ -21,13 +21,13 @@ Here's what sponsorship gets you:
 
 - A presence in our community space — logo on our sign and slides, plus shoutouts on our website and social media.
 - Access to engineers who care about the same software- and hardware-security problems you do.
-- A conference badge available at our top tier, and the ability to put your swag directly in our community space.
+- At our top tier: a conference badge for someone on your team, and the chance to put your swag directly in our community space.
 
 We're a DEF CON community first, and we use that lens to reach into the more esoteric corners of Nix and NixOS. We encourage creative exploration of the systems that keep our software supply chain and builds secure.
 
 ## Audience
 
-2025 was our first year as a DEF CON community, and we filled the space. Multiple talks ran standing room only — attendees lined the back walls to catch them. We ran out of swag to hand out.
+2025 was our first year as a DEF CON community and we filled the space. Some talks ran standing room only, with attendees lining up outside the space to get in. We ran out of swag.
 
 The programming itself:
 
@@ -41,13 +41,13 @@ We're building on that for 2026.
 
 ## Sponsorship tiers
 
-DEF CON has specific rules for community sponsorships, and we follow them. That shapes what we can and can't offer.
+DEF CON has rules for community sponsorships. We follow them, which shapes what we can and can't offer.
 
-We **can** offer logo placement on our website, signage and slides inside the Nix Vegas Space, brief mentions in opening remarks, and social media shoutouts.
+What we **can** do: logo placement on our website, signage and slides inside the Nix Vegas Space, brief mentions in opening remarks, social media shoutouts.
 
-We **can't** offer guaranteed speaking slots, sponsored sessions, branded talk content, dedicated booths, or product sales on our behalf. CFP is independent of sponsorship — if your team wants to submit talks, they go through the same review as everyone else.
+What we **can't** do: guaranteed speaking slots, sponsored sessions, branded talk content, dedicated booths, or sales of your product on our behalf. CFP is independent of sponsorship. If your team wants to submit a talk they go through the same review as everyone else.
 
-Looking for your own space at DEF CON to attract talent for your team, connect with existing customers, or make your offerings known? Apply to be a [DEF CON Exhibitor](https://defcon.org/html/defcon-34/dc-34-cfe.html) — that's a separate program from community sponsorships, with its own application process and its own benefits.
+If you want your own space at DEF CON to recruit, talk to existing customers, or showcase what you build, that's the [DEF CON Exhibitor](https://defcon.org/html/defcon-34/dc-34-cfe.html) program. It's separate from community sponsorships, with its own application process.
 
 ### Source — $1,000
 
@@ -70,17 +70,17 @@ Looking for your own space at DEF CON to attract talent for your team, connect w
 
 ## What we need beyond cash
 
-Cash is great. In-kind support is sometimes a better fit for what your company already has lying around. What we may be looking for:
+Cash is great. Sometimes in-kind support fits better with what your company already has lying around. What we may be looking for:
 
 - **Networking.** A 10G-capable router/firewall and a managed switch with VLAN support to anchor the network. Smaller boxes that can run as mesh nodes around the space.
 - **Compute.** Servers for the binary cache (we mirror the full nixpkgs tree on-site), plus a high-core-count server (think 96+ cores) for streaming, builds, and live PR review during the event.
 - **Speaker badge funding.** DEF CON badges are expensive. We cover them for the speakers we bring in, and funding helps us bring in more talent and a more diverse lineup.
 - **Swag.** We ran out of swag in 2025. If you produce or fund stickers, t-shirts, patches, or anything else attendees can take home, we'll happily put your name next to it.
 
-For more on how this came together in 2025, see our [DEF CON 33 retrospective](/blog/2025/2025-retrospective). We're building for similar (or larger) needs in 2026.
+See our [DEF CON 33 retrospective](/blog/2025/2025-retrospective) for how 2025 came together. 2026 needs are similar or larger.
 
-If you have something to offer that doesn't fit a neat tier, email <sponsor@nix.vegas> — we'll figure it out together.
+Got something that doesn't fit a tier? Email <sponsor@nix.vegas> and we'll work it out.
 
 ## Get in touch
 
-Email <sponsor@nix.vegas>. Tell us your tier interest, in-kind capability, or just that you want to talk — we'll route to the right person and respond within a few days.
+Email <sponsor@nix.vegas>. Tell us which tier you're thinking about, what you can offer in kind, or just that you want to talk. We'll route to the right person and respond within a few days.
