@@ -1,0 +1,85 @@
+.current-event-callout {
+  display: block;
+  padding: 2rem;
+  border: 2px solid currentColor;
+  text-decoration: none;
+  color: inherit;
+  margin: 2rem 0;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .current-event-callout-defcon {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .current-event-callout-dates {
+    font-size: 1.25rem;
+  }
+
+  .current-event-callout-location {
+    font-size: 1rem;
+    opacity: 0.85;
+  }
+
+  .current-event-callout-tagline {
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .current-event-callout-cta {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+}
+
+.past-events-list,
+.recent-posts-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.past-events-list {
+  .past-event-year {
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .past-event-defcon {
+    margin-right: 0.5em;
+  }
+
+  .past-event-tagline {
+    font-style: italic;
+    opacity: 0.85;
+  }
+}
+
+.recent-posts-list {
+  .recent-post-date {
+    font-size: 0.875rem;
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
+  }
+
+  .recent-post-title {
+    margin: 0.25rem 0;
+  }
+}

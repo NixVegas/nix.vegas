@@ -1,0 +1,11 @@
+{% set blog = get_section(path="blog/_index.md") %}
+{% set recent = blog.pages | slice(end=3) %}
+<ul class="recent-posts-list">
+  {% for post in recent %}
+    <li>
+      <p class="recent-post-date">{{ post.date }}</p>
+      <h3 class="recent-post-title"><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+      <p class="recent-post-description">{{ post.description }}</p>
+    </li>
+  {% endfor %}
+</ul>

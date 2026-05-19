@@ -1,0 +1,16 @@
+# nix.vegas redirects — consumed by Netlify
+#
+# The "current-year" block is rewritten by script/new-year when the live event year rolls over.
+# Everything below the "permanent" header is hand-maintained.
+
+# BEGIN current-year
+/about     /2026/about      301
+/schedule  /2026/schedule   301
+/speakers  /2026/speakers   301
+# END current-year
+
+# Permanent blog redirects (one-time moves from flat /blog/<slug> to /blog/YYYY/<slug>)
+/blog/2025-retrospective   /blog/2025/2025-retrospective   301
+/blog/artwork              /blog/2025/artwork              301
+/blog/sneak-preview        /blog/2025/sneak-preview        301
+/blog/dc32-nixmesh         /blog/2025/dc32-nixmesh         301

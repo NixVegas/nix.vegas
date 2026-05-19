@@ -1,4 +1,6 @@
 ---
+template: "onsite.html"
+title: "Onsite"
 ---
 
 ## Welcome to Nix Vegas

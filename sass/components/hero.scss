@@ -1,33 +1,13 @@
 .hero-wrapper {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .container {
-        margin: auto;
-        text-align: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        overflow: clip;
-
-        .brand {
-            margin: auto auto;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px 0 5px 0;
-            width: 100%;
-        }
-    }
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
-.onsite {
-  min-height: 50vh;
-}
-
-.onsite .social-bar {
-  display: none;
+.brand {
+    background: #1f1f1f;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .rgb {

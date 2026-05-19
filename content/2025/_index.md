@@ -1,5 +1,5 @@
 ---
-template: "home.html"
+template: "year_home.html"
 title: "Home"
 
 extra:
@@ -15,6 +15,11 @@ extra:
     - "/img/2025/nix-vegas-glitched3.png"
     - "/img/2025/nix-vegas-glitched4.png"
     - "/img/2025/nix-vegas-glitched5.png"
+  event_dates: "August 7–10, 2025"
+  event_location: "Las Vegas Convention Center"
+  event_defcon: "DEF CON 33"
+  event_defcon_url: "https://defcon.org/html/defcon-33/"
+  event_tagline: "Rebuild the World"
 ---
 
 ## Sponsors

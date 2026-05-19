@@ -1,11 +1,15 @@
 #!/usr/bin/env nix-shell
 #!nix-shell -i bash -p curl jq
 
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 [sessionize all URL]" >&2
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <year> <sessionize-all-url>" >&2
+    echo "Example: $0 2026 https://sessionize.com/api/v2/abc123/view/All" >&2
     exit 1
 fi
 
-mkdir -p data
-curl "${1//All/Speakers}" | jq > data/speakers-filtered.json
-curl "${1//All/GridSmart}" | jq > data/schedule.json
+YEAR=$1
+URL=$2
+
+mkdir -p "data/$YEAR"
+curl "${URL//All/Speakers}" | jq > "data/$YEAR/speakers-filtered.json"
+curl "${URL//All/GridSmart}" | jq > "data/$YEAR/schedule.json"

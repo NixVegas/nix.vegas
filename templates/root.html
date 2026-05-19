@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="root-landing">
+    {% include 'components/current_event_callout.html' %}
+
+    <section class="root-about">
+      {{ section.content | safe }}
+    </section>
+
+    <section class="root-recent-posts">
+      <h2>Recent posts</h2>
+      {% include 'components/recent_posts.html' %}
+      <p><a href="/blog">All posts →</a></p>
+    </section>
+
+    <section class="root-past-events">
+      <h2>Past events</h2>
+      {% include 'components/past_events_list.html' %}
+    </section>
+  </div>
+{% endblock %}

@@ -1,6 +1,6 @@
 ---
-template: "home.html"
-title: "Home"
+template: "root.html"
+title: "Nix Vegas"
 
 extra:
   favicon_ico: "/img/favicon.ico"
@@ -12,39 +12,16 @@ extra:
   hero_glitch_imgs: []
 ---
 
-## DEF CON 26 Theme: Agency
+## About Nix Vegas
 
-DEF CON's theme this year is **Agency**, take a second to read about it
-[here](https://defcon.org/html/defcon-34/dc-34-theme.html).
+Nix Vegas is a [DEF CON](https://defcon.org) community of [Nix](https://nixos.org) users and developers, hosted by the [SoCal NixOS User Group](https://socal-nug.com) and Distractions, Inc. Whether you use Nix to break insecure hardware, build reproducible supply chains, or replace SaaS with self-hosted services, come learn about the quiet revolution that's reshaping software.
 
-While we are still hard at work on our art and theme this year, we
-would like to challenge you to submit talks that answer to our take on the DEF
-CON theme:
+Newbies and users of any distro are welcome.
 
-- Starve the beast: How can you use Nix and NixOS to reclaim your digital
-  agency?
-- Feed your community: How can we support others doing the same by rolling our
-  own tools and build infrastructure?
-- Resources, time, and energy: How can we use Nix to connect ordinary users
-  with the developers who made all the software they depend on?
+## Contact
 
-## CFP
+All emails route to a shared inbox managed by the team.
 
-CFP is open until June 15, 2026. Submit your ideas on
-[Pretalx](https://cfp.nix.vegas/2026).
-
-Note that we have two types of CFP this year: a standard **call for
-presentations** and a **call for projects**.
-
-Don't like speaking? No problem. We have some space for people to show off
-their projects instead of giving presentations. If you have a cool Nix related
-thing you want to demo at con, we have the space (and, perhaps, the
-infrastructure) for you. Our NOC will connect with you beforehand to see how we
-can tie your project in.
-
-## Sponsors
-
-Interested in sponsoring us with hardware, funding, or something else?
-Connect with us at <sponsor@nix.vegas>.
-
-Note that all emails to us go to a shared mailbox and ticketing system now.
+- General: <noc@nix.vegas>
+- CFP questions: <cfp@nix.vegas>
+- Sponsorships: <sponsor@nix.vegas>

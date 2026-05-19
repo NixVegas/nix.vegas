@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% set intro = get_page(path=year_dir ~ "/intro.md") %}
+  {{ intro.content | safe }}
+  {{ section.content | safe }}
+{% endblock %}

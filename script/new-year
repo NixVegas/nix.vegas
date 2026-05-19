@@ -1,0 +1,102 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p coreutils gnused gawk
+
+# new-year YYYY — scaffolds a new event year.
+#
+# Creates:
+#   content/YYYY/             (copied from script/year-template/)
+#   data/YYYY/{schedule,speakers-filtered}.json
+#   static/img/YYYY/.gitkeep
+#
+# Updates:
+#   config.toml               sets extra.current_year = "YYYY" (and prompts about cfp_year)
+#   static/_redirects         rewrites the BEGIN/END current-year block
+
+set -euo pipefail
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <year>" >&2
+    echo "Example: $0 2027" >&2
+    exit 1
+fi
+
+YEAR=$1
+if [[ ! "$YEAR" =~ ^[0-9]{4}$ ]]; then
+    echo "Error: year must be 4 digits, got: $YEAR" >&2
+    exit 1
+fi
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+if [ -d "content/$YEAR" ]; then
+    echo "Error: content/$YEAR already exists. Aborting." >&2
+    exit 1
+fi
+
+echo "Scaffolding new event year: $YEAR"
+
+# 1. Copy template
+echo "  -> content/$YEAR/ (from script/year-template/)"
+cp -r script/year-template "content/$YEAR"
+
+# 2. Empty data files
+echo "  -> data/$YEAR/{schedule,speakers-filtered}.json"
+mkdir -p "data/$YEAR"
+echo "[]" > "data/$YEAR/schedule.json"
+echo "[]" > "data/$YEAR/speakers-filtered.json"
+
+# 3. Static image dir
+echo "  -> static/img/$YEAR/.gitkeep"
+mkdir -p "static/img/$YEAR"
+touch "static/img/$YEAR/.gitkeep"
+
+# 4. Rewrite current-year block in static/_redirects
+REDIRECTS_FILE="static/_redirects"
+if [ ! -f "$REDIRECTS_FILE" ]; then
+    echo "Error: $REDIRECTS_FILE not found." >&2
+    exit 1
+fi
+
+echo "  -> updating $REDIRECTS_FILE"
+NEW_BLOCK="# BEGIN current-year
+/about     /$YEAR/about      301
+/schedule  /$YEAR/schedule   301
+/speakers  /$YEAR/speakers   301
+# END current-year"
+
+awk -v new_block="$NEW_BLOCK" '
+    /^# BEGIN current-year/ { print new_block; in_block=1; next }
+    /^# END current-year/   { in_block=0; next }
+    !in_block               { print }
+' "$REDIRECTS_FILE" > "$REDIRECTS_FILE.tmp"
+mv "$REDIRECTS_FILE.tmp" "$REDIRECTS_FILE"
+
+# 5. Update config.toml current_year
+echo "  -> config.toml: current_year = \"$YEAR\""
+sed -i -E "s/^current_year = \"[0-9]+\"/current_year = \"$YEAR\"/" config.toml
+
+if ! grep -q "^current_year = \"$YEAR\"" config.toml; then
+    echo "Warning: failed to update current_year in config.toml. Edit by hand." >&2
+fi
+
+# 6. Prompt about cfp_year
+read -p "Update cfp_year to $YEAR too? [y/N] " UPDATE_CFP
+if [[ "$UPDATE_CFP" =~ ^[Yy]$ ]]; then
+    sed -i -E "s/^cfp_year = \"[0-9]+\"/cfp_year = \"$YEAR\"/" config.toml
+    echo "  -> config.toml: cfp_year = \"$YEAR\""
+fi
+
+# 7. Next steps
+cat <<EOF
+
+Done. Next steps:
+
+  1. Edit content/$YEAR/_index.md — fill in event_dates, event_defcon, event_tagline, theme/CFP/sponsors copy.
+  2. Edit content/$YEAR/hero.md — fill in TAGLINE, DATES, DEF CON NN.
+  3. Edit content/$YEAR/about/_index.md — fill in dates and location.
+  4. Replace YYYY/NN placeholders throughout content/$YEAR/.
+  5. (Optional) Add hero/glitch art to static/img/$YEAR/ and reference in _index.md.
+  6. When CFP is open: ./script/refresh-data.sh $YEAR <sessionize-all-url>
+  7. git add . && git commit -m "content: scaffold $YEAR event"
+EOF

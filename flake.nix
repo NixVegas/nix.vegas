@@ -47,8 +47,6 @@
 
           packages = {
             default = pkgs.nix-vegas-site;
-            nixVegasOffsite = pkgs.nix-vegas-site;
-            nixVegasOnsite = pkgs.nix-vegas-site.onsite;
           };
 
           devShells.default = pkgs.mkShell {

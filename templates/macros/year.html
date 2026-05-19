@@ -1,0 +1,16 @@
+{# Returns the year a page belongs to by parsing its path. #}
+{# For pages under /YYYY/, returns "YYYY". For pages not under a year (root, /blog), returns the empty string. #}
+{% macro year_of_page(page) %}
+{%- set parts = page.path | split(pat="/") -%}
+{%- if parts | length > 1 and parts[1] is matching("^[0-9]{4}$") -%}
+{{- parts[1] -}}
+{%- endif -%}
+{% endmacro year_of_page %}
+
+{# Same, but for a section path. #}
+{% macro year_of_section(section) %}
+{%- set parts = section.path | split(pat="/") -%}
+{%- if parts | length > 1 and parts[1] is matching("^[0-9]{4}$") -%}
+{{- parts[1] -}}
+{%- endif -%}
+{% endmacro year_of_section %}

@@ -1,6 +1,8 @@
+{% import "macros/year.html" as year_macros %}
 {% extends 'base.html' %} {% block content %}
 
-{% set schedule = load_data(path="data/schedule.json", format="json") %}
+{% set year = year_macros::year_of_page(page=page) | trim %}
+{% set schedule = load_data(path="data/" ~ year ~ "/schedule.json", format="json") %}
 {{ page.content | safe }}
 
 <nav class="schedule-navigation">
@@ -10,14 +12,21 @@
     </h2>
   </div>
 
+  {% if schedule | length > 0 %}
   <div class="schedule-navigation-footer">
     <p>
         The schedule is also available <a href="https://hackertracker.app/schedule/?conf=DEFCON33&tag=48148">on Hacker Tracker</a>!
     </p>
   </div>
+  {% endif %}
 </nav>
 
-
+{% if schedule | length == 0 %}
+<div class="coming-soon">
+  <h2>Coming soon</h2>
+  <p>The schedule for the {{ year }} event isn't published yet. Check back closer to the conference.</p>
+</div>
+{% else %}
 {% for day_content in schedule %}
 <div class="schedule-day">
   <div class="schedule-day-header">
@@ -58,5 +67,6 @@
 
 </div>
 {% endfor %}
+{% endif %}
 
 {% endblock %}
