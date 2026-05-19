@@ -4,6 +4,12 @@
 {% set year = year_macros::year_of_page(page=page) | trim %}
 {% set speakers = load_data(path="data/" ~ year ~ "/speakers-filtered.json", format="json") %}
 {{ page.content | safe }}
+{% if speakers | length == 0 %}
+<div class="coming-soon">
+  <h2>Coming soon</h2>
+  <p>Speakers for the {{ year }} event are still being announced. Check back closer to the conference.</p>
+</div>
+{% endif %}
 {% for speaker in speakers %}
 <div class="speaker-item">
   {% if speaker.profilePicture %}
