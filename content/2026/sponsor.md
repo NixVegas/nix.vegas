@@ -70,7 +70,7 @@ Looking for your own space at DEF CON to attract talent for your team, connect w
 
 ## What we need beyond cash
 
-Cash is great. In-kind support is sometimes a better fit for what your company already has lying around. The big buckets:
+Cash is great. In-kind support is sometimes a better fit for what your company already has lying around. What we may be looking for:
 
 - **Networking.** A 10G-capable router/firewall and a managed switch with VLAN support to anchor the network. Smaller boxes that can run as mesh nodes around the space.
 - **Compute.** Servers for the binary cache (we mirror the full nixpkgs tree on-site), plus a high-core-count server (think 96+ cores) for streaming, builds, and live PR review during the event.
