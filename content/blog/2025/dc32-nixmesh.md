@@ -4,6 +4,7 @@ title: "Adventures in NixOS Mesh Networking at DEF CON"
 authors: ["numinit"]
 description: "Experimenting with mesh software delivery at DEF CON using NixOS"
 date: "2025-06-03"
+aliases: ["/blog/dc32-nixmesh"]
 ---
 
 _At DEF CON 32, a few friends pushed binary caching on NixOS to its limits. Thanks to a generous hardware donation by Protectli, we managed to get a mesh network of binary cache servers running in our backpacks at the conference, with Nebula mesh VPN and 802.11s mesh point wifi running between them using the onboard TPMs for key exchange. Follow along to see what we learned, what we're planning in the future, and how you can do better than us as we try to push trustworthy Nix binary caching out to edge devices. With DEF CON 33 right around the corner and us trying to rebuild the world, it's time to publish this so we can share what we did in years prior._

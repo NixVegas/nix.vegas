@@ -4,6 +4,7 @@ title: "Nix Vegas artwork announcement"
 authors: ["Nix Vegas Team", "Kenz Tobias"]
 description: "Introducing the Nix Vegas art, by Kenz Tobias!"
 date: "2025-07-23"
+aliases: ["/blog/artwork"]
 ---
 
 ----

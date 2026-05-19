@@ -4,6 +4,7 @@ title: "Extended CFP, and a sneak preview"
 authors: ["Nix Vegas Team"]
 description: "Get a preview of this year's Nix Vegas talks in advance of DEF CON"
 date: "2025-07-08"
+aliases: ["/blog/sneak-preview"]
 ---
 
 Attention all DEF CON 33 attendees! We are extending our CFP to **July 31**. As a reminder, the Sessionize link is [over here...](http://sessionize.com/NixVegas)
