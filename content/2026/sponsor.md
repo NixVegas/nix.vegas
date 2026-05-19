@@ -47,6 +47,8 @@ We **can** offer logo placement on our website, signage and slides inside the Ni
 
 We **can't** offer guaranteed speaking slots, sponsored sessions, branded talk content, dedicated booths, or product sales on our behalf. CFP is independent of sponsorship — if your team wants to submit talks, they go through the same review as everyone else.
 
+Looking for your own space at DEF CON to attract talent for your team, connect with existing customers, or make your offerings known? Apply to be a [DEF CON Exhibitor](https://defcon.org/html/defcon-34/dc-34-cfe.html) — that's a separate program from community sponsorships, with its own application process and its own benefits.
+
 ### Source — $1,000
 
 - Logo on the Nix Vegas 2026 website (sponsor page and footer)
