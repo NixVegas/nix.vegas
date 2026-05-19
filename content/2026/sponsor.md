@@ -3,7 +3,7 @@ template: "sponsor.html"
 title: "Sponsor Nix Vegas"
 ---
 
-# Sponsor Nix Vegas 2026
+# 2026 Sponsorship Prospectus
 
 ## Why sponsor us
 
