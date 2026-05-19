@@ -1,0 +1,14 @@
+{% set current_year = config.extra.current_year %}
+{% set target = "/" ~ current_year ~ "/" ~ page.extra.redirect_to ~ "/" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <meta http-equiv="refresh" content="0; url={{ target | safe }}">
+  <link rel="canonical" href="{{ target | safe }}">
+</head>
+<body>
+  <p>Redirecting to <a href="{{ target | safe }}">{{ target }}</a>…</p>
+</body>
+</html>

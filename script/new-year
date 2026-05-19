@@ -10,7 +10,9 @@
 #
 # Updates:
 #   config.toml               sets extra.current_year = "YYYY" (and prompts about cfp_year)
-#   static/_redirects         rewrites the BEGIN/END current-year block
+#
+# Vanity redirects (/about, /schedule, /speakers) follow config.extra.current_year
+# automatically via templates/redirect.html — no script action needed.
 
 set -euo pipefail
 
@@ -51,28 +53,7 @@ echo "  -> static/img/$YEAR/.gitkeep"
 mkdir -p "static/img/$YEAR"
 touch "static/img/$YEAR/.gitkeep"
 
-# 4. Rewrite current-year block in static/_redirects
-REDIRECTS_FILE="static/_redirects"
-if [ ! -f "$REDIRECTS_FILE" ]; then
-    echo "Error: $REDIRECTS_FILE not found." >&2
-    exit 1
-fi
-
-echo "  -> updating $REDIRECTS_FILE"
-NEW_BLOCK="# BEGIN current-year
-/about     /$YEAR/about      301
-/schedule  /$YEAR/schedule   301
-/speakers  /$YEAR/speakers   301
-# END current-year"
-
-awk -v new_block="$NEW_BLOCK" '
-    /^# BEGIN current-year/ { print new_block; in_block=1; next }
-    /^# END current-year/   { in_block=0; next }
-    !in_block               { print }
-' "$REDIRECTS_FILE" > "$REDIRECTS_FILE.tmp"
-mv "$REDIRECTS_FILE.tmp" "$REDIRECTS_FILE"
-
-# 5. Update config.toml current_year
+# 4. Update config.toml current_year
 echo "  -> config.toml: current_year = \"$YEAR\""
 sed -i -E "s/^current_year = \"[0-9]+\"/current_year = \"$YEAR\"/" config.toml
 
@@ -80,14 +61,14 @@ if ! grep -q "^current_year = \"$YEAR\"" config.toml; then
     echo "Warning: failed to update current_year in config.toml. Edit by hand." >&2
 fi
 
-# 6. Prompt about cfp_year
+# 5. Prompt about cfp_year
 read -p "Update cfp_year to $YEAR too? [y/N] " UPDATE_CFP
 if [[ "$UPDATE_CFP" =~ ^[Yy]$ ]]; then
     sed -i -E "s/^cfp_year = \"[0-9]+\"/cfp_year = \"$YEAR\"/" config.toml
     echo "  -> config.toml: cfp_year = \"$YEAR\""
 fi
 
-# 7. Next steps
+# 6. Next steps
 cat <<EOF
 
 Done. Next steps:
