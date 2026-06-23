@@ -18,8 +18,26 @@
     return new Date(start.getTime() + parseDurationMinutes(durationHHMM) * 60000);
   }
 
+  function formatTime(date, tz) {
+    return new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false
+    }).format(date);
+  }
+
+  function formatDayLabel(date, tz) {
+    return new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, weekday: 'long', month: 'long', day: 'numeric'
+    }).format(date);
+  }
+
+  function dateKey(date, tz) {
+    return new Intl.DateTimeFormat('en-CA', {
+      timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit'
+    }).format(date);
+  }
+
   // ---- Node export (browser leaves `module` undefined) ----
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { parseDurationMinutes, computeEnd };
+    module.exports = { parseDurationMinutes, computeEnd, formatTime, formatDayLabel, dateKey };
   }
 })();
