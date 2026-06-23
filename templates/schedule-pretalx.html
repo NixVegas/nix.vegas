@@ -1,0 +1,28 @@
+{% import "macros/year.html" as year_macros %}
+{% extends 'base.html' %} {% block content %}
+
+{% set year = year_macros::year_of_page(page=page) | trim %}
+{{ page.content | safe }}
+
+<nav class="schedule-navigation">
+  <div class="left">
+    <h2>Schedule</h2>
+  </div>
+</nav>
+
+<div class="pretalx-schedule"
+     data-schedule-url="https://cfp.nix.vegas/{{ year }}/schedule/export/schedule.json"
+     data-public-url="https://cfp.nix.vegas/{{ year }}/schedule/"
+     data-timezone="{{ config.extra.timezone }}">
+  <div class="ps-loading">Loading schedule…</div>
+  <noscript>
+    <div class="ps-error">
+      <h2>Schedule</h2>
+      <p>This schedule needs JavaScript. <a href="https://cfp.nix.vegas/{{ year }}/schedule/" rel="noopener">View it on pretalx ↗</a></p>
+    </div>
+  </noscript>
+</div>
+
+<script defer src="/js/schedule.js"></script>
+
+{% endblock %}
