@@ -127,7 +127,7 @@
 
   function pickDefaultDayIndex(vm, now) {
     if (!vm.days.length) return 0;
-    var nowKey = dateKey(now, vm.tz || 'America/Los_Angeles');
+    var nowKey = dateKey(now, vm.tz);
     for (var i = 0; i < vm.days.length; i++) {
       if (vm.days[i].dateKey === nowKey) return i;        // today matches a scheduled day
     }
