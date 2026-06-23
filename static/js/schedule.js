@@ -1,0 +1,25 @@
+/* Nix Vegas schedule renderer — fetches the pretalx schedule export and renders it.
+   Single classic script (no bundler/imports). Pure functions are exported for Node
+   unit tests; browser bootstrap runs only when a document is present. */
+(function () {
+  'use strict';
+
+  // ---- pure helpers ----
+
+  function parseDurationMinutes(hhmm) {
+    const parts = String(hhmm).split(':');
+    const h = Number(parts[0]);
+    const m = Number(parts[1]);
+    return h * 60 + m;
+  }
+
+  function computeEnd(startISO, durationHHMM) {
+    const start = new Date(startISO);
+    return new Date(start.getTime() + parseDurationMinutes(durationHHMM) * 60000);
+  }
+
+  // ---- Node export (browser leaves `module` undefined) ----
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { parseDurationMinutes, computeEnd };
+  }
+})();
