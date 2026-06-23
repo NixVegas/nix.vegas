@@ -137,6 +137,173 @@
     return 0;                                              // else (event passed) first day
   }
 
+  // ---- browser-only rendering ----
+
+  var CLAMP_CHARS = 120; // proxy for "abstract overflows ~2 lines" -> show Details link
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+
+  function safeTalkLink(url) {
+    return typeof url === 'string' && url.indexOf('https://cfp.nix.vegas/') === 0;
+  }
+
+  function showLoading(root) {
+    clear(root);
+    root.appendChild(el('div', 'ps-loading', 'Loading schedule…'));
+  }
+
+  function showEmpty(root) {
+    clear(root);
+    var box = el('div', 'ps-empty');
+    box.appendChild(el('h2', null, 'Coming soon'));
+    box.appendChild(el('p', null, "The schedule isn't published yet. Check back closer to the conference."));
+    root.appendChild(box);
+  }
+
+  function showError(root, publicUrl) {
+    clear(root);
+    var box = el('div', 'ps-error');
+    box.appendChild(el('h2', null, 'Schedule unavailable'));
+    var p = el('p', null, "We couldn't load the live schedule right now. ");
+    var a = el('a', null, 'View it on pretalx ↗');
+    a.setAttribute('href', publicUrl);
+    a.setAttribute('rel', 'noopener');
+    p.appendChild(a);
+    box.appendChild(p);
+    root.appendChild(box);
+  }
+
+  function renderCard(s, day, showTrackChips) {
+    var card = el('div', 'ps-card' + (s.isLive ? ' is-live' : '') + (s.isNext ? ' is-next' : ''));
+
+    var time = el('div', 'ps-time');
+    time.appendChild(el('b', 'ps-start', s.start));
+    time.appendChild(el('span', 'ps-end', '– ' + s.end));
+    time.appendChild(el('span', 'ps-dur', durationLabel(s)));
+    card.appendChild(time);
+
+    var info = el('div', 'ps-info');
+
+    var flags = el('div', 'ps-flags');
+    if (s.isLive) flags.appendChild(el('span', 'ps-flag is-live', 'LIVE'));
+    else if (s.isNext) flags.appendChild(el('span', 'ps-flag is-next', 'UP NEXT'));
+    if (day.multiRoom) flags.appendChild(el('span', 'ps-room', s.room));
+    if (showTrackChips && s.track) {
+      var chip = el('span', 'ps-track', s.track);
+      if (s.trackColor) chip.style.backgroundColor = s.trackColor;
+      flags.appendChild(chip);
+    }
+    if (flags.childNodes.length) info.appendChild(flags);
+
+    if (safeTalkLink(s.url)) {
+      var title = el('a', 'ps-title', s.title);
+      title.setAttribute('href', s.url);
+      title.setAttribute('rel', 'noopener');
+      info.appendChild(title);
+    } else {
+      info.appendChild(el('div', 'ps-title', s.title));
+    }
+
+    if (s.body) {
+      info.appendChild(el('p', 'ps-abstract', s.body));
+      if (s.body.length > CLAMP_CHARS && safeTalkLink(s.url)) {
+        var det = el('a', 'ps-details', 'Details ↗');
+        det.setAttribute('href', s.url);
+        det.setAttribute('rel', 'noopener');
+        info.appendChild(det);
+      }
+    }
+
+    if (s.speakers.length) {
+      info.appendChild(el('div', 'ps-speakers', s.speakers.join(', ')));
+    }
+
+    card.appendChild(info);
+    return card;
+  }
+
+  function durationLabel(s) {
+    var mins = Math.round((s.endInstant.getTime() - s.startInstant.getTime()) / 60000);
+    return mins + ' min';
+  }
+
+  function renderSchedule(root, vm) {
+    clear(root);
+    var activeIndex = pickDefaultDayIndex(vm, new Date());
+
+    var tabs = el('div', 'ps-tabs');
+    tabs.setAttribute('role', 'tablist');
+    var panels = [];
+
+    vm.days.forEach(function (day, i) {
+      var tab = el('button', 'ps-tab' + (i === activeIndex ? ' is-active' : ''));
+      tab.setAttribute('type', 'button');
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+      var parts = day.label.split(', ');
+      tab.appendChild(el('b', null, parts[0]));        // weekday
+      tab.appendChild(document.createTextNode(parts[1] || day.label)); // "Month D"
+      tab.addEventListener('click', function () { activate(i); });
+      tabs.appendChild(tab);
+
+      var panel = el('section', 'ps-day' + (i === activeIndex ? ' is-active' : ''));
+      panel.setAttribute('role', 'tabpanel');
+      if (i !== activeIndex) panel.setAttribute('hidden', '');
+
+      var metaText = day.sessions.length + (day.sessions.length === 1 ? ' session' : ' sessions');
+      if (day.roomName) metaText += ' · ' + day.roomName;
+      metaText += ' · all times Pacific';
+      panel.appendChild(el('div', 'ps-daymeta', metaText));
+
+      day.sessions.forEach(function (s) { panel.appendChild(renderCard(s, day, vm.showTrackChips)); });
+      panels.push(panel);
+    });
+
+    function activate(idx) {
+      var tabEls = tabs.querySelectorAll('.ps-tab');
+      for (var i = 0; i < tabEls.length; i++) {
+        var on = i === idx;
+        tabEls[i].classList.toggle('is-active', on);
+        tabEls[i].setAttribute('aria-selected', on ? 'true' : 'false');
+        panels[i].classList.toggle('is-active', on);
+        if (on) panels[i].removeAttribute('hidden'); else panels[i].setAttribute('hidden', '');
+      }
+    }
+
+    root.appendChild(tabs);
+    panels.forEach(function (p) { root.appendChild(p); });
+  }
+
+  function init() {
+    var root = document.querySelector('.pretalx-schedule[data-schedule-url]');
+    if (!root) return;
+    var url = root.getAttribute('data-schedule-url');
+    var tz = root.getAttribute('data-timezone') || 'America/Los_Angeles';
+    var publicUrl = root.getAttribute('data-public-url') || url;
+
+    showLoading(root);
+    fetch(url, { credentials: 'omit' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (json) {
+        var vm = annotateLiveNext(buildViewModel(json, tz), new Date());
+        if (!vm.days.length) { showEmpty(root); return; }
+        renderSchedule(root, vm);
+      })
+      .catch(function () { showError(root, publicUrl); });
+  }
+
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  }
+
   // ---- Node export (browser leaves `module` undefined) ----
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
