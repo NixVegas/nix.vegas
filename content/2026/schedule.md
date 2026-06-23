@@ -1,4 +1,4 @@
 ---
-template: "schedule.html"
+template: "schedule-sessionize.html"
 title: "Schedule"
 ---
