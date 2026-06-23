@@ -81,3 +81,29 @@ test('buildViewModel skips empty days and builds days/sessions', () => {
   assert.strictEqual(d1.sessions[1].start, '13:30');
   assert.strictEqual(d1.sessions[1].end, '14:15');
 });
+
+test('annotateLiveNext flags the running session and the next upcoming one', () => {
+  const vm = S.buildViewModel(FIXTURE, TZ);
+  // 12:30 PT on Aug 7: session BBB222 (12:00-13:00) is live; nothing later that day -> no isNext on day 0.
+  S.annotateLiveNext(vm, new Date('2026-08-07T12:30:00-07:00'));
+  assert.strictEqual(vm.days[0].sessions[0].isLive, false);
+  assert.strictEqual(vm.days[0].sessions[1].isLive, true);
+  assert.strictEqual(vm.days[0].sessions[0].isNext, false);
+  assert.strictEqual(vm.days[0].sessions[1].isNext, false);
+});
+
+test('annotateLiveNext flags up-next before the day starts', () => {
+  const vm = S.buildViewModel(FIXTURE, TZ);
+  S.annotateLiveNext(vm, new Date('2026-08-07T09:00:00-07:00'));
+  assert.strictEqual(vm.days[0].sessions[0].isNext, true);
+  assert.strictEqual(vm.days[0].sessions[1].isNext, false);
+  assert.strictEqual(vm.days[0].sessions[0].isLive, false);
+});
+
+test('pickDefaultDayIndex matches today, else first upcoming, else 0', () => {
+  const vm = S.buildViewModel(FIXTURE, TZ);
+  assert.strictEqual(S.pickDefaultDayIndex(vm, new Date('2026-08-08T09:00:00-07:00')), 1); // matches Aug 8
+  assert.strictEqual(S.pickDefaultDayIndex(vm, new Date('2026-08-07T23:00:00-07:00')), 0); // matches Aug 7
+  assert.strictEqual(S.pickDefaultDayIndex(vm, new Date('2026-08-01T09:00:00-07:00')), 0); // before event -> first
+  assert.strictEqual(S.pickDefaultDayIndex(vm, new Date('2026-09-01T09:00:00-07:00')), 0); // after event -> 0
+});

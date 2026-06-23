@@ -111,11 +111,38 @@
     return { showTrackChips: Object.keys(tracks).length > 1, days: days, tz: tz };
   }
 
+  function annotateLiveNext(vm, now) {
+    var nowMs = now.getTime();
+    vm.days.forEach(function (day) {
+      day.sessions.forEach(function (s) {
+        s.isLive = s.startInstant.getTime() <= nowMs && nowMs < s.endInstant.getTime();
+        s.isNext = false;
+      });
+      for (var i = 0; i < day.sessions.length; i++) {
+        if (day.sessions[i].startInstant.getTime() > nowMs) { day.sessions[i].isNext = true; break; }
+      }
+    });
+    return vm;
+  }
+
+  function pickDefaultDayIndex(vm, now) {
+    if (!vm.days.length) return 0;
+    var nowKey = dateKey(now, vm.tz || 'America/Los_Angeles');
+    for (var i = 0; i < vm.days.length; i++) {
+      if (vm.days[i].dateKey === nowKey) return i;        // today matches a scheduled day
+    }
+    for (var j = 0; j < vm.days.length; j++) {
+      if (vm.days[j].dateKey >= nowKey) return j;          // else first upcoming day
+    }
+    return 0;                                              // else (event passed) first day
+  }
+
   // ---- Node export (browser leaves `module` undefined) ----
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       parseDurationMinutes, computeEnd, formatTime, formatDayLabel, dateKey,
-      speakerNames, pickBody, trackColorMap, buildViewModel
+      speakerNames, pickBody, trackColorMap, buildViewModel,
+      annotateLiveNext, pickDefaultDayIndex
     };
   }
 })();
