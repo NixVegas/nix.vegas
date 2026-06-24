@@ -8,6 +8,14 @@
   <div class="left">
     <h2>Schedule</h2>
   </div>
+
+  {% if page.extra.external_schedule_url %}
+  <div class="schedule-navigation-footer">
+    <p>
+        Also on the official DEF CON guide: <a href="{{ page.extra.external_schedule_url | safe }}">{{ page.extra.external_schedule_label | default(value="view schedule") }} ↗</a>
+    </p>
+  </div>
+  {% endif %}
 </nav>
 
 <div class="pretalx-schedule"
