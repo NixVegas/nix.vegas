@@ -172,7 +172,7 @@
     var box = el('div', 'ps-error');
     box.appendChild(el('h2', null, 'Schedule unavailable'));
     var p = el('p', null, "We couldn't load the live schedule right now. ");
-    var a = el('a', null, 'View it on pretalx ↗');
+    var a = el('a', null, 'View the static schedule on pretalx ↗');
     a.setAttribute('href', publicUrl);
     a.setAttribute('rel', 'noopener');
     p.appendChild(a);
