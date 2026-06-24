@@ -8,6 +8,11 @@
   <div class="left">
     <h2>Schedule</h2>
   </div>
+  {% if page.extra.livecast_url %}
+  <div class="right">
+    <a class="schedule-livecast" href="{{ page.extra.livecast_url | safe }}">● Watch the livecast ↗</a>
+  </div>
+  {% endif %}
 
   {% if page.extra.external_schedule_url %}
   <div class="schedule-navigation-footer">

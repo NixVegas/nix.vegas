@@ -134,6 +134,15 @@
   .ps-speakers { margin-top: 0.5rem; color: #cfd2d6; font-size: 0.82rem; }
 }
 
+// "Watch the livecast" link in the schedule nav (pretalx years only)
+.schedule-navigation .schedule-livecast {
+  color: #e0287d;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.schedule-navigation .schedule-livecast:hover { text-decoration: underline; }
+
 @media screen and (max-width: 768px) {
   .pretalx-schedule {
     padding: 0 2ch;
