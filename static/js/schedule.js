@@ -62,44 +62,41 @@
         .filter(function (e) { return e[1] && e[1].length > 0; });
       if (roomEntries.length === 0) return; // skip empty day
 
-      var rooms = roomEntries.map(function (e) {
-        var name = e[0];
-        var talks = e[1].slice().sort(function (a, b) { return new Date(a.date) - new Date(b.date); });
-        return {
-          name: name,
-          sessions: talks.map(function (t) {
-            var startInstant = new Date(t.date);
-            var endInstant = computeEnd(t.date, t.duration);
-            return {
-              code: t.code,
-              title: t.title,
-              url: t.url,
-              room: t.room || name,
-              track: t.track || null,
-              trackColor: colors[t.track] || null,
-              speakers: speakerNames(t.persons),
-              body: pickBody(t),
-              startInstant: startInstant,
-              endInstant: endInstant,
-              start: formatTime(startInstant, tz),
-              end: formatTime(endInstant, tz),
-              isLive: false,
-              isNext: false
-            };
-          })
-        };
+      // Flatten every room's talks into one time-sorted list. The renderer shows a
+      // single interleaved list with a per-card room badge (gated on day.multiRoom),
+      // so there is no per-room grouping to keep.
+      var sessions = [];
+      roomEntries.forEach(function (e) {
+        var roomName = e[0];
+        e[1].forEach(function (t) {
+          var startInstant = new Date(t.date);
+          var endInstant = computeEnd(t.date, t.duration);
+          sessions.push({
+            code: t.code,
+            title: t.title,
+            url: t.url,
+            room: t.room || roomName,
+            track: t.track || null,
+            trackColor: colors[t.track] || null,
+            speakers: speakerNames(t.persons),
+            body: pickBody(t),
+            startInstant: startInstant,
+            endInstant: endInstant,
+            start: formatTime(startInstant, tz),
+            end: formatTime(endInstant, tz),
+            isLive: false,
+            isNext: false
+          });
+        });
       });
-
-      var allSessions = rooms.reduce(function (acc, r) { return acc.concat(r.sessions); }, [])
-        .sort(function (a, b) { return a.startInstant - b.startInstant; });
+      sessions.sort(function (a, b) { return a.startInstant - b.startInstant; });
 
       days.push({
-        label: formatDayLabel(allSessions[0].startInstant, tz),
-        dateKey: dateKey(allSessions[0].startInstant, tz),
-        multiRoom: rooms.length > 1,
-        roomName: rooms.length === 1 ? rooms[0].name : null,
-        rooms: rooms,
-        sessions: allSessions
+        label: formatDayLabel(sessions[0].startInstant, tz),
+        dateKey: dateKey(sessions[0].startInstant, tz),
+        multiRoom: roomEntries.length > 1,
+        roomName: roomEntries.length === 1 ? roomEntries[0][0] : null,
+        sessions: sessions
       });
     });
 
@@ -113,15 +110,18 @@
 
   function annotateLiveNext(vm, now) {
     var nowMs = now.getTime();
+    var next = null; // the single soonest upcoming session across the whole schedule
     vm.days.forEach(function (day) {
       day.sessions.forEach(function (s) {
         s.isLive = s.startInstant.getTime() <= nowMs && nowMs < s.endInstant.getTime();
         s.isNext = false;
+        if (s.startInstant.getTime() > nowMs &&
+            (next === null || s.startInstant.getTime() < next.startInstant.getTime())) {
+          next = s;
+        }
       });
-      for (var i = 0; i < day.sessions.length; i++) {
-        if (day.sessions[i].startInstant.getTime() > nowMs) { day.sessions[i].isNext = true; break; }
-      }
     });
+    if (next) next.isNext = true;
     return vm;
   }
 
@@ -180,6 +180,11 @@
     root.appendChild(box);
   }
 
+  function durationLabel(s) {
+    var mins = Math.round((s.endInstant.getTime() - s.startInstant.getTime()) / 60000);
+    return mins + ' min';
+  }
+
   function renderCard(s, day, showTrackChips) {
     var card = el('div', 'ps-card' + (s.isLive ? ' is-live' : '') + (s.isNext ? ' is-next' : ''));
 
@@ -227,11 +232,6 @@
 
     card.appendChild(info);
     return card;
-  }
-
-  function durationLabel(s) {
-    var mins = Math.round((s.endInstant.getTime() - s.startInstant.getTime()) / 60000);
-    return mins + ' min';
   }
 
   function renderSchedule(root, vm) {

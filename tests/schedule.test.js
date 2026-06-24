@@ -34,6 +34,8 @@ test('formatDayLabel renders weekday/month/day in the given zone', () => {
 
 test('dateKey returns ISO-ordered Y-M-D in the given zone', () => {
   assert.strictEqual(S.dateKey(new Date('2026-08-07T10:00:00-07:00'), 'America/Los_Angeles'), '2026-08-07');
+  // UTC instant that lands on the previous calendar day in Pacific (05:00Z = 22:00 PDT, Aug 7)
+  assert.strictEqual(S.dateKey(new Date('2026-08-08T05:00:00Z'), 'America/Los_Angeles'), '2026-08-07');
 });
 
 test('speakerNames prefers public_name, falls back to name, drops empties', () => {
@@ -52,6 +54,7 @@ test('buildViewModel skips empty days and builds days/sessions', () => {
   const vm = S.buildViewModel(FIXTURE, TZ);
   assert.strictEqual(vm.days.length, 2);                 // Aug 6 (empty) skipped
   assert.strictEqual(vm.showTrackChips, true);           // Events + Talks + Projects
+  assert.strictEqual(vm.tz, TZ);                         // tz carried for default-day selection
 
   const d0 = vm.days[0];
   assert.strictEqual(d0.label, 'Friday, August 7');
@@ -82,22 +85,27 @@ test('buildViewModel skips empty days and builds days/sessions', () => {
   assert.strictEqual(d1.sessions[1].end, '14:15');
 });
 
-test('annotateLiveNext flags the running session and the next upcoming one', () => {
+test('annotateLiveNext marks the running session live and the single global next', () => {
   const vm = S.buildViewModel(FIXTURE, TZ);
-  // 12:30 PT on Aug 7: session BBB222 (12:00-13:00) is live; nothing later that day -> no isNext on day 0.
+  // 12:30 PT Aug 7: BBB222 (12:00-13:00) is live; the soonest upcoming session across
+  // the whole schedule is on the next day (Aug 8 13:00) -> only it is "next".
   S.annotateLiveNext(vm, new Date('2026-08-07T12:30:00-07:00'));
   assert.strictEqual(vm.days[0].sessions[0].isLive, false);
   assert.strictEqual(vm.days[0].sessions[1].isLive, true);
   assert.strictEqual(vm.days[0].sessions[0].isNext, false);
   assert.strictEqual(vm.days[0].sessions[1].isNext, false);
+  assert.strictEqual(vm.days[1].sessions[0].isNext, true);   // global next is cross-day
+  assert.strictEqual(vm.days[1].sessions[0].isLive, false);
 });
 
-test('annotateLiveNext flags up-next before the day starts', () => {
+test('annotateLiveNext marks only one global next before the event, none live', () => {
   const vm = S.buildViewModel(FIXTURE, TZ);
   S.annotateLiveNext(vm, new Date('2026-08-07T09:00:00-07:00'));
-  assert.strictEqual(vm.days[0].sessions[0].isNext, true);
+  assert.strictEqual(vm.days[0].sessions[0].isNext, true);   // soonest upcoming overall
   assert.strictEqual(vm.days[0].sessions[1].isNext, false);
+  assert.strictEqual(vm.days[1].sessions[0].isNext, false);  // only ONE global next
   assert.strictEqual(vm.days[0].sessions[0].isLive, false);
+  assert.strictEqual(vm.days[0].sessions[1].isLive, false);  // negative isLive coverage
 });
 
 test('pickDefaultDayIndex matches today, else first upcoming, else 0', () => {
