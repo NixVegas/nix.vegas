@@ -69,9 +69,12 @@
   .ps-card.is-next { box-shadow: inset 3px 0 0 #33d17a; }
   .ps-card.is-live { box-shadow: inset 3px 0 0 #e0287d; }
 
+  // allow long titles/abstracts to wrap/clamp instead of stretching the 1fr column
+  .ps-info { min-width: 0; }
+
   .ps-time { border-right: 1px solid #34343a; padding-right: 0.7rem; }
   .ps-start { display: block; color: #66ccee; font-size: 1.35rem; font-weight: 800; line-height: 1; }
-  .ps-end { color: #7d8288; font-size: 0.8rem; }
+  .ps-end { display: block; color: #7d8288; font-size: 0.8rem; }
   .ps-dur { display: block; color: #5a5e63; font-size: 0.7rem; margin-top: 0.35rem; }
 
   .ps-flags { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem; }
@@ -84,7 +87,7 @@
     padding: 0.12rem 0.4rem;
   }
   .ps-flag.is-live { background: #e0287d; color: #fff; }
-  .ps-flag.is-next { background: #33d17a; }
+  .ps-flag.is-next { background: #33d17a; color: #0c0c0d; }
   .ps-room {
     font-size: 0.68rem;
     letter-spacing: 0.06em;
