@@ -234,9 +234,9 @@
     return card;
   }
 
-  function renderSchedule(root, vm) {
+  function renderSchedule(root, vm, now) {
     clear(root);
-    var activeIndex = pickDefaultDayIndex(vm, new Date());
+    var activeIndex = pickDefaultDayIndex(vm, now);
 
     var tabs = el('div', 'ps-tabs');
     tabs.setAttribute('role', 'tablist');
@@ -281,20 +281,35 @@
     panels.forEach(function (p) { root.appendChild(p); });
   }
 
+  // Optional ?now=<ISO> override for previewing LIVE / UP NEXT at a given moment
+  // (e.g. ?now=2026-08-07T10:10:00-07:00). Falls back to the real clock; inert
+  // for normal visitors who don't pass the param.
+  function previewNow() {
+    try {
+      var p = new URLSearchParams(window.location.search).get('now');
+      if (p) {
+        var d = new Date(p);
+        if (!isNaN(d.getTime())) return d;
+      }
+    } catch (e) {}
+    return new Date();
+  }
+
   function init() {
     var root = document.querySelector('.pretalx-schedule[data-schedule-url]');
     if (!root) return;
     var url = root.getAttribute('data-schedule-url');
     var tz = root.getAttribute('data-timezone') || 'America/Los_Angeles';
     var publicUrl = root.getAttribute('data-public-url') || url;
+    var now = previewNow();
 
     showLoading(root);
     fetch(url, { credentials: 'omit' })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (json) {
-        var vm = annotateLiveNext(buildViewModel(json, tz), new Date());
+        var vm = annotateLiveNext(buildViewModel(json, tz), now);
         if (!vm.days.length) { showEmpty(root); return; }
-        renderSchedule(root, vm);
+        renderSchedule(root, vm, now);
       })
       .catch(function () { showError(root, publicUrl); });
   }
