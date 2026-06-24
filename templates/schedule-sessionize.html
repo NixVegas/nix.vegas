@@ -12,10 +12,10 @@
     </h2>
   </div>
 
-  {% if schedule | length > 0 %}
+  {% if page.extra.external_schedule_url and schedule | length > 0 %}
   <div class="schedule-navigation-footer">
     <p>
-        The schedule is also available <a href="https://hackertracker.app/schedule/?conf=DEFCON33&tag=48148">on Hacker Tracker</a>!
+        Also on the official DEF CON guide: <a href="{{ page.extra.external_schedule_url | safe }}">{{ page.extra.external_schedule_label | default(value="view schedule") }} ↗</a>
     </p>
   </div>
   {% endif %}

@@ -1,0 +1,41 @@
+{% import "macros/year.html" as year_macros %}
+{% extends 'base.html' %} {% block content %}
+
+{% set year = year_macros::year_of_page(page=page) | trim %}
+{{ page.content | safe }}
+
+<nav class="schedule-navigation">
+  <div class="left">
+    <h2>Schedule</h2>
+  </div>
+  {% if page.extra.livecast_url %}
+  <div class="right">
+    <a class="schedule-livecast" href="{{ page.extra.livecast_url | safe }}">● Watch the livecast ↗</a>
+  </div>
+  {% endif %}
+
+  {% if page.extra.external_schedule_url %}
+  <div class="schedule-navigation-footer">
+    <p>
+        Also on the official DEF CON guide: <a href="{{ page.extra.external_schedule_url | safe }}">{{ page.extra.external_schedule_label | default(value="view schedule") }} ↗</a>
+    </p>
+  </div>
+  {% endif %}
+</nav>
+
+<div class="pretalx-schedule"
+     data-schedule-url="https://cfp.nix.vegas/{{ year }}/schedule/export/schedule.json"
+     data-public-url="https://cfp.nix.vegas/{{ year }}/schedule/nojs"
+     data-timezone="{{ config.extra.timezone | safe }}">
+  <div class="ps-loading">Loading schedule…</div>
+  <noscript>
+    <div class="ps-error">
+      <h2>Schedule</h2>
+      <p>This schedule needs JavaScript. <a href="https://cfp.nix.vegas/{{ year }}/schedule/nojs" rel="noopener">View the static schedule on pretalx ↗</a></p>
+    </div>
+  </noscript>
+</div>
+
+<script defer src="/js/schedule.js"></script>
+
+{% endblock %}

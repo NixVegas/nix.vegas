@@ -56,6 +56,7 @@
               pngcrush
               nodePackages.svgo
               nixfmt-rfc-style
+              nodejs
             ];
           };
         };
