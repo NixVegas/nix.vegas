@@ -35,7 +35,7 @@ CON theme:
 
 ## CFP
 
-CFP is open until June 15, 2026. Submit your ideas on
+CFP is open until July 15, 2026. Submit your ideas on
 [Pretalx](https://cfp.nix.vegas/2026).
 
 Note that we have two types of CFP this year: a standard **call for
