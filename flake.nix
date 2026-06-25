@@ -54,7 +54,7 @@
               zola
               alejandra
               pngcrush
-              nodePackages.svgo
+              svgo
               nixfmt-rfc-style
               nodejs
             ];
