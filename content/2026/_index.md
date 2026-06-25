@@ -49,7 +49,16 @@ can tie your project in.
 
 ## Sponsors
 
-Interested in sponsoring us with hardware, funding, or something else?
-Connect with us at <sponsor@nix.vegas>.
+Thank you to these companies who believe in Nix as the future of software
+deployment for supporting the Nix Community at DEF CON:
+
+### Closure Tier
+
+>[![Flox](/img/sponsors/Flox.svg)](https://flox.dev)
+>[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
+
+Interested in sponsoring us with hardware, funding, or something else? See the
+[Sponsorship Prospectus](/2026/sponsor) and connect with us at
+<sponsor@nix.vegas>.
 
 Note that all emails to us go to a shared mailbox and ticketing system now.
