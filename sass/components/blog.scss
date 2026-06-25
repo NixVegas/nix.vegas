@@ -18,6 +18,13 @@
     font-style: italic;
 }
 
+.blog-wrapper .community-stage {
+    border-left: 4px solid currentColor;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
+
 .blog-wrapper li.blog-post::marker {
     content: "";
 }

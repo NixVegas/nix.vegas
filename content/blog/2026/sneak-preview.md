@@ -20,6 +20,31 @@ get your submission in.
 In the meantime, here are some sessions to look forward to in advance of the
 full conference schedule...
 
+## Compiling the World: A Binary Dataset Built from nixpkgs
+
+Chris Connelly
+
+<div class="community-stage">This talk will be presented on the DEF CON Community Stage.</div>
+
+Reverse engineering binaries is slow, detailed work, but it's one of the few
+ways we have to verify what some software actually does. Machine learning might
+help improve some of those challenges, but only if you have high-quality,
+real-world ground truth to train and evaluate on. At MIT Lincoln Laboratory, we
+have built a large dataset for machine learning on x86_64 binaries using
+nixpkgs, taking advantage of Nix's reproducibility, package coverage, and
+instrumentable build environments.
+
+We compiled tens of thousands of C, C++, Rust, and Go packages, often multiple
+versions of each, with consistent compiler flags, captured source files, and
+debug information. From these, we extracted roughly 50 million functions and
+aligned with their source code and short descriptions. Possible applications
+include fine-tuning large language models for various binary tasks or training
+custom, highly efficient models for binary code understanding.
+
+I'll walk through what it takes to wrangle nixpkgs in an HPC environment at this
+scale and show how open build tooling like Nix can help us to better understand
+and analyze the software that we all depend on.
+
 ## NixOS Workspaces
 
 JB
@@ -81,26 +106,3 @@ Patches are cheap. Proof is not. I will show what it takes to make an agent's
 work auditable enough to be worth a maintainer's time and I hope, to persuade
 maintainers that agents belong in their workflow. The workflows we built for
 human-only contribution will not survive contact with agents unchanged.
-
-## Compiling the World: A Binary Dataset Built from nixpkgs
-
-Chris Connelly
-
-Reverse engineering binaries is slow, detailed work, but it's one of the few
-ways we have to verify what some software actually does. Machine learning might
-help improve some of those challenges, but only if you have high-quality,
-real-world ground truth to train and evaluate on. At MIT Lincoln Laboratory, we
-have built a large dataset for machine learning on x86_64 binaries using
-nixpkgs, taking advantage of Nix's reproducibility, package coverage, and
-instrumentable build environments.
-
-We compiled tens of thousands of C, C++, Rust, and Go packages, often multiple
-versions of each, with consistent compiler flags, captured source files, and
-debug information. From these, we extracted roughly 50 million functions and
-aligned with their source code and short descriptions. Possible applications
-include fine-tuning large language models for various binary tasks or training
-custom, highly efficient models for binary code understanding.
-
-I'll walk through what it takes to wrangle nixpkgs in an HPC environment at this
-scale and show how open build tooling like Nix can help us to better understand
-and analyze the software that we all depend on.
