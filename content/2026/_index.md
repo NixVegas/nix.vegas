@@ -49,6 +49,14 @@ can tie your project in.
 
 ## Sponsors
 
+Thank you to these companies who believe in Nix as the future of software
+deployment for supporting the Nix Community at DEF CON:
+
+### Closure Tier
+
+>[![Flox](/img/sponsors/Flox.svg)](https://flox.dev)
+>[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
+
 Interested in sponsoring us with hardware, funding, or something else?
 Connect with us at <sponsor@nix.vegas>.
 
