@@ -63,7 +63,7 @@ of deployment, security considerations, and installation guidance.
 
 ## Running a homelab with NixOS
 
-ahoneybun
+Aaron Honeycutt
 
 Are you looking to self host some services like Movies/TV, Music, Audiobooks
 and more with NixOS? It is really simple!
