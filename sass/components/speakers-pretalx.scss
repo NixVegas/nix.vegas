@@ -1,0 +1,99 @@
+.pretalx-speakers {
+  display: block;
+
+  .pspk-loading,
+  .pspk-empty,
+  .pspk-error {
+    background: #202024;
+    border: 1px solid #2e2e33;
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: #b9bcc2;
+  }
+  .pspk-error a,
+  .pspk-empty a { color: #66ccee; }
+
+  .pspk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.85rem;
+  }
+
+  .pspk-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    background: #202024;
+    border: 1px solid #2e2e33;
+    border-radius: 11px;
+    padding: 1.05rem;
+    min-width: 0;
+  }
+
+  .pspk-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #34343a;
+  }
+  .pspk-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0287d;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  .pspk-name {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.22;
+    text-decoration: none;
+  }
+  a.pspk-name:hover { color: #66ccee; }
+
+  .pspk-bio {
+    color: #b9bcc2;
+    font-size: 0.86rem;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pspk-talks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .pspk-talk {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    margin-top: 0.25rem;
+    padding-left: 0.9rem;
+    position: relative;
+  }
+  .pspk-talk::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #e0287d;
+  }
+  .pspk-talk a { color: #66ccee; text-decoration: none; }
+  .pspk-talk a:hover { text-decoration: underline; }
+}
+
+@media screen and (max-width: 768px) {
+  .pretalx-speakers {
+    padding: 0 2ch;
+    .pspk-grid { grid-template-columns: 1fr; }
+  }
+}
