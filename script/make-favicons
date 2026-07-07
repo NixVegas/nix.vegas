@@ -1,0 +1,57 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p coreutils imagemagick pngcrush
+
+# make-favicons <image> <year> — generates a year's favicon set from a source image.
+#
+# Writes to static/img/YEAR/:
+#   favicon-16x16.png, favicon-32x32.png, favicon-48x48.png   (pngcrushed)
+#   favicon.png                                               (512x512, pngcrushed)
+#   favicon.ico                                               (128/64/48/32/16 multi-res)
+#
+# The source image should be square with the artwork close to the edges so the
+# icon doesn't render undersized in browser tabs. A non-square image is centered
+# on a transparent square canvas.
+#
+# Afterwards, point extra.favicon_* in content/YEAR/_index.md at /img/YEAR/...
+
+set -euo pipefail
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <image> <year>" >&2
+    echo "Example: $0 ~/new-logo.png 2027" >&2
+    exit 1
+fi
+
+SRC=$1
+YEAR=$2
+if [[ ! "$YEAR" =~ ^[0-9]{4}$ ]]; then
+    echo "Error: year must be 4 digits, got: $YEAR" >&2
+    exit 1
+fi
+if [ ! -r "$SRC" ]; then
+    echo "Error: cannot read image: $SRC" >&2
+    exit 1
+fi
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+OUT="$REPO_ROOT/static/img/$YEAR"
+mkdir -p "$OUT"
+
+TMP="$(mktemp -d)"
+trap 'rm -rf "$TMP"' EXIT
+
+for s in 16 32 48 64 128 512; do
+    echo "  -> ${s}x${s}"
+    magick "$SRC" -resize ${s}x${s} -background none -gravity center -extent ${s}x${s} "$TMP/raw-$s.png"
+    pngcrush -s -brute -rem alla -reduce "$TMP/raw-$s.png" "$TMP/crushed-$s.png"
+done
+
+cp "$TMP/crushed-16.png"  "$OUT/favicon-16x16.png"
+cp "$TMP/crushed-32.png"  "$OUT/favicon-32x32.png"
+cp "$TMP/crushed-48.png"  "$OUT/favicon-48x48.png"
+cp "$TMP/crushed-512.png" "$OUT/favicon.png"
+echo "  -> favicon.ico"
+magick "$TMP/crushed-128.png" "$TMP/crushed-64.png" "$TMP/crushed-48.png" \
+       "$TMP/crushed-32.png" "$TMP/crushed-16.png" "$OUT/favicon.ico"
+
+echo "Done. Favicons written to static/img/$YEAR/"
