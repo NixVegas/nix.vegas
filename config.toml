@@ -13,7 +13,7 @@ style = "inline"
 theme = "github-dark"
 
 [extra]
-og_preview_img = "/img/favicon.png"
+og_preview_img = "/img/2026/favicon.png"
 twitter_site = "@nixvegas"
 twitter_user = "@nixvegas"
 masto_user = "@nixvegas@defcon.social"
