@@ -88,8 +88,15 @@ test('fetchAllSpeakers follows next links and concatenates results', async () =>
     'https://x/1': { count: 3, next: 'https://x/2', results: [{ code: 'A' }, { code: 'B' }] },
     'https://x/2': { count: 3, next: null, results: [{ code: 'C' }] }
   };
-  const res = await S.fetchAllSpeakers(stubFetch(pages), 'https://x/1', 10);
+  const seenOpts = [];
+  const stub = stubFetch(pages);
+  const res = await S.fetchAllSpeakers(function (url, opts) {
+    seenOpts.push(opts);
+    return stub(url);
+  }, 'https://x/1', 10);
   assert.deepStrictEqual(res.map(r => r.code), ['A', 'B', 'C']);
+  seenOpts.forEach(opts => assert.deepStrictEqual(opts, { credentials: 'omit' }));
+  assert.strictEqual(seenOpts.length, 2);
 });
 
 test('fetchAllSpeakers stops at the page cap and returns what it has', async () => {
