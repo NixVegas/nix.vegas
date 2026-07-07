@@ -1,0 +1,22 @@
+{% import "macros/year.html" as year_macros %}
+{% extends 'base.html' %} {% block content %}
+
+{% set year = year_macros::year_of_page(page=page) | trim %}
+{{ page.content | safe }}
+
+<div class="pretalx-speakers"
+     data-speakers-url="https://cfp.nix.vegas/api/events/{{ year }}/speakers/"
+     data-schedule-url="https://cfp.nix.vegas/{{ year }}/schedule/export/schedule.json"
+     data-public-url="https://cfp.nix.vegas/{{ year }}/speaker/">
+  <div class="pspk-loading">Loading speakers…</div>
+  <noscript>
+    <div class="pspk-error">
+      <h2>Speakers</h2>
+      <p>This page needs JavaScript. <a href="https://cfp.nix.vegas/{{ year }}/speaker/" rel="noopener">View the speaker list on pretalx ↗</a></p>
+    </div>
+  </noscript>
+</div>
+
+<script defer src="/js/speakers.js"></script>
+
+{% endblock %}
