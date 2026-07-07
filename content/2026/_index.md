@@ -14,7 +14,7 @@ extra:
   event_location: "Las Vegas Convention Center"
   event_defcon: "DEF CON 34"
   event_defcon_url: "https://defcon.org/html/defcon-34/"
-  event_tagline: "Agency"
+  event_tagline: "Escape Your Fate"
 ---
 
 ## CFP
