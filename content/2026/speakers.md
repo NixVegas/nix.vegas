@@ -1,4 +1,4 @@
 ---
-template: "speakers-sessionize.html"
+template: "speakers-pretalx.html"
 title: "Speakers"
 ---
