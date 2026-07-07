@@ -1,0 +1,39 @@
+{
+  "count": 4,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "code": "ZZ9PZA",
+      "name": "zoe lastalpha",
+      "biography": null,
+      "submissions": ["NOSCHED"],
+      "avatar_url": null,
+      "answers": []
+    },
+    {
+      "code": "9HRPTA",
+      "name": "Aaron Honeycutt",
+      "biography": "a computer nerd who happens to use Linux",
+      "submissions": ["AHEHMM"],
+      "avatar_url": "https://cfp.nix.vegas/media/avatars/B97ED8_bgZVxIc.webp",
+      "answers": []
+    },
+    {
+      "code": "JYC9UR",
+      "name": "Daniel Baker",
+      "biography": "   ",
+      "submissions": ["VDYEYG"],
+      "avatar_url": null,
+      "answers": []
+    },
+    {
+      "code": "77M3KN",
+      "name": "morgan jones",
+      "biography": ".",
+      "submissions": ["VDYEYG", "NOSCHED"],
+      "avatar_url": null,
+      "answers": []
+    }
+  ]
+}
