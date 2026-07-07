@@ -3,12 +3,12 @@ template: "year_home.html"
 title: "Home"
 
 extra:
-  favicon_ico: "/img/favicon.ico"
-  favicon_16: "/img/favicon-16x16.png"
-  favicon_32: "/img/favicon-32x32.png"
-  favicon_48: "/img/favicon-48x48.png"
-  favicon_512: "/img/favicon.png"
-  hero_img: "/img/2025/nix-vegas.png"
+  favicon_ico: "/img/2026/favicon.ico"
+  favicon_16: "/img/2026/favicon-16x16.png"
+  favicon_32: "/img/2026/favicon-32x32.png"
+  favicon_48: "/img/2026/favicon-48x48.png"
+  favicon_512: "/img/2026/favicon.png"
+  hero_img: "/img/2026/nix-vegas.png"
   hero_glitch_imgs: []
   event_dates: "August 6–9, 2026"
   event_location: "Las Vegas Convention Center"

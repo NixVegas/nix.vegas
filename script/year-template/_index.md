@@ -3,11 +3,11 @@ template: "year_home.html"
 title: "Home"
 
 extra:
-  favicon_ico: "/img/favicon.ico"
-  favicon_16: "/img/favicon-16x16.png"
-  favicon_32: "/img/favicon-32x32.png"
-  favicon_48: "/img/favicon-48x48.png"
-  favicon_512: "/img/favicon.png"
+  favicon_ico: "/img/YYYY/favicon.ico"
+  favicon_16: "/img/YYYY/favicon-16x16.png"
+  favicon_32: "/img/YYYY/favicon-32x32.png"
+  favicon_48: "/img/YYYY/favicon-48x48.png"
+  favicon_512: "/img/YYYY/favicon.png"
   hero_img: "/img/YYYY/nix-vegas.png"
   hero_glitch_imgs: []
   event_dates: "TBD"
