@@ -17,14 +17,13 @@ extra:
   event_tagline: "Agency"
 ---
 
-## DEF CON 34 Theme: Agency
+## CFP
 
-DEF CON's theme this year is **Agency**, take a second to read about it
-[here](https://defcon.org/html/defcon-34/dc-34-theme.html).
+CFP is open until July 15, 2026. Submit your ideas on
+[Pretalx](https://cfp.nix.vegas/2026).
 
-While we are still hard at work on our art and theme this year, we
-would like to challenge you to submit talks that answer to our take on the DEF
-CON theme:
+We challenge you to submit talks that answer to our take on the DEF CON theme,
+[Escape Your Fate](/blog/2026/artwork/):
 
 - Starve the beast: How can you use Nix and NixOS to reclaim your digital
   agency?
@@ -32,11 +31,6 @@ CON theme:
   own tools and build infrastructure?
 - Resources, time, and energy: How can we use Nix to connect ordinary users
   with the developers who made all the software they depend on?
-
-## CFP
-
-CFP is open until July 15, 2026. Submit your ideas on
-[Pretalx](https://cfp.nix.vegas/2026).
 
 Note that we have two types of CFP this year: a standard **call for
 presentations** and a **call for projects**.
