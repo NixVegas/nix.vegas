@@ -25,3 +25,4 @@ All emails route to a shared inbox managed by the team.
 - General: <noc@nix.vegas>
 - CFP questions: <cfp@nix.vegas>
 - Sponsorships: <sponsor@nix.vegas>
+- Media: <media@nix.vegas>
