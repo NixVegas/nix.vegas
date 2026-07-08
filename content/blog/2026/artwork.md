@@ -28,22 +28,23 @@ control theirs." Our answer is **Escape Your Fate**, and this year we're taking 
 Greek mythology:
 
 - The charioteer is [Nyx](https://www.theoi.com/Protogenos/Nyx.html), the primordial goddess
-  of Night, driving her chariot across the sky. (We couldn't resist.)
+  of night and chaos, driving her chariot across the sky. (We couldn't resist.)
 - The giant hand is the hand of fate: the [Moirai](https://www.theoi.com/Daimon/Moirai.html),
   the Fates who spin, measure, and cut the thread of your life. Ours spins algorithmic feeds
   and SaaS that shifts under your feet, all with an unblinking eye in its palm, watching you
   while it steers. It spins locked down devices that spy on their users, begging
-  to have an open source system installed.
+  to have an open system installed.
 - Look at Nyx's hand: she holds a thread of fate, taken back from the Moirai. That's what
   [Nix](https://github.com/NixOS/nixpkgs) hands you: a system whose every package and
   service is declared, pinned, and reproducible. Your world, spun from a thread you hold,
-  with 140,000+ tools for you and your agents to use. The world's largest set of Linux
-  packages, for you to reclaim your digital agency.
-- One more layer for the mythology nerds: in Hesiod's
-  [Theogony](https://www.theoi.com/Text/HesiodTheogony.html), the Moirai are daughters of
-  Nyx. Fate isn't handed down from on high; it's made. And what is made can be remade.
+  with 140,000+ tools for you and your agents to use.
+- As [Nyx's daughters](https://www.theoi.com/Text/HesiodTheogony.html), the Fates are
+  supposed to be _her_ agents, not the other way around. It's time for a reminder of who's
+  in charge. We think it's time to use the world's largest package repository for you
+  to reclaim your own agency.
+- Fate isn't handed down from on high; it's made. And what is made can be remade.
   Look at all the Linux sandbox escapes like [copy.fail](https://copy.fail) over the past
-  few months like [copy.fail](https://copy.fail) for great examples.
+  few months like [copy.fail](https://copy.fail) and [dirtyfrag](https://github.com/v4bel/dirtyfrag) for great examples.
   Maybe breaking Nix's build sandbox itself is part of becoming ungovernable.
 
 ## Ideas
