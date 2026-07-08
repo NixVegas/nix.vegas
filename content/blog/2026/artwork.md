@@ -24,23 +24,27 @@ _You can follow Kenz on [Twitch](https://www.twitch.tv/kenz_tobias_art) and [Ins
 
 DEF CON's theme this year is [Agency](https://defcon.org/html/defcon-34/dc-34-theme.html):
 "self-determination. It's about making choices that increase yours, AND helping others to
-control theirs." Our answer is **Escape Your Fate**, and last year's Norse mythology gives way
-to Greek:
+control theirs." Our answer is **Escape Your Fate**, and this year we're taking cues from
+Greek mythology:
 
 - The charioteer is [Nyx](https://www.theoi.com/Protogenos/Nyx.html), the primordial goddess
-  of Night, driving her chariot across the sky. (Nyx. [Nix](https://nixos.org/). We couldn't
-  resist.)
+  of Night, driving her chariot across the sky. (We couldn't resist.)
 - The giant hand is the hand of fate: the [Moirai](https://www.theoi.com/Daimon/Moirai.html),
-  the Fates who spin, measure, and cut the thread of your life. Ours spins forced updates,
-  algorithmic feeds, and SaaS that shifts under your feet, all with an unblinking eye in its
-  palm, watching you while it steers.
+  the Fates who spin, measure, and cut the thread of your life. Ours spins algorithmic feeds
+  and SaaS that shifts under your feet, all with an unblinking eye in its palm, watching you
+  while it steers. It spins locked down devices that spy on their users, begging
+  to have an open source system installed.
 - Look at Nyx's hand: she holds a thread of fate, taken back from the Moirai. That's what
   [Nix](https://github.com/NixOS/nixpkgs) hands you: a system whose every package and
-  service is declared, pinned, and reproducible. Your
-  world, spun from a thread you hold.
+  service is declared, pinned, and reproducible. Your world, spun from a thread you hold,
+  with 140,000+ tools for you and your agents to use. The world's largest set of Linux
+  packages, for you to reclaim your digital agency.
 - One more layer for the mythology nerds: in Hesiod's
   [Theogony](https://www.theoi.com/Text/HesiodTheogony.html), the Moirai are daughters of
   Nyx. Fate isn't handed down from on high; it's made. And what is made can be remade.
+  Look at all the Linux sandbox escapes like [copy.fail](https://copy.fail) over the past
+  few months like [copy.fail](https://copy.fail) for great examples.
+  Maybe breaking Nix's build sandbox itself is part of becoming ungovernable.
 
 ## Ideas
 
