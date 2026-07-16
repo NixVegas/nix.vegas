@@ -1,7 +1,9 @@
-<h4>Nixpkgs {{ config.nixos_version }}</h4>
+<h4>Nixpkgs {% if config.extra.nixos_version %}{{ config.extra.nixos_version }}{% else %}(onsite){% endif %}</h4>
 
-<ul>
 {% if config.extra.channel %}
-  <li><a href="/{{config.extra.channel}}">Nixpkgs channel</a> (<code> {{config.extra.nixpkgs_rev}}</code>)</li>
-{% endif %}
+<ul>
+  <li><a href="/{{config.extra.channel}}">Nixpkgs channel</a> (<code>{{config.extra.nixpkgs_rev}}</code>)</li>
 </ul>
+{% else %}
+<p><em>Available on the event network.</em></p>
+{% endif %}

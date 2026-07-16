@@ -1,1 +1,1 @@
-{{ config.extra.nixos_version}}{%- set _ = "eat whitespace" -%}
+{%- if config.extra.nixos_version -%}{{ config.extra.nixos_version }}{%- else -%}(onsite){%- endif -%}

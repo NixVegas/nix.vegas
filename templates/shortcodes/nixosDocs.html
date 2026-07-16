@@ -1,9 +1,12 @@
+{% if config.extra.manual or config.extra.search %}
 <ul>
 {% if config.extra.manual %}
   <li><a href="/{{ config.extra.manual }}">Manual</a></li>
 {% endif %}
-
 {% if config.extra.search %}
   <li><a href="/{{ config.extra.search }}">Search</a></li>
 {% endif %}
 </ul>
+{% else %}
+<p><em>Available on the event network.</em></p>
+{% endif %}

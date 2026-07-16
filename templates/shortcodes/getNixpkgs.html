@@ -6,4 +6,6 @@
       {{config.extra.channel | split(pat="/") | last}}
     {%- endif -%}
   </a>
+{%- else -%}
+  {%- if text -%}{{text}}{%- else -%}(onsite){%- endif -%}
 {%- endif -%}
