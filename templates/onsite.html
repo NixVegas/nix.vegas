@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  {{ page.content | safe }}
+  {%- if config.extra.nixpkgs_rev -%}
+    {{ page.content | safe }}
+  {%- else -%}
+    <h2>This page is only available onsite.</h2>
+    <p>If you're already onsite, connect to the event network and go to <a href="https://nixos.lv">nixos.lv</a>.</p>
+  {%- endif -%}
 {% endblock %}
