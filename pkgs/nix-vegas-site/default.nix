@@ -1,8 +1,9 @@
 {
   stdenv,
   zola,
+  callPackage,
   ...
-}:
+}@args:
 
 stdenv.mkDerivation {
   name = "nix-vegas-site";
@@ -21,4 +22,5 @@ stdenv.mkDerivation {
     mv public $out/
     runHook postInstall
   '';
+  passthru.onsite = callPackage ./onsite.nix args;
 }
