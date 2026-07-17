@@ -8,6 +8,16 @@ title: "Onsite"
 We have every package from the [world's largest software repository](https://search.nixos.org)
 on machines here in this very room. Hopefully we've made it easy to get started.
 
+### On the network
+
+Once you're on our WiFi or plugged in, these all live on the event network:
+
+- **Binary cache** — [https://cache.nixos.lv](https://cache.nixos.lv) — every package we've
+  built and fetched, served locally ([how to use it](#downloading-packages-from-our-binary-cache)).
+- **Git server** — [https://git.nixos.lv](https://git.nixos.lv) — our Forgejo, mirroring nixpkgs
+  so you can browse and clone it at LAN speed.
+- **CTF** — [https://nixc.tf](https://nixc.tf) — capture the flag; the challenge VMs live here.
+
 ## Nixpkgs {{nixpkgsRev()}}
 
 We have a copy of [nixpkgs](https://github.com/nixpkgs), the world's largest and most up to date
