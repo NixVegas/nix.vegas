@@ -32,6 +32,9 @@ We use Let's Encrypt and pass through the ["official" Hydra binary cache key](ht
 so no more configuration is needed and you mostly don't have to trust us to serve you packages
 except for accepting that you'll need to hit our infra to download them.
 If you use the above version of nixpkgs, we will likely have what you want cached.
+If we don't, cache.nixos.lv fetches it from
+[https://cache.nixos.org](https://cache.nixos.org) for you on the fly and keeps a
+copy for the next person, so it only crosses the venue uplink once.
 
 You can use [https://search.nixos.org](https://search.nixos.org) or
 our local [nixos-pagefind](https://github.com/Jaculabilis/nixos-pagefind) built in the
