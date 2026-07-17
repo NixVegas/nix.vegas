@@ -13,9 +13,10 @@ on machines here in this very room. Hopefully we've made it easy to get started.
 Once you're on our WiFi or plugged in, these all live on the event network:
 
 - **Binary cache** — [https://cache.nixos.lv](https://cache.nixos.lv) — every package we've
-  built and fetched, served locally ([how to use it](#downloading-packages-from-our-binary-cache)).
+  built and fetched, served locally, with **25.11, 26.05, and unstable** all cached
+  ([how to use it](#downloading-packages-from-our-binary-cache)).
 - **Git server** — [https://git.nixos.lv](https://git.nixos.lv) — our Forgejo, mirroring nixpkgs
-  so you can browse and clone it at LAN speed.
+  (25.11, 26.05, and unstable) so you can browse and clone at LAN speed.
 - **CTF** — [https://nixc.tf](https://nixc.tf) — capture the flag; the challenge VMs live here.
 
 ## Nixpkgs {{nixpkgsRev()}}
