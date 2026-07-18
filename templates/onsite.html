@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  {%- if config.extra.nixpkgs_rev -%}
+  {%- if config.extra.onsite -%}
     {{ page.content | safe }}
   {%- else -%}
     <h2>This page is only available onsite.</h2>

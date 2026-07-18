@@ -10,26 +10,38 @@ on machines here in this very room. Hopefully we've made it easy to get started.
 
 ### On the network
 
-Once you're on our WiFi or plugged in, these all live on the event network:
+Once you're on our Wi-Fi or plugged in, everything below lives on the event
+network and loads at LAN speed. Start here:
 
-- **Binary cache** — [https://cache.nixos.lv](https://cache.nixos.lv) — every package we've
-  built and fetched, served locally, with **25.11, 26.05, and unstable** all cached
-  ([how to use it](#downloading-packages-from-our-binary-cache)).
-- **Git server** — [https://git.nixos.lv](https://git.nixos.lv) — our Forgejo, mirroring nixpkgs
-  (25.11, 26.05, and unstable) so you can browse and clone at LAN speed.
-- **CTF** — [https://nixc.tf](https://nixc.tf) — capture the flag; the challenge VMs live here.
+- **CTF:** [https://nixc.tf](https://nixc.tf). The fastest way in, and a gentle
+  intro to Nix that hands you your own VMs to play with. Capture the flag.
+- **Git server:** [https://git.nixos.lv](https://git.nixos.lv). Our Forgejo,
+  mirroring [NixOS/nixpkgs](https://git.nixos.lv/NixOS/nixpkgs) so you can browse
+  and clone at LAN speed. The exact revision our cache is built against:
+  {{nixpkgsCommitLink()}}.
+- **Package search:** our [local NixOS search](#docs) instance, no internet
+  round-trip, plus [https://search.nixos.org](https://search.nixos.org).
+- **Manual:** the [NixOS manual](#docs), a local copy.
+- **ISOs and images:** [installer ISOs, SD cards, and Proxmox images](#isos)
+  preconfigured to use our cache, or [PXE boot straight into NixOS](#pxe-boot-your-machine-into-nixos)
+  from any of our DHCP networks.
+- **Our nixpkgs and cache:** add our channel and point Nix at
+  [https://cache.nixos.lv](https://cache.nixos.lv) so packages install from the
+  room instead of the venue uplink. [Set it up](#downloading-packages-from-our-binary-cache).
+- **Live stream:** [https://live.nixos.lv](https://live.nixos.lv). The main
+  stage, if you stepped out.
 
 ## Nixpkgs {{nixpkgsRev()}}
 
-We have a copy of [nixpkgs](https://github.com/nixpkgs), the world's largest and most up to date
+We have a copy of [nixpkgs](https://git.nixos.lv/NixOS/nixpkgs), the world's largest and most up to date
 Linux package repository by [many measures](https://repology.org/repositories/graphs):
 
 - `nix-channel --remove nixpkgs`
 - <code>nix-channel --add {{nixpkgsUrl()}} nixpkgs</code>
 - `nix-channel --update`
 
-Our version is <code>{{nixpkgsVersion()}}</code>, which corresponds to <code>{{nixpkgsRev()}}</code> -
-click {{nixpkgsCommitLink(text="here")}} to see the corresponding commit on GitHub.
+Our version is <code>{{nixpkgsVersion()}}</code>, which corresponds to <code>{{nixpkgsRev()}}</code>;
+click {{nixpkgsCommitLink(text="here")}} to see that commit on our own Git server.
 
 ### Downloading packages from our binary cache
 
