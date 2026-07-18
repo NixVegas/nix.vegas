@@ -1,1 +1,1 @@
-{%- if config.extra.nixos_version -%}{{ config.extra.nixos_version | split(pat=".") | slice(end=2) | join(sep=".") }}{%- else -%}(onsite){%- endif -%}
+{%- if config.extra.nixos_version -%}{{ config.extra.nixos_version | truncate(length=5, end="") }}{%- else -%}(onsite){%- endif -%}
