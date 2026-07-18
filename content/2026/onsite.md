@@ -33,21 +33,31 @@ network and loads at LAN speed. Start here:
 
 ## Nixpkgs {{nixpkgsRev()}}
 
-We have a copy of [nixpkgs](https://git.nixos.lv/NixOS/nixpkgs), the world's largest and most up to date
-Linux package repository by [many measures](https://repology.org/repositories/graphs):
+We serve a full copy of [nixpkgs](https://git.nixos.lv/NixOS/nixpkgs), the world's
+largest and most up to date Linux package repository by
+[many measures](https://repology.org/repositories/graphs), straight from our own git
+server, plus every package built against it from our cache. Our version is
+<code>{{nixpkgsVersion()}}</code> at commit {{nixpkgsCommitLink()}}. Use it whichever
+way you like:
+
+**Flakes.** Point `nix run` at our git server and cache in one shot, no setup:
+
+<code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/{{nixpkgsRev()}}.tar.gz#hello</code>
+
+Swap `hello` for anything in nixpkgs. To pin it in your own `flake.nix`, add
+<code>git+https://git.nixos.lv/NixOS/nixpkgs?rev={{nixpkgsRev()}}</code> as your
+nixpkgs input.
+
+**Channels.** The classic route:
 
 - `nix-channel --remove nixpkgs`
 - <code>nix-channel --add {{nixpkgsUrl()}} nixpkgs</code>
 - `nix-channel --update`
 
-Our version is <code>{{nixpkgsVersion()}}</code>, which corresponds to <code>{{nixpkgsRev()}}</code>;
-click {{nixpkgsCommitLink(text="here")}} to see that commit on our own Git server.
-
 ### Downloading packages from our binary cache
 
-Our local binary cache is at [https://cache.nixos.lv](https://cache.nixos.lv). It serves
-everything we've built and fetched for the event, straight from our store over the
-event network. If you're using our channel:
+However you got our nixpkgs above, point Nix at [https://cache.nixos.lv](https://cache.nixos.lv)
+to pull packages from the room instead of the venue uplink. On the classic channel:
 
 `nix-shell --option substituters https://cache.nixos.lv -p ghidra`
 
