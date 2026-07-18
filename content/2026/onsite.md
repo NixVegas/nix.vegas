@@ -31,7 +31,7 @@ network and loads at LAN speed. Start here:
 - **Live stream:** [https://live.nixos.lv](https://live.nixos.lv). The main
   stage, if you stepped out.
 
-## Nixpkgs {{nixpkgsRev()}}
+## Nixpkgs {{nixpkgsRelease()}}
 
 We serve a full copy of [nixpkgs](https://git.nixos.lv/NixOS/nixpkgs), the world's
 largest and most up to date Linux package repository by
@@ -42,10 +42,10 @@ way you like:
 
 **Flakes.** Point `nix run` at our git server and cache in one shot, no setup:
 
-<code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/{{nixpkgsRev()}}.tar.gz#hello</code>
+<code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-{{nixpkgsRelease()}}.tar.gz#hello</code>
 
 Swap `hello` for anything in nixpkgs. To pin it in your own `flake.nix`, add
-<code>git+https://git.nixos.lv/NixOS/nixpkgs?rev={{nixpkgsRev()}}</code> as your
+<code>git+https://git.nixos.lv/NixOS/nixpkgs?ref=nixos-{{nixpkgsRelease()}}</code> as your
 nixpkgs input.
 
 **Channels.** The classic route:
@@ -83,7 +83,7 @@ seems like a great idea, right)?
 
 You should just see versions that differ.
 
-## NixOS {{ nixpkgsRev() }}
+## NixOS {{ nixpkgsRelease() }}
 
 You can also download our images that are configured to use https://cache.nixos.lv
 as their primary substituter to retrieve packages.

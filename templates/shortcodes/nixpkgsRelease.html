@@ -1,0 +1,6 @@
+{#- The XX.YY release (channel) from the full nixos_version, e.g. -#}
+{#- "26.05.20260716.4382ed2" -> "26.05", used to build the nixos-XX.YY -#}
+{#- branch name. Idempotent for an already-short "26.05". -#}
+{%- if config.extra.nixos_version -%}
+{{- config.extra.nixos_version | split(pat=".") | slice(end=2) | join(sep=".") -}}
+{%- else -%}(onsite){%- endif -%}
