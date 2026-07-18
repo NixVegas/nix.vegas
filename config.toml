@@ -21,10 +21,13 @@ timezone = "America/Los_Angeles"
 current_year = "2026"
 cfp_year = "2026"
 
-# Onsite/kiosk-build config slots. The site is no longer built in two modes
-# (the onsite Nix derivation was dropped), but the shortcodes in
-# templates/shortcodes/ still read these — leave the empty defaults so the
-# 2025 archive's /2025/onsite page renders without template errors.
+# Onsite/kiosk-build config slots. The public build leaves these at their empty
+# defaults (so onsite.html shows the "only available onsite" stub and the
+# shortcodes render "(onsite)" placeholders); the onsite Nix derivation
+# (pkgs/nix-vegas-site/onsite.nix) sets `onsite = true` and fills the rest from
+# the onboarding artifacts. `onsite` is the single source of truth for whether
+# we are the in-venue build; templates gate on it rather than on any one value.
+onsite = false
 nixos_version = ""
 nixpkgs_rev = ""
 isos = []
