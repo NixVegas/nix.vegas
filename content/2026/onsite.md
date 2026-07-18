@@ -40,13 +40,20 @@ server, plus every package built against it from our cache. Our version is
 <code>{{nixpkgsVersion()}}</code> at commit {{nixpkgsCommitLink()}}. Use it whichever
 way you like:
 
-**Flakes.** Point `nix run` at our git server and cache in one shot, no setup:
+**Flakes.** Point `nix run` at our git server and cache in one shot, no setup. Our
+current release:
 
 <code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-{{nixpkgsRelease()}}.tar.gz#hello</code>
 
-Swap `hello` for anything in nixpkgs. To pin it in your own `flake.nix`, add
-<code>git+https://git.nixos.lv/NixOS/nixpkgs?ref=nixos-{{nixpkgsRelease()}}</code> as your
-nixpkgs input.
+Or the bleeding edge, `nixos-unstable`:
+
+<code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-unstable.tar.gz#hello</code>
+
+We keep the previous release, <code>nixos-{{nixpkgsPreviousRelease()}}</code>, cached
+too, so swap that branch into either command if you need it. Swap `hello` for any
+package. To pin a branch in your own `flake.nix`, add
+<code>git+https://git.nixos.lv/NixOS/nixpkgs?ref=nixos-{{nixpkgsRelease()}}</code>
+(or `nixos-unstable`) as your nixpkgs input.
 
 **Channels.** The classic route:
 
@@ -61,7 +68,7 @@ to pull packages from the room instead of the venue uplink. On the classic chann
 
 `nix-shell --option substituters https://cache.nixos.lv -p ghidra`
 
-We use Let's Encrypt and pass through the ["official" Hydra binary cache key](https://github.com/NixOS/nixpkgs/blob/nixos-26.05/nixos/modules/config/nix.nix),
+We use Let's Encrypt and pass through the <a href="https://github.com/NixOS/nixpkgs/blob/nixos-{{nixpkgsRelease()}}/nixos/modules/config/nix.nix">"official" Hydra binary cache key</a>,
 so no more configuration is needed and you mostly don't have to trust us to serve you packages
 except for accepting that you'll need to hit our infra to download them.
 If you use the above version of nixpkgs, we will likely have what you want cached.

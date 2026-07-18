@@ -1,0 +1,1 @@
+{%- if config.extra.nixos_version -%}{%- set p = config.extra.nixos_version | split(pat=".") -%}{%- set y = p[0] | int -%}{%- if p[1] == "11" -%}{{ y }}.05{%- else -%}{{ y - 1 }}.11{%- endif -%}{%- else -%}(onsite){%- endif -%}
