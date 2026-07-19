@@ -19,9 +19,9 @@ network and loads at LAN speed. Start here:
   mirroring [NixOS/nixpkgs](https://git.nixos.lv/NixOS/nixpkgs) so you can browse
   and clone at LAN speed. The exact revision our cache is built against:
   {{nixpkgsCommitLink()}}.
-- **Package search:** our [local NixOS search](#docs) instance, no internet
-  round-trip, plus [https://search.nixos.org](https://search.nixos.org).
-- **Manual:** the [NixOS manual](#docs), a local copy.
+- **Package search:** our {{nixosSearchLink(text="local NixOS search")}} instance,
+  no internet round-trip, plus [https://search.nixos.org](https://search.nixos.org).
+- **Manual:** the {{nixosManualLink(text="NixOS manual")}}, a local copy.
 - **ISOs and images:** [installer ISOs, SD cards, and Proxmox images](#isos)
   preconfigured to use our cache, or [PXE boot straight into NixOS](#pxe-boot-your-machine-into-nixos)
   from any of our DHCP networks.
