@@ -52,6 +52,11 @@ deployment for supporting the Nix Community at DEF CON:
 >[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
 >[![Determinate Systems](/img/sponsors/Determinate.svg)](https://determinate.systems)
 
+### Builder Tier
+
+>[![NixOS Project](/img/sponsors/NixOS.svg)](https://www.nixos.org)
+>[![Exa](/img/sponsors/Exa.svg)](https://exa.ai/)
+
 Interested in sponsoring us with hardware, funding, or something else? See the
 [Sponsorship Prospectus](/2026/sponsor) and connect with us at
 <sponsor@nix.vegas>.
