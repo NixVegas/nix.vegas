@@ -65,6 +65,14 @@ deployment for supporting the Nix Community at DEF CON:
 
 </div>
 
+<div class="sponsor-tier">
+
+### Source Tier
+
+>[![PCBWay](/img/sponsors/PCBWay.svg)](https://www.pcbway.com/)
+
+</div>
+
 Interested in sponsoring us with hardware, funding, or something else? See the
 [Sponsorship Prospectus](/2026/sponsor) and connect with us at
 <sponsor@nix.vegas>.
