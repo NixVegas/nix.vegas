@@ -44,13 +44,17 @@ way you like:
 current release:
 
 ```
-nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-{{nixpkgsRelease()}}.tar.gz#hello
+nix run \
+  --option substituters https://cache.nixos.lv \
+  https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-{{nixpkgsRelease()}}.tar.gz#hello
 ```
 
 Or the bleeding edge, `nixos-unstable`:
 
 ```
-nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-unstable.tar.gz#hello
+nix run \
+  --option substituters https://cache.nixos.lv \
+  https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-unstable.tar.gz#hello
 ```
 
 We keep the previous release, <code>nixos-{{nixpkgsPreviousRelease()}}</code>, cached
@@ -113,7 +117,9 @@ you can also check that it's what we say it is yourself. (Installing random soft
 seems like a great idea, right)?
 
 ```
-diff -r $(nix-prefetch-url --print-path --unpack {{nixpkgsUrl()}} | tee /dev/stderr | tail -n1) $(nix-prefetch-url --print-path --unpack {{nixpkgsVerifyUrl()}} | tee /dev/stderr | tail -n1)
+diff -r \
+  $(nix-prefetch-url --print-path --unpack {{nixpkgsUrl()}} | tee /dev/stderr | tail -n1) \
+  $(nix-prefetch-url --print-path --unpack {{nixpkgsVerifyUrl()}} | tee /dev/stderr | tail -n1)
 ```
 
 You should just see versions that differ.
