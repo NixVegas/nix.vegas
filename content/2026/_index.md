@@ -46,16 +46,24 @@ can tie your project in.
 Thank you to these companies who believe in Nix as the future of software
 deployment for supporting the Nix Community at DEF CON:
 
+<div class="sponsor-tier">
+
 ### Closure Tier
 
 >[![Flox](/img/sponsors/Flox.svg)](https://flox.dev)
 >[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
 >[![Determinate Systems](/img/sponsors/Determinate.svg)](https://determinate.systems)
 
+</div>
+
+<div class="sponsor-tier">
+
 ### Builder Tier
 
 >[![NixOS Project](/img/sponsors/NixOS.svg)](https://www.nixos.org)
 >[![Exa](/img/sponsors/Exa.svg)](https://exa.ai/)
+
+</div>
 
 Interested in sponsoring us with hardware, funding, or something else? See the
 [Sponsorship Prospectus](/2026/sponsor) and connect with us at

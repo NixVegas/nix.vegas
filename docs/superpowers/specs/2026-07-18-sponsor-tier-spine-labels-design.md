@@ -13,32 +13,37 @@ rule between label and logos.
 
 ## Decisions
 
-- **Pure CSS on the existing markup** (user-chosen over HTML wrappers):
-  `content/2026/_index.md` is untouched; all changes live in
-  `sass/components/sponsors.scss`.
+- **HTML tier wrappers** (revised 2026-07-18): each tier in
+  `content/2026/_index.md` is wrapped in `<div class="sponsor-tier">` around
+  its `###` heading and logo blockquote. The original "pure CSS on existing
+  markup" choice used a fixed-height floated label; stress-testing multi-line
+  logo rows showed a float cannot vertically center against a sibling of
+  dynamic height, so the user opted into the wrappers.
 - **Spine direction:** left side, reading bottom-to-top, via
   `writing-mode: vertical-rl` + `transform: rotate(180deg)` (universal support;
   avoids the newer `sideways-lr`).
-- **Scoping:** `#sponsors ~ h3` matches nothing on the 2025 archive (it has no
-  `###` headings) and intentionally applies to future years that copy the tier
-  pattern. Two inert rules do reach 2025: `min-height` on the logo rows (equals
-  their natural height) and `clear: both` on trailing paragraphs (no floats
-  there). This branch already restyles the shared logo rules, so that is within
-  precedent.
+- **Per-tier accents**, keyed to the heading ids Zola generates from the tier
+  names (robust to reordering): `#closure-tier` pink `#e0287d`,
+  `#builder-tier` cyan `#66ccee`, `#source-tier` green `#33d17a` (reserved for
+  a future Source Tier sponsor).
+- **Scoping:** all tier styling lives under `.sponsor-tier`, which only exists
+  in the 2026 markup; the shared `#sponsors ~ …` rules revert to serving the
+  2025 archive's wrapper-less blockquotes.
 
-## CSS behavior
+## CSS behavior (`sass/components/sponsors.scss`)
 
-- `#sponsors ~ h3`: `float: left; clear: left;` fixed `height: 230px` (150px
-  logo + 2×40px margins — tracks the logo rules above it); text centered along
-  the spine; `text-transform: uppercase`, letter-spacing, muted gray (`#9aa0a6`);
-  pink (`#e0287d`) rule + padding on the side facing the logos.
-- `#sponsors ~ blockquote`: `min-height: 230px` so every row is at least
-  label-height; the flex logo row sits beside the float without overlap (flex
-  roots establish a new formatting context).
-- `#sponsors ~ p`: `clear: both` so following copy never wraps around a label.
-- **Mobile (existing ≤700px breakpoint):** label reverts to a horizontal
-  centered heading above the stacked logo column (float/rotation undone, same
-  uppercase/accent styling).
+- `.sponsor-tier`: `display: flex; align-items: center` — the rotated label
+  vertically centers against the logo row at any row height (including
+  multi-line wraps); `margin-bottom: 2.5rem` keeps consecutive tiers' rules
+  from merging.
+- `.sponsor-tier h3`: rotated spine label, `uppercase`, letter-spaced, muted
+  gray (`#9aa0a6`).
+- `.sponsor-tier blockquote`: `flex: 1`, with the tier-colored `border-left`
+  rule — living on the row, it always spans the row's real height; the inner
+  `p` is the wrapping flex row of logos (200px wide, 20px margins).
+- **Mobile (existing ≤700px breakpoint):** `.sponsor-tier` stacks; the label
+  reverts to a horizontal centered heading with a tier-colored underline above
+  the logo column; the row rule is dropped as redundant.
 
 ## Verification
 
