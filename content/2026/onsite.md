@@ -19,9 +19,9 @@ network and loads at LAN speed. Start here:
   mirroring [NixOS/nixpkgs](https://git.nixos.lv/NixOS/nixpkgs) so you can browse
   and clone at LAN speed. The exact revision our cache is built against:
   {{nixpkgsCommitLink()}}.
-- **Package search:** our [local NixOS search](#docs) instance, no internet
-  round-trip, plus [https://search.nixos.org](https://search.nixos.org).
-- **Manual:** the [NixOS manual](#docs), a local copy.
+- **Package search:** our {{nixosSearchLink(text="local NixOS search")}} instance,
+  no internet round-trip, plus [https://search.nixos.org](https://search.nixos.org).
+- **Manual:** the {{nixosManualLink(text="NixOS manual")}}, a local copy.
 - **ISOs and images:** [installer ISOs, SD cards, and Proxmox images](#isos)
   preconfigured to use our cache, or [PXE boot straight into NixOS](#pxe-boot-your-machine-into-nixos)
   from any of our DHCP networks.
@@ -43,30 +43,60 @@ way you like:
 **Flakes.** Point `nix run` at our git server and cache in one shot, no setup. Our
 current release:
 
-<code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-{{nixpkgsRelease()}}.tar.gz#hello</code>
+```
+nix run \
+  --option substituters https://cache.nixos.lv \
+  https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-{{nixpkgsRelease()}}.tar.gz#hello
+```
 
 Or the bleeding edge, `nixos-unstable`:
 
-<code>nix run --option substituters https://cache.nixos.lv https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-unstable.tar.gz#hello</code>
+```
+nix run \
+  --option substituters https://cache.nixos.lv \
+  https://git.nixos.lv/NixOS/nixpkgs/archive/nixos-unstable.tar.gz#hello
+```
 
 We keep the previous release, <code>nixos-{{nixpkgsPreviousRelease()}}</code>, cached
 too, so swap that branch into either command if you need it. Swap `hello` for any
-package. To pin a branch in your own `flake.nix`, add
-<code>git+https://git.nixos.lv/NixOS/nixpkgs?ref=nixos-{{nixpkgsRelease()}}</code>
-(or `nixos-unstable`) as your nixpkgs input.
+package. To pin a branch in your own `flake.nix`, use this as your nixpkgs input
+(or `nixos-unstable`):
+
+```
+git+https://git.nixos.lv/NixOS/nixpkgs?ref=nixos-{{nixpkgsRelease()}}
+```
 
 **Channels.** The classic route:
 
-- `nix-channel --remove nixpkgs`
-- <code>nix-channel --add {{nixpkgsUrl()}} nixpkgs</code>
-- `nix-channel --update`
+```
+nix-channel --remove nixpkgs
+nix-channel --add {{nixpkgsUrl()}} nixpkgs
+nix-channel --update
+```
+
+**Clone it.** Want the tree itself to hack on? Grab our mirror. The LAN is fast, so
+a full clone is the default:
+
+```
+git clone https://git.nixos.lv/NixOS/nixpkgs.git
+```
+
+Or shallow, if you just want the latest quickly:
+
+```
+git clone --depth 1 https://git.nixos.lv/NixOS/nixpkgs.git
+```
+
+(A `--filter=blob:none` clone is another option: full history, blobs on demand.)
 
 ### Downloading packages from our binary cache
 
 However you got our nixpkgs above, point Nix at [https://cache.nixos.lv](https://cache.nixos.lv)
 to pull packages from the room instead of the venue uplink. On the classic channel:
 
-`nix-shell --option substituters https://cache.nixos.lv -p ghidra`
+```
+nix-shell --option substituters https://cache.nixos.lv -p ghidra
+```
 
 We use Let's Encrypt and pass through the <a href="https://github.com/NixOS/nixpkgs/blob/nixos-{{nixpkgsRelease()}}/nixos/modules/config/nix.nix">"official" Hydra binary cache key</a>,
 so no more configuration is needed and you mostly don't have to trust us to serve you packages
@@ -86,7 +116,11 @@ While you could just grab {{getNixpkgs(text="our nixpkgs")}} following the above
 you can also check that it's what we say it is yourself. (Installing random software at DEF CON
 seems like a great idea, right)?
 
-<code>diff -r $(nix-prefetch-url --print-path --unpack {{nixpkgsUrl()}} | tee /dev/stderr | tail -n1) $(nix-prefetch-url --print-path --unpack {{nixpkgsVerifyUrl()}} | tee /dev/stderr | tail -n1)</code>
+```
+diff -r \
+  $(nix-prefetch-url --print-path --unpack {{nixpkgsUrl()}} | tee /dev/stderr | tail -n1) \
+  $(nix-prefetch-url --print-path --unpack {{nixpkgsVerifyUrl()}} | tee /dev/stderr | tail -n1)
+```
 
 You should just see versions that differ.
 

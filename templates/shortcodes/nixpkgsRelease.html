@@ -1,1 +1,1 @@
-{%- if config.extra.nixos_version -%}{{ config.extra.nixos_version | truncate(length=5, end="") }}{%- else -%}(onsite){%- endif -%}
+{%- if config.extra.nixos_version -%}{{ config.extra.nixos_version | truncate(length=5, end="") }}{%- else -%}00.00{%- endif -%}

@@ -1,0 +1,20 @@
+// Click-to-copy affordance for code blocks (see static/js/copy-code.js).
+pre.copyable {
+  cursor: pointer;
+  position: relative;
+}
+
+// Brief "copied!" badge in the top-right after a successful copy.
+pre.copyable.copied::after {
+  content: "copied!";
+  position: absolute;
+  top: 0.35em;
+  right: 0.6em;
+  font-size: 0.7em;
+  line-height: 1;
+  padding: 0.2em 0.45em;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  pointer-events: none;
+}

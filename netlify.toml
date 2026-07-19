@@ -3,7 +3,10 @@
 # to have a `base` variable but you do need the `publish` and `command` variables.
 base    = "."
 publish = "public"
-command = "zola build"
+# Production is the public nix.vegas site: force onsite = false so the
+# onsite-only pages show the "only available onsite" stub. (config.toml defaults
+# onsite = true so previews and local builds render them.)
+command = "sed -i 's/^onsite = true/onsite = false/' config.toml && zola build"
 
 [build.environment]
 # Set the version name that you want to use and Netlify will automatically use it.
@@ -14,5 +17,11 @@ ZOLA_VERSION = "0.22.1"
 # preview site.  We do this using the Netlify environment variable
 # `$DEPLOY_PRIME_URL`.
 
+# PR previews and branch deploys render the onsite-only pages (with
+# format-matching placeholders) so we can eyeball them. They just take the
+# config.toml default (onsite = true); only the base URL is overridden.
 [context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
 command = "zola build --base-url $DEPLOY_PRIME_URL"

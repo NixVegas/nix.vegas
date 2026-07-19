@@ -1,0 +1,1 @@
+{%- if config.extra.search -%}<a href="/{{ config.extra.search }}">{%- if text -%}{{ text }}{%- else -%}local NixOS search{%- endif -%}</a>{%- else -%}<a href="/search">{%- if text -%}{{ text }}{%- else -%}local NixOS search{%- endif -%}</a>{%- endif -%}
