@@ -1,2 +1,2 @@
 {%- if config.extra.nixpkgs_rev -%}{%- set rev = config.extra.nixpkgs_rev -%}{%- else -%}{%- set rev = "0000000000000000000000000000000000000000" -%}{%- endif -%}
-<a href="https://git.nixos.lv/NixOS/nixpkgs/commit/{{ rev }}">{%- if text -%}{{ text }}{%- else -%}{{ rev }}{%- endif -%}</a>
+<a href="https://git.nixos.lv/NixOS/nixpkgs/commit/{{ rev }}">{%- if text -%}{{ text }}{%- else -%}{{ rev }}{%- endif -%}</a>{#- -#}
