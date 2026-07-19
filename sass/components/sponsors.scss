@@ -1,3 +1,5 @@
+// Shared sponsor-logo rules: the 2025 archive renders bare blockquotes as
+// siblings of #sponsors. (2026+ uses the .sponsor-tier wrappers below.)
 #sponsors ~ blockquote {
   margin: 0;
 }
@@ -17,8 +19,88 @@
 }
 
 #sponsors ~ blockquote img {
-  max-width: 225px;
-  min-width: 225px;
+  max-width: 200px;
+  min-width: 200px;
   object-fit: contain;
-  margin: 10px;
+  margin: 20px 20px;
+}
+
+// Tiered sponsors (2026+): each tier is a <div class="sponsor-tier"> wrapping
+// its ### heading and logo blockquote, laid out as one flex row — a rotated
+// "spine" label centered against the logos, however many lines they wrap to.
+.sponsor-tier {
+  display: flex;
+  // Single-line rows still read as a full band; multi-line rows grow past it.
+  min-height: 200px;
+  margin-bottom: 2.5rem; // keeps consecutive tiers' rules from merging
+}
+
+.sponsor-tier h3 {
+  align-self: center;
+  margin: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); // spine reads bottom-to-top
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.95rem;
+  color: #9aa0a6;
+}
+
+// Tier accents, keyed to the heading ids Zola generates from the tier names.
+// Colors the h3's mobile underline and the row's spine rule.
+#closure-tier, #closure-tier ~ blockquote { border-color: #e0287d; }
+#builder-tier, #builder-tier ~ blockquote { border-color: #66ccee; }
+#source-tier,  #source-tier ~ blockquote  { border-color: #33d17a; }
+
+// The logo row stretches to the tier's full height (default flex stretch),
+// so its rule is never shorter than the label; logos center within it.
+.sponsor-tier blockquote {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-left: 2px solid;
+  padding-left: 0.6rem;
+}
+
+.sponsor-tier blockquote p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.sponsor-tier img {
+  max-width: 200px;
+  min-width: 200px;
+  object-fit: contain;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  // Stack: horizontal centered label above a single column of logos.
+  .sponsor-tier {
+    display: block;
+  }
+
+  .sponsor-tier h3 {
+    writing-mode: horizontal-tb;
+    transform: none;
+    border-bottom: 2px solid;
+    padding-bottom: 0.3rem;
+    width: fit-content;
+    margin: 0 auto 0.5rem;
+  }
+
+  // The rule is redundant with the label underline on mobile
+  .sponsor-tier blockquote {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .sponsor-tier blockquote p {
+    flex-direction: column;
+  }
 }
