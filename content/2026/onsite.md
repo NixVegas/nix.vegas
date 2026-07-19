@@ -61,6 +61,14 @@ package. To pin a branch in your own `flake.nix`, add
 - <code>nix-channel --add {{nixpkgsUrl()}} nixpkgs</code>
 - `nix-channel --update`
 
+**Clone it.** Want the tree itself to hack on? Grab our mirror at LAN speed. A
+shallow clone keeps it quick:
+
+<code>git clone --depth 1 https://git.nixos.lv/NixOS/nixpkgs.git</code>
+
+Drop `--depth 1` for full history, or use `--filter=blob:none` for full history
+with blobs fetched on demand.
+
 ### Downloading packages from our binary cache
 
 However you got our nixpkgs above, point Nix at [https://cache.nixos.lv](https://cache.nixos.lv)
