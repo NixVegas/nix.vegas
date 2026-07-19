@@ -14,5 +14,13 @@ ZOLA_VERSION = "0.22.1"
 # preview site.  We do this using the Netlify environment variable
 # `$DEPLOY_PRIME_URL`.
 
+# Non-production builds (PR previews and branch deploys) render the onsite-only
+# pages so we can eyeball them. Flipping `onsite = true` renders the full content
+# with (onsite) placeholders for the values the onsite build would fill in;
+# production ([build] above) stays gated and shows the "only available onsite"
+# stub.
 [context.deploy-preview]
-command = "zola build --base-url $DEPLOY_PRIME_URL"
+command = "sed -i 's/^onsite = false/onsite = true/' config.toml && zola build --base-url $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+command = "sed -i 's/^onsite = false/onsite = true/' config.toml && zola build --base-url $DEPLOY_PRIME_URL"
