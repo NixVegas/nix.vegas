@@ -21,13 +21,15 @@ timezone = "America/Los_Angeles"
 current_year = "2026"
 cfp_year = "2026"
 
-# Onsite/kiosk-build config slots. The public build leaves these at their empty
-# defaults (so onsite.html shows the "only available onsite" stub and the
-# shortcodes render "(onsite)" placeholders); the onsite Nix derivation
-# (pkgs/nix-vegas-site/onsite.nix) sets `onsite = true` and fills the rest from
-# the onboarding artifacts. `onsite` is the single source of truth for whether
-# we are the in-venue build; templates gate on it rather than on any one value.
-onsite = false
+# Onsite/kiosk-build config slots. `onsite` is the single source of truth for
+# whether the onsite-only pages render; templates gate on it. It DEFAULTS TO
+# true so local builds and Netlify deploy previews show the onsite pages (with
+# format-matching placeholders for the empty values below). The public builds
+# turn it back off explicitly: the offsite Nix derivation
+# (pkgs/nix-vegas-site/default.nix) and the Netlify production build. The onsite
+# Nix derivation (onsite.nix) keeps it true and fills the values from the
+# onboarding artifacts.
+onsite = true
 nixos_version = ""
 nixpkgs_rev = ""
 isos = []
