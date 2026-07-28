@@ -53,6 +53,7 @@ deployment for supporting the Nix Community at DEF CON:
 >[![Flox](/img/sponsors/Flox.svg)](https://flox.dev)
 >[![Protectli](/img/sponsors/Protectli.png)](https://protectli.com/)
 >[![Determinate Systems](/img/sponsors/Determinate.svg)](https://determinate.systems)
+>[![Exa](/img/sponsors/Exa.svg)](https://exa.ai/)
 
 </div>
 
@@ -61,7 +62,6 @@ deployment for supporting the Nix Community at DEF CON:
 ### Builder Tier
 
 >[![NixOS Project](/img/sponsors/NixOS.svg)](https://www.nixos.org)
->[![Exa](/img/sponsors/Exa.svg)](https://exa.ai/)
 
 </div>
 
