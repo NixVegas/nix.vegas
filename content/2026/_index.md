@@ -24,7 +24,6 @@ CFP is open until July 15, 2026. Submit your ideas on
 
 We challenge you to submit talks that answer to our take on the DEF CON theme,
 [Escape Your Fate](/blog/2026/artwork/):
-
 - Starve the beast: How can you use Nix and NixOS to reclaim your digital
   agency?
 - Feed your community: How can we support others doing the same by rolling our
@@ -62,6 +61,7 @@ deployment for supporting the Nix Community at DEF CON:
 ### Builder Tier
 
 >[![NixOS Project](/img/sponsors/NixOS.svg)](https://www.nixos.org)
+>[![Nixcademy](/img/sponsors/nixcademy.svg)](https://nixcademy.com/)
 
 </div>
 
