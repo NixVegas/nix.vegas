@@ -12,7 +12,10 @@
     flex: 1;
 }
 
-.blog-wrapper p:has(img) + blockquote, .blog-wrapper .video + blockquote {
+.blog-wrapper p:has(img) + blockquote,
+.blog-wrapper video + blockquote,
+.blog-wrapper .video + blockquote,
+.blog-wrapper .img + blockquote {
     margin: 0;
     text-align: center;
     font-style: italic;
