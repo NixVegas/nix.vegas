@@ -1,0 +1,54 @@
+{{/* layouts/shortcodes/smart-image.html */}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $width := .Get "width" | default "800" }}
+{{ $quality := .Get "quality" | default "80" }}
+{{ $class := .Get "class" | default "" }}
+{{ $sensitive := .Get "sensitive" | default false }}
+
+{{ $isRemote := or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
+{{ $image := "" }}
+
+{{ if $isRemote }}
+{{ $image = resources.GetRemote $src }}
+{{ else }}
+{{ $image = $.Page.Resources.Get $src }}
+{{ end }}
+
+{{ if $image }}
+{{ $opts := dict "method" "Atkinson" "colors" (slice "#F5E8C8" "#D0B27A" "#A67F46" "#664A2B") }}
+{{ $processed := $image.Resize (printf "%sx q%s" $width $quality) | images.Filter (images.Grayscale) | images.Filter
+(images.Dither $opts)
+}}
+
+<figure class="{{ $class }} --smart-image {{ if $sensitive }} sensitive-content{{ end }}">
+    {{ if $sensitive }}
+    <div class="sensitive-overlay" onclick="this.parentNode.classList.add('revealed')">
+        <div class="sensitive-warning">
+            <span class="sensitive-icon">⚠️</span>
+            <p>Sensitive Content</p>
+            <small>Click to reveal</small>
+        </div>
+    </div>
+    {{ end }}
+    {{ if $isRemote }}
+    <a target="_blank" href="{{$src}}">
+        {{else}}
+        <a target="_blank" href="{{$image.RelPermalink}}">
+            {{ end }}
+            <img src="{{ $processed.RelPermalink }}" width="{{ $width }}" alt="{{ $alt }}" loading="lazy">
+
+        </a>
+        {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{ else }}
+{{ if $isRemote }}
+<!-- Fallback for remote images that can't be processed -->
+<figure class="{{ $class }}">
+    <img src="{{ $src }}" width="{{ $width }}" alt="{{ $alt }}" loading="lazy">
+    {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{ else }}
+<div class="error">Image not found: {{ $src }}</div>
+{{ end }}
+{{ end }}
