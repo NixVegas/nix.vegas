@@ -55,10 +55,10 @@ That would totally be enough, right?
 
 {{ smart_image(
     src="/img/blog/2026-ctf/2025_ctf_challenge_1.png",
-    alt="Web page showing the CTF first challenge, with flag capture at bottom..",
+    alt="Web page showing the CTF first challenge, with flag capture at bottom.",
     caption="This is about as far as I got--a functioning test that you claim a flag.") }}
 
-My ambition overstepped my capability, and so I failed to get the CTF to a workable state in time. At a DEF CON dance part I was able to finally get a VM to provision (hackily), but by that point it was too late to do anything but [enjoy the show](https://media.defcon.org/DEF%20CON%2033/DEF%20CON%2033%20music/DEF%20CON%2033%20Live%20Music%20-%20video/).
+My ambition overstepped my capability, and so I failed to get the CTF to a workable state in time. At a DEF CON dance party I was able to finally get a VM to provision (hackily), but by that point it was too late to do anything but [enjoy the show](https://media.defcon.org/DEF%20CON%2033/DEF%20CON%2033%20music/DEF%20CON%2033%20Live%20Music%20-%20video/).
 
 The actual Nix Community went *great*--though we had the expected teething issues (almost all addressed this year and written about elsewhere!)--and afterwards I shelved the CTF repo knowing that I'd come back and fix it up.
 
@@ -130,7 +130,7 @@ One thing that was important in July was the creation of a proper set of project
 
 {{ smart_image(
     src="/img/blog/2026-ctf/2026_gh_2_project_management.png",
-    alt="Screenshot of Githhub Project swimlanes for the CTF.",
+    alt="Screenshot of Github Project swimlanes for the CTF.",
     caption="Sometimes, when everybody is stressed, it's good to have a map.") }}
 
 The last week, the beginning of August, was a mad dash to finish the last few tracks (Hacking with Nix, Recon, Social Engineering) as well as a pile of fixes. I added a CTF helper script for the challenges (`tldr` with some wrapping), an offline manual (more on that later) to help CTF staff, and ripped out a challenge that I couldn't get working at all (which made me very sad! it was cool!). Tristan landed a bunch of fixes and we bumped deps, and the last major thing was a "de-design" pass to basically remove all the old art and styling and get us back to a plain-looking web app (not pretty by any stretch, but something we wouldn't be ashamed to have people use).
@@ -169,7 +169,7 @@ The success of the CTF relied on some rather neat infrastructure and networking 
 
 ### Infrastructure
 
-*Nix Vegas CTF est in tres partes divisa est.*
+*Nix Vegas CTF in tres partes divisa est.*
 
 We had: the user access plane, the network edge, and the CTF compute core.
 
@@ -193,7 +193,7 @@ The reasons for this are:
 
 (It is said that these days it's sort of safe, and that "nobody is gonna burn a 0-day at DEF CON". Increasing usage of LLMs and AI tooling for automatic vulnerability discovery and exploitation will doubtless change that arithmetic.)
 
-Nix is somewhat notorious for its storage and bandwidth usage. Doing a `nix-rebuild` over that network environment is asking for disaster. So, we owned our own uplinks and backhauls, using [Nebula](https://github.com/slackhq/nebula) for tunneling, and then ran our own cache and APs and hardlines for attendees in our space.
+Nix is somewhat notorious for its storage and bandwidth usage. Doing a `nixos-rebuild` over that network environment is asking for disaster. So, we owned our own uplinks and backhauls, using [Nebula](https://github.com/slackhq/nebula) for tunneling, and then ran our own cache and APs and hardlines for attendees in our space.
 
 We of course had a [flake](https://github.com/NixVegas/dcwifi) for making our wifi onboarding simpler for NixOS users, and [instructions](https://nixos.lv/2026/onsite/) for folks onsite on the different things available--fully on-site copies of nixpkgs (unstable and 26.05, binary cache and source), NixOS ISOs, a PXE boot for the bold, the manual, a search interface for nixpkgs, the live steam, the CTF, and other goodies. This was all an extension of the work done [last year](https://nix.vegas/blog/2025/2025-retrospective/#noc), but with polish and lessons-learned.
 
@@ -635,7 +635,7 @@ This made rapid development especially safe and effective--and remember, since t
 
 ### Lessons learned
 
-Honestly, everything this year went off pretty amazing. We did learn a few things, though, in different areas.
+Honestly, everything this year went amazingly. We did learn a few things, though, in different areas.
 
 #### Scheduling lessons
 
@@ -661,9 +661,9 @@ One of the biggest differences between 2025 and 2026 was the quality of clankers
 
 By and large, nix is now a first-class language for clankers. Elixir (again, not an accidental choice on my part here either--if you don't believe me, please sample some of my community's finest [agitprop](https://dashbit.co/blog/why-elixir-best-language-for-ai)) remains well-understood especially if you don't indulge in too much excess of macros or whatever. The understanding of network issues for qemu was imperfect, but with enough blind-flailing Claude usually got something figured out.
 
-Remember how I'd mentioned the testing situation? Between `mix test` for the control plane and the superpowers of nix, we were able to create deterministic, reliable, and clanker-legible feedback that made them much more effective. I am unsure if this would generalize to other circumstances, but for *this project* it worked extremely well. I even ended up with a skill to have Claude kick off full test runs and verify everything else via clicking. Check the `.claude/skills` directory in the code drop for more there.
+Remember how I'd mentioned the testing situation? Between `mix test` for the control plane and the superpowers of nix, we were able to create deterministic, reliable, and clanker-legible feedback that made them much more effective. I am unsure if this would generalize to other circumstances, but for *this project* it worked extremely well. I even ended up with a skill to have Claude kick off full test runs and verify everything else via headless browser clicking. Check the `.claude/skills` directory in the code drop for more there.
 
-There *were* cases where the clankers sorta lost their minds. I wasted a day or two riding shotgun with Claude as it repeatedly failed to figure out what was wrong with the challenge I ultimately yanked: suffering both from a misunderstanding of nix and how the build chain worked, an overloaded builder box whose suffocation appeared as a test failure, and various other things we finally had to give up and shelve it for next year. To give an idea of the problem, observe this frantic addition made to its testing skill:
+There *were* cases where the clankers sorta lost their minds. I wasted a day or two riding shotgun with Claude as it repeatedly failed to figure out what was wrong with the challenge I ultimately yanked: suffering from a misunderstanding of nix and how the build chain worked, an overloaded builder box whose suffocation appeared as a test failure, and various other things we finally had to give up and shelve it for next year. To give an idea of the problem, observe this frantic addition made to its testing skill:
 
 ```markdown
 **Watch per-box concurrency — oversubscription = false timeouts.** Each challenge
