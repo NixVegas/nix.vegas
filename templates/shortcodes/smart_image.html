@@ -1,0 +1,11 @@
+{#- A figure with an optional caption, linking through to the full-size image.
+    Usage: {{ smart_image(src="/img/blog/...", alt="...", caption="...") }} -#}
+{%- set alt = alt | default(value="") -%}
+{%- set class = class | default(value="") -%}
+{%- set caption = caption | default(value="") -%}
+<figure class="smart-image {{ class }}">
+    <a target="_blank" href="{{ src | safe }}"><img src="{{ src | safe }}" alt="{{ alt }}" loading="lazy"></a>
+    {%- if caption %}
+    <figcaption>{{ caption }}</figcaption>
+    {%- endif %}
+</figure>
