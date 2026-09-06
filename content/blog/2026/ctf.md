@@ -38,25 +38,21 @@ That would totally be enough, right?
 
 
 ### The results
-{{< smart-image
-    src="images/2025_ctf_initial_commit.png"
-    alt="Picture of first commit, dated July 23, 2025."
-    caption="Why yes, anything is possible in two weeks." >}}
+![Picture of first commit, dated July 23, 2025.](/img/blog/2026-ctf/2025_ctf_initial_commit.png)
 
-{{< smart-image
-    src="images/2025_ctf_landing.png"
-    alt="Web page showing the landing page for the CTF at Nix Vegas."
-    caption="A sweet landing page." >}}
+> Why yes, anything is possible in two weeks.
 
-{{< smart-image
-    src="images/2025_ctf_dashboard.png"
-    alt="Web page showing the CTF dashboard, including the Nix flake-as-progress-indicator."
-    caption="Manually chopping up this SVG for use as a progress tracker ate a few nights." >}}
+![Web page showing the landing page for the CTF at Nix Vegas.](/img/blog/2026-ctf/2025_ctf_landing.png)
 
-{{< smart-image
-    src="images/2025_ctf_challenge_1.png"
-    alt="Web page showing the CTF first challenge, with flag capture at bottom.."
-    caption="This is about as far as I got--a functioning test that you claim a flag." >}}
+> A sweet landing page.
+
+![Web page showing the CTF dashboard, including the Nix flake-as-progress-indicator.](/img/blog/2026-ctf/2025_ctf_dashboard.png)
+
+> Manually chopping up this SVG for use as a progress tracker ate a few nights.
+
+![Web page showing the CTF first challenge, with flag capture at bottom..](/img/blog/2026-ctf/2025_ctf_challenge_1.png)
+
+> This is about as far as I got--a functioning test that you claim a flag.
 
 My ambition overstepped my capability, and so I failed to get the CTF to a workable state in time. At a DEF CON dance part I was able to finally get a VM to provision (hackily), but by that point it was too late to do anything but [enjoy the show](https://media.defcon.org/DEF%20CON%2033/DEF%20CON%2033%20music/DEF%20CON%2033%20Live%20Music%20-%20video/).
 
@@ -93,34 +89,30 @@ In addition, there were things we wanted to accomplish that hadn't happened the 
 
 On April 18th I landed a bunch of code and got the first fully-functioning end-to-end version working (including port assignment, VM baking, and so forth) based on the 2025 attempt. The bones were in place, it was alive!
 
-{{< smart-image
-    src="images/2026_dev_first_challenge.png"
-    alt="Screenshot of entering and completing the first challenge."
-    caption="The first challenge, with me derping around--BUT IT WORKED!" >}}
+![Screenshot of entering and completing the first challenge.](/img/blog/2026-ctf/2026_dev_first_challenge.png)
+
+> The first challenge, with me derping around--BUT IT WORKED!
 
 
 Even with this progress, though, I'd failed to execute by myself the year prior and figuring out how to make enough room for other folks to get their ideas in was going to be the difference between having to carry it myself (with the risk that entails) and having a fun project with less risk that more people could be proud of.
 
-{{< smart-image
-    src="images/2026_jason_first_meeting.png"
-    alt="Screenshot of exchange organizing first CTF meeting."
-    caption="If you want to go fast, go alone. If you want to go far, go with friends." >}}
+![Screenshot of exchange organizing first CTF meeting.](/img/blog/2026-ctf/2026_jason_first_meeting.png)
+
+> If you want to go fast, go alone. If you want to go far, go with friends.
 
 During that first meeting, I laid out the basic vision and what I felt willing to compromise on (challenge specifics, formatting, etc.) and what I wanted to try and keep the same (basic tech stack, basic grouped approach to challenges/curriculum). The last bit was feeling out how comfortable Jason was with AI--I'd been an early adopter years prior but some folks in the Nix community are not comfortable using it. Jason luckily was very much in a compatible camp and so we found ourselves substantially aligned on all details and could start grinding.
 
 The first thing we did (after sharing the repo and getting Jason admin privileges) was to open an issue to go through the high-level tracks I'd thought about and then open the floor to actual discussion and brainstorming.
 
-{{< smart-image
-    src="images/2026_gh_1_brainstorming.png"
-    alt="Screenshot of first issue on CTF repo, laying out general categories of challenges."
-    caption="Engineering leadership trick one: make a coloring book, not a sketch, and your team will surprise you." >}}
+![Screenshot of first issue on CTF repo, laying out general categories of challenges.](/img/blog/2026-ctf/2026_gh_1_brainstorming.png)
+
+> Engineering leadership trick one: make a coloring book, not a sketch, and your team will surprise you.
 
 Jason and I then went through and pitched our own ideas of challenges, and then kinda picked-and-chose which ones we really liked. Within a couple of weeks (June 10th), Jason had posted a PR to knock out the remainder of the Basic Nix category (following the template from the initial test challenge I'd built the framework vertical slice on), and that got us rolling with our basic pattern for the first half or so of challenges: Jason grabs a chunk of the challenges from the overview and implements them, I run them through manual PR and give feedback, we ship. I'm a strong proponent of optimistic merging and that let us cover tremendous ground in short order.
 
-{{< smart-image
-    src="images/2026_gh_jason_on_elixir.png"
-    alt="Screenshot of PR comment where Jason is giving a trip report on Elixir."
-    caption="This is an accurate depiction of the Elixir Experience for many newcomers." >}}
+![Screenshot of PR comment where Jason is giving a trip report on Elixir.](/img/blog/2026-ctf/2026_gh_jason_on_elixir.png)
+
+> This is an accurate depiction of the Elixir Experience for many newcomers.
 
 By June 17th Jason had landed the Advanced Nix track, and I was fighting with VM building and moving the Oban jobs over to make better use of Nix. The rest of June would be Jason wrapping the Deployment with Nix track (finally landing on July 8th) and me doing other tweaks (the VM work, scrapping the snowflake progress indicator, etc.)
 
@@ -128,19 +120,17 @@ July is where more of the fit-and-finish and admin work happened. We landed a bu
 
 One thing that was important in July was the creation of a proper set of project milestones and child issues. Normally this wouldn't be super useful, but when you have four folks working sporadically and *especially* when using LLMs to help, having a place where basic task definitions and progress are being tracked is immensely helpful. A happy discovery we made was that both Claude and Codex are more than happy to follow and do book-keeping on those boards (we used Github Projects) and this kinda kept everybody aligned and productive.
 
-{{< smart-image
-    src="images/2026_gh_2_project_management.png"
-    alt="Screenshot of Githhub Project swimlanes for the CTF."
-    caption="Sometimes, when everybody is stressed, it's good to have a map." >}}
+![Screenshot of Githhub Project swimlanes for the CTF.](/img/blog/2026-ctf/2026_gh_2_project_management.png)
+
+> Sometimes, when everybody is stressed, it's good to have a map.
 
 The last week, the beginning of August, was a mad dash to finish the last few tracks (Hacking with Nix, Recon, Social Engineering) as well as a pile of fixes. I added a CTF helper script for the challenges (`tldr` with some wrapping), an offline manual (more on that later) to help CTF staff, and ripped out a challenge that I couldn't get working at all (which made me very sad! it was cool!). Tristan landed a bunch of fixes and we bumped deps, and the last major thing was a "de-design" pass to basically remove all the old art and styling and get us back to a plain-looking web app (not pretty by any stretch, but something we wouldn't be ashamed to have people use).
 
 ### The (successful!!!) result
 
-{{< smart-image
-    src="images/2026_ctf_1_leaderboard.png"
-    alt="Screenshot of the leaderboard at the end of the CTF."
-    caption="30 participants at least--feels like a success. :)" >}}
+![Screenshot of the leaderboard at the end of the CTF.](/img/blog/2026-ctf/2026_ctf_1_leaderboard.png)
+
+> 30 participants at least--feels like a success. :)
 
 We ran the CTF and people sat down around our table or connected via wifi (or logged-in after hours via the uplink...) and went after the challenges.
 
@@ -173,10 +163,9 @@ The success of the CTF relied on some rather neat infrastructure and networking 
 
 We had: the user access plane, the network edge, and the CTF compute core.
 
-{{< smart-image
-    src="images/2026_ctf_infra.png"
-    alt="Block diagram of the Nix Vegas infrastructure, showing networking, hosts, and services."
-    caption="Every good CTF needs a bunch of boxes and wires." >}}
+![Block diagram of the Nix Vegas infrastructure, showing networking, hosts, and services.](/img/blog/2026-ctf/2026_ctf_infra.png)
+
+> Every good CTF needs a bunch of boxes and wires.
 
 You might be wondering: "Why did you all bring so much of the stack on-site?"
 
@@ -242,24 +231,21 @@ That was the basic shape of it in 2025; in 2026, we refined this a bit and featu
 
 After registering, a user would be given the list of available challenges:
 
-{{< smart-image
-    src="images/2026_ctf_2_dashboard.png"
-    alt="Screenshot of a typical team dashboard, showing available challenges."
-    caption="The list of challenges that greeted new teams. Simple but effective." >}}
+![Screenshot of a typical team dashboard, showing available challenges.](/img/blog/2026-ctf/2026_ctf_2_dashboard.png)
+
+> The list of challenges that greeted new teams. Simple but effective.
 
 Once chosen, they are given the challenge screen:
 
-{{< smart-image
-    src="images/2026_ctf_3_starting_challenge.png"
-    alt="Screenshot of the first challenge."
-    caption="The first challenge, basically just a tutorial level to spin up, log in, and cap a flag." >}}
+![Screenshot of the first challenge.](/img/blog/2026-ctf/2026_ctf_3_starting_challenge.png)
+
+> The first challenge, basically just a tutorial level to spin up, log in, and cap a flag.
 
 They'd click the begin button, and after provisioning completed (usually within a few seconds), they'd be given the final instructions:
 
-{{< smart-image
-    src="images/2026_ctf_4_challenge_provisioned.png"
-    alt="Screenshot of the first challenge's provisioned information."
-    caption="The first challenge, now provisioned, displays a private key, login instructions, a flag input form, and self-serve options." >}}
+![Screenshot of the first challenge's provisioned information.](/img/blog/2026-ctf/2026_ctf_4_challenge_provisioned.png)
+
+> The first challenge, now provisioned, displays a private key, login instructions, a flag input form, and self-serve options.
 
 Teams would log into the instance, complete the challenge (perhaps using the `ctf-help` command to access a description of the challenge and get `tldr`-powered command reference/assistance), and then input their flag and (hopefully) capture its points. Rinse and repeat unto glory!
 
