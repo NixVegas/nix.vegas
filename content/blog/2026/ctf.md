@@ -271,15 +271,15 @@ Breaking that workflow down a bit, the actual lifecycle was rather more involved
 2. A new challenge attempt is instantiated with status `provisioning`, including keys and flags.
 3. An [Oban](https://github.com/oban-bg/oban) (the Elixir community's standard for work queueing) job is created with the challenge attempt ID and pubkey (we could've attached this to the challenge attempt...next year goals!).
 4. The job is picked up and provisioning attempted.
-  1. if it is already in-progress or needs no VM, we mark it as good to go.
-  2. attempt to checkout a port, bail out if at capacity.
-  3. generate the seed/flag for the challenge
-  4. finally, use the challenge-specific callback to create the attempt instance--probably by using `CtfUtils.VMUtils.start_cluster` to pass along the VM definitions, cluster settings, seed, pubkey, and relevant files.
+    1. If it is already in-progress or needs no VM, we mark it as good to go.
+    2. Attempt to checkout a port, bail out if at capacity.
+    3. Generate the seed/flag for the challenge
+    4. Finally, use the challenge-specific callback to create the attempt instance--probably by using `CtfUtils.VMUtils.start_cluster` to pass along the VM definitions, cluster settings, seed, pubkey, and relevant files.
 5. User LiveView process gets the update that the challenge is ready, and displays the connection information.
 6. User completes challenge and submits flag.
-  1. If flag is incorrect, notify user and leave everything alone.
-  2. Flag was correct, so score the attempt (this allows for multiple flags) using the challenge-provided value.
-  3. Schedule a deprovisioning job.
+    1. If flag is incorrect, notify user and leave everything alone.
+    2. Flag was correct, so score the attempt (this allows for multiple flags) using the challenge-provided value.
+    3. Schedule a deprovisioning job.
 
 The main trick to all of this was separating out the core logic of the CTF--creating a challenge, tracking progress, orchestrating infrastructure, and so forth--with the *challenge-specific* logic--scoring, player information, attempt-specific flags and files. Key to this was the use of two Elixir features: [protocols](https://elixir.hexdocs.pm/1.20.4/protocols.html#protocols-and-structs) and [behaviours](https://elixir.hexdocs.pm/1.20.4/typespecs.html#behaviours)--the latter allows us to dictate the functions that a module must expose if it is compliant, and the former allows us to define those functions in such a way that callers have no idea about their specifics. Such is scalable software organization in the functional actor language of Elixir.
 
