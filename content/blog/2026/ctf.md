@@ -643,7 +643,7 @@ We had a couple hiccups with development. The Slirp issue was something that I a
 
 Starting earlier in the year (e.g., not *two weeks before the conference!*) made everything vastly less stressful and gave everybody sufficient slack and time to schedule in work where they could when they could. Since our team was scattered across the West Coast, Texas, and East Coast, that flexibility was clutch.
 
-Picking a couple of days that were spiritually pencils-down was helpful (even if we snuck in stuff after), and the choice to do the "de-styling" to give us a presentable base paid off when I was unable to get the lore and new art into place in time (always, always, schedule a fallback position in a project like this).
+Picking a couple of days that were spiritually pencils-down was helpful (even if we snuck in stuff after), and the choice to do the de-design to give us a presentable base paid off when I was unable to get the lore and new art into place in time (always, always, schedule a fallback position in a project like this).
 
 #### Communication and collaboration
 
