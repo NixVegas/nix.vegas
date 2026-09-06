@@ -35,3 +35,14 @@
 .blog-wrapper li.blog-post .blog-post-date {
     font-style: italic;
 }
+
+.blog-wrapper figure.smart-image {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.blog-wrapper figure.smart-image figcaption {
+    text-align: center;
+    font-style: italic;
+}
