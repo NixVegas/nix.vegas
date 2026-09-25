@@ -57,7 +57,7 @@
               alejandra
               pngcrush
               svgo
-              nixfmt-rfc-style
+              nixfmt
               nodejs
             ];
           };
