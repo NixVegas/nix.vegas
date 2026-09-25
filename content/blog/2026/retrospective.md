@@ -47,6 +47,7 @@ were mostly to have a great time at DEF CON. In the spirit of open source,
 we're sharing it openly.
 
 > "I am the master of my fate, I am the captain of my soul."
+>
 > \- William Ernest Henley
 
  ESCAPE YOUR FATE!
@@ -95,7 +96,7 @@ present danger, what higher purpose can we contribute to?
 > [Pessimistic merging] gives maintainers power over new contributors,
 > which many maintainers abuse.
 >
-> \- Pieter Hintjens, _Social Architecture_
+> \- Pieter Hintjens, [_Social Architecture_](https://hintjens.gitbooks.io/social-architecture/content/)
 
 The Nix Community at DEF CON is many things to many people, but _unafraid of your drama_ is
 somewhere at the top of the list. We reject the notion that an open source
